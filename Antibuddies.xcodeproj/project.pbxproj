@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1577CA5DD19FFFEF6E189E61 /* Pods_AntibuddiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */; };
+		1DBEAA71CC12049E29AED7D4 /* Pods_Antibuddies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFF53C769C22903D7037432 /* Pods_Antibuddies.framework */; };
+		2143EA5E8F4BDF41141BDF00 /* Pods_AntibuddiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */; };
 		855FBA2F228E1C1900C086F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA2E228E1C1900C086F2 /* AppDelegate.swift */; };
 		855FBA31228E1C1900C086F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA30228E1C1900C086F2 /* ViewController.swift */; };
 		855FBA34228E1C1900C086F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA32228E1C1900C086F2 /* Main.storyboard */; };
@@ -15,6 +18,7 @@
 		855FBA3C228E1C1E00C086F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA3A228E1C1E00C086F2 /* LaunchScreen.storyboard */; };
 		855FBA47228E1C1E00C086F2 /* AntibuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA46228E1C1E00C086F2 /* AntibuddiesTests.swift */; };
 		855FBA52228E1C1E00C086F2 /* AntibuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA51228E1C1E00C086F2 /* AntibuddiesUITests.swift */; };
+		855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11D3693C946E6976678C9F6A /* Pods-AntibuddiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesTests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesTests/Pods-AntibuddiesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		412C4C4DC6F5584FFA8E5151 /* Pods-AntibuddiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesTests.release.xcconfig"; path = "Target Support Files/Pods-AntibuddiesTests/Pods-AntibuddiesTests.release.xcconfig"; sourceTree = "<group>"; };
+		7EFF53C769C22903D7037432 /* Pods_Antibuddies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Antibuddies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80EAD00665E884A6E8FC5DAF /* Pods-AntibuddiesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.release.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		855FBA2B228E1C1900C086F2 /* Antibuddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antibuddies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855FBA2E228E1C1900C086F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855FBA30228E1C1900C086F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,12 @@
 		855FBA4D228E1C1E00C086F2 /* AntibuddiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntibuddiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855FBA51228E1C1E00C086F2 /* AntibuddiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntibuddiesUITests.swift; sourceTree = "<group>"; };
 		855FBA53228E1C1E00C086F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.release.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.release.xcconfig"; sourceTree = "<group>"; };
+		96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE4C2421122535EA0894A59 /* Pods-Antibuddies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.debug.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.debug.xcconfig"; sourceTree = "<group>"; };
+		B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBEAA71CC12049E29AED7D4 /* Pods_Antibuddies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1577CA5DD19FFFEF6E189E61 /* Pods_AntibuddiesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2143EA5E8F4BDF41141BDF00 /* Pods_AntibuddiesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40CD42051BACA96FF3D05EA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABE4C2421122535EA0894A59 /* Pods-Antibuddies.debug.xcconfig */,
+				87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */,
+				11D3693C946E6976678C9F6A /* Pods-AntibuddiesTests.debug.xcconfig */,
+				412C4C4DC6F5584FFA8E5151 /* Pods-AntibuddiesTests.release.xcconfig */,
+				9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */,
+				80EAD00665E884A6E8FC5DAF /* Pods-AntibuddiesUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7982F06A343BD7888ACDAA7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EFF53C769C22903D7037432 /* Pods_Antibuddies.framework */,
+				96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */,
+				B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		855FBA22228E1C1900C086F2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				855FBA45228E1C1E00C086F2 /* AntibuddiesTests */,
 				855FBA50228E1C1E00C086F2 /* AntibuddiesUITests */,
 				855FBA2C228E1C1900C086F2 /* Products */,
+				40CD42051BACA96FF3D05EA2 /* Pods */,
+				7982F06A343BD7888ACDAA7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +147,7 @@
 				855FBA38228E1C1E00C086F2 /* Assets.xcassets */,
 				855FBA3A228E1C1E00C086F2 /* LaunchScreen.storyboard */,
 				855FBA3D228E1C1E00C086F2 /* Info.plist */,
+				855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */,
 				855FBA35228E1C1900C086F2 /* Antibuddies.xcdatamodeld */,
 			);
 			path = Antibuddies;
@@ -135,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 855FBA56228E1C1E00C086F2 /* Build configuration list for PBXNativeTarget "Antibuddies" */;
 			buildPhases = (
+				62899CAAFDE4F8A3229E726F /* [CP] Check Pods Manifest.lock */,
 				855FBA27228E1C1900C086F2 /* Sources */,
 				855FBA28228E1C1900C086F2 /* Frameworks */,
 				855FBA29228E1C1900C086F2 /* Resources */,
+				8DBAE10F5ECE1ECBFF6CA7C8 /* [CP] Embed Pods Frameworks */,
+				BBB1009CEDA0DBB782B8368A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 855FBA59228E1C1E00C086F2 /* Build configuration list for PBXNativeTarget "AntibuddiesTests" */;
 			buildPhases = (
+				9C24E42D15EF317802A2C570 /* [CP] Check Pods Manifest.lock */,
 				855FBA3E228E1C1E00C086F2 /* Sources */,
 				855FBA3F228E1C1E00C086F2 /* Frameworks */,
 				855FBA40228E1C1E00C086F2 /* Resources */,
@@ -170,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 855FBA5C228E1C1E00C086F2 /* Build configuration list for PBXNativeTarget "AntibuddiesUITests" */;
 			buildPhases = (
+				B74E70883F601BC63AC9EFE7 /* [CP] Check Pods Manifest.lock */,
 				855FBA49228E1C1E00C086F2 /* Sources */,
 				855FBA4A228E1C1E00C086F2 /* Frameworks */,
 				855FBA4B228E1C1E00C086F2 /* Resources */,
@@ -233,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				855FBA3C228E1C1E00C086F2 /* LaunchScreen.storyboard in Resources */,
+				855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */,
 				855FBA39228E1C1E00C086F2 /* Assets.xcassets in Resources */,
 				855FBA34228E1C1900C086F2 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +302,125 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62899CAAFDE4F8A3229E726F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Antibuddies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DBAE10F5ECE1ECBFF6CA7C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C24E42D15EF317802A2C570 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AntibuddiesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B74E70883F601BC63AC9EFE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AntibuddiesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBB1009CEDA0DBB782B8368A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		855FBA27228E1C1900C086F2 /* Sources */ = {
@@ -434,9 +602,11 @@
 		};
 		855FBA57228E1C1E00C086F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE4C2421122535EA0894A59 /* Pods-Antibuddies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7S6D9G55V;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,9 +621,11 @@
 		};
 		855FBA58228E1C1E00C086F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7S6D9G55V;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,6 +640,7 @@
 		};
 		855FBA5A228E1C1E00C086F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D3693C946E6976678C9F6A /* Pods-AntibuddiesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +661,7 @@
 		};
 		855FBA5B228E1C1E00C086F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 412C4C4DC6F5584FFA8E5151 /* Pods-AntibuddiesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +682,7 @@
 		};
 		855FBA5D228E1C1E00C086F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +702,7 @@
 		};
 		855FBA5E228E1C1E00C086F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80EAD00665E884A6E8FC5DAF /* Pods-AntibuddiesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
