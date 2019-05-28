@@ -1,0 +1,6 @@
+framework module Pods_AntibuddiesTests {
+  umbrella header "Pods-AntibuddiesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
