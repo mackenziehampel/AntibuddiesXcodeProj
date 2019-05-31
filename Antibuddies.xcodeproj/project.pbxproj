@@ -10,6 +10,7 @@
 		1577CA5DD19FFFEF6E189E61 /* Pods_AntibuddiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */; };
 		1DBEAA71CC12049E29AED7D4 /* Pods_Antibuddies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFF53C769C22903D7037432 /* Pods_Antibuddies.framework */; };
 		2143EA5E8F4BDF41141BDF00 /* Pods_AntibuddiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */; };
+		855182CE229CB9430002225B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855182CD229CB9430002225B /* Extensions.swift */; };
 		855FBA2F228E1C1900C086F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA2E228E1C1900C086F2 /* AppDelegate.swift */; };
 		855FBA31228E1C1900C086F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA30228E1C1900C086F2 /* ViewController.swift */; };
 		855FBA34228E1C1900C086F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA32228E1C1900C086F2 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		855FBA47228E1C1E00C086F2 /* AntibuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA46228E1C1E00C086F2 /* AntibuddiesTests.swift */; };
 		855FBA52228E1C1E00C086F2 /* AntibuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA51228E1C1E00C086F2 /* AntibuddiesUITests.swift */; };
 		855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */; };
+		857011EF229E075E00FBA10F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857011EE229E075E00FBA10F /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 		412C4C4DC6F5584FFA8E5151 /* Pods-AntibuddiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesTests.release.xcconfig"; path = "Target Support Files/Pods-AntibuddiesTests/Pods-AntibuddiesTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EFF53C769C22903D7037432 /* Pods_Antibuddies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Antibuddies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EAD00665E884A6E8FC5DAF /* Pods-AntibuddiesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.release.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		855182CD229CB9430002225B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		855FBA2B228E1C1900C086F2 /* Antibuddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antibuddies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855FBA2E228E1C1900C086F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855FBA30228E1C1900C086F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		855FBA51228E1C1E00C086F2 /* AntibuddiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntibuddiesUITests.swift; sourceTree = "<group>"; };
 		855FBA53228E1C1E00C086F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		857011EE229E075E00FBA10F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.release.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.release.xcconfig"; sourceTree = "<group>"; };
 		96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,9 +147,11 @@
 			children = (
 				855FBA2E228E1C1900C086F2 /* AppDelegate.swift */,
 				855FBA30228E1C1900C086F2 /* ViewController.swift */,
+				857011EE229E075E00FBA10F /* MainMenuViewController.swift */,
 				855FBA32228E1C1900C086F2 /* Main.storyboard */,
 				855FBA38228E1C1E00C086F2 /* Assets.xcassets */,
 				855FBA3A228E1C1E00C086F2 /* LaunchScreen.storyboard */,
+				855182CD229CB9430002225B /* Extensions.swift */,
 				855FBA3D228E1C1E00C086F2 /* Info.plist */,
 				855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */,
 				855FBA35228E1C1900C086F2 /* Antibuddies.xcdatamodeld */,
@@ -332,22 +338,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -404,16 +399,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Antibuddies/Pods-Antibuddies-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,8 +418,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				855FBA31228E1C1900C086F2 /* ViewController.swift in Sources */,
+				857011EF229E075E00FBA10F /* MainMenuViewController.swift in Sources */,
 				855FBA37228E1C1900C086F2 /* Antibuddies.xcdatamodeld in Sources */,
 				855FBA2F228E1C1900C086F2 /* AppDelegate.swift in Sources */,
+				855182CE229CB9430002225B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

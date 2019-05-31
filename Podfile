@@ -9,6 +9,10 @@ target 'Antibuddies' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
+pod 'Firebase/Analytics'
+pod 'Firebase/Functions'
+pod 'Firebase/Database'
+pod 'Firebase/Firestore'
   target 'AntibuddiesTests' do
     inherit! :search_paths
     # Pods for testing
