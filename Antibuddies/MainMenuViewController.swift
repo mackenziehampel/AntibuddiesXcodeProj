@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import FirebaseDatabase
-import FirebaseFirestore
 import FirebaseFunctions
 
 class MainMenuViewController: UIViewController {
@@ -18,9 +17,8 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var intermediateBtn: UIButton!
     @IBOutlet weak var advancedBtn: UIButton!
     lazy var functions = Functions.functions()
-   // var ref2: DocumentReference? = nil
-   // var ref:DatabaseReference = Database.database().reference()
-  //  let db = Firestore.firestore()
+    
+    var ref:DatabaseReference = Database.database().reference()
     
    // @IBOutlet weak var messageFromBeyond: UILabel!
     @IBOutlet weak var messageFromBeyone: UITextField!
@@ -36,24 +34,11 @@ class MainMenuViewController: UIViewController {
     
     @IBAction func didselect(_ sender: Any) {
         
-      //  ref.child("User").setValue("A.Lincoln")
-//
-//        ref2 = db.collection("UsersTest").addDocument(data: [
-//            "first":"Abe",
-//            "last":"Lincoln",
-//            "age":22
-//
-//        ]) {err in
-//            if let err = err {
-//                print("Error adding doc: \(err)")
-//            }else {
-//                print("Document added with ID: \(self.ref2!.documentID)")
-//            }
-//        }
-//
+        ref.child("User").setValue("A.Lincoln")
         
         
-        functions.httpsCallable("helloWorldCallable").call(["text": "test"]) { (result, error) in
+    
+        functions.httpsCallable("helloWorldCallable").call(["data": self.messageFromBeyone.text]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
                     let code = FunctionsErrorCode(rawValue: error.code)
@@ -66,8 +51,8 @@ class MainMenuViewController: UIViewController {
             
             
             
-            if let text = (result?.data as? [String: Any])?["text"] as? String {
-                self.messageFromBeyone.text = "test"
+            if let text = (result?.data as? [String: Any])/*?["data"] as? String*/ {
+              
                 print(self.messageFromBeyone.text!)
             }
         }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		855FBA52228E1C1E00C086F2 /* AntibuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA51228E1C1E00C086F2 /* AntibuddiesUITests.swift */; };
 		855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */; };
 		857011EF229E075E00FBA10F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857011EE229E075E00FBA10F /* MainMenuViewController.swift */; };
+		85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */; };
+		85C39C2E22A74048008D2E96 /* Panel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2D22A74048008D2E96 /* Panel.storyboard */; };
+		85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		855FBA53228E1C1E00C086F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		857011EE229E075E00FBA10F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		85C39C2D22A74048008D2E96 /* Panel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Panel.storyboard; sourceTree = "<group>"; };
+		85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PanelCollection.storyboard; sourceTree = "<group>"; };
 		87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.release.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.release.xcconfig"; sourceTree = "<group>"; };
 		96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +155,9 @@
 				855FBA30228E1C1900C086F2 /* ViewController.swift */,
 				857011EE229E075E00FBA10F /* MainMenuViewController.swift */,
 				855FBA32228E1C1900C086F2 /* Main.storyboard */,
+				85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */,
+				85C39C2D22A74048008D2E96 /* Panel.storyboard */,
+				85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */,
 				855FBA38228E1C1E00C086F2 /* Assets.xcassets */,
 				855FBA3A228E1C1E00C086F2 /* LaunchScreen.storyboard */,
 				855182CD229CB9430002225B /* Extensions.swift */,
@@ -287,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				855FBA3C228E1C1E00C086F2 /* LaunchScreen.storyboard in Resources */,
+				85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */,
+				85C39C2E22A74048008D2E96 /* Panel.storyboard in Resources */,
 				855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */,
 				855FBA39228E1C1E00C086F2 /* Assets.xcassets in Resources */,
 				855FBA34228E1C1900C086F2 /* Main.storyboard in Resources */,
@@ -417,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */,
 				855FBA31228E1C1900C086F2 /* ViewController.swift in Sources */,
 				857011EF229E075E00FBA10F /* MainMenuViewController.swift in Sources */,
 				855FBA37228E1C1900C086F2 /* Antibuddies.xcdatamodeld in Sources */,

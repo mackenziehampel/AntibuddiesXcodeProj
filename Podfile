@@ -13,6 +13,8 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Functions'
 pod 'Firebase/Database'
 pod 'Firebase/Firestore'
+pod 'SpreadsheetView'
+
   target 'AntibuddiesTests' do
     inherit! :search_paths
     # Pods for testing

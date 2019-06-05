@@ -121,6 +121,9 @@
                                                 <real key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="R9T-Uq-DcC" kind="modal" modalPresentationStyle="formSheet" id="Iv7-x4-CAP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -190,6 +193,227 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="14.934114202049779" y="17.578125"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="fNs-7L-dGq">
+            <objects>
+                <viewController id="R9T-Uq-DcC" customClass="CreateAccountViewController" customModule="Antibuddies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Btr-Xa-Kei">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBM-15-nSB">
+                                <rect key="frame" x="20" y="20" width="500" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEP-KY-syL">
+                                        <rect key="frame" x="26" y="109" width="448" height="1"/>
+                                        <color key="backgroundColor" white="0.1962489298" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="FUL-3m-M9G"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="Uc4-W2-YYY">
+                                        <rect key="frame" x="70" y="159.5" width="360" height="243"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aHg-RR-tOD">
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-uR-1jo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pei-3E-uzc">
+                                                        <rect key="frame" x="127.5" y="0.0" width="232.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" textContentType="name"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="llW-Vd-nzA">
+                                                <rect key="frame" x="0.0" y="71" width="360" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbJ-Kn-fN0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bh1-nO-PLI">
+                                                        <rect key="frame" x="127.5" y="0.0" width="232.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" textContentType="name"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Gal-NH-b1d">
+                                                <rect key="frame" x="0.0" y="142" width="360" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Eb-Da-TF2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZr-5w-ZtC">
+                                                        <rect key="frame" x="127.5" y="0.0" width="232.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" textContentType="username"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="M0y-ga-DD1">
+                                                <rect key="frame" x="0.0" y="213" width="360" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrD-kg-NdT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Scu-W0-cJ6">
+                                                        <rect key="frame" x="127.5" y="0.0" width="232.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" textContentType="password"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pei-3E-uzc" firstAttribute="width" secondItem="Bh1-nO-PLI" secondAttribute="width" id="5ct-HH-CrC"/>
+                                            <constraint firstItem="zZr-5w-ZtC" firstAttribute="width" secondItem="Bh1-nO-PLI" secondAttribute="width" id="HIC-P3-lp6"/>
+                                            <constraint firstItem="Scu-W0-cJ6" firstAttribute="width" secondItem="zZr-5w-ZtC" secondAttribute="width" id="RJP-km-nNF"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-g4-TEb">
+                                        <rect key="frame" x="80" y="462.5" width="340" height="47.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-9c-mC2">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="47.5"/>
+                                                <color key="backgroundColor" red="0.26423677800000001" green="0.58850425480000002" blue="0.30124235150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <state key="normal" title="Create">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="-1" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didSelectCreateAccount:" destination="R9T-Uq-DcC" eventType="touchUpInside" id="wka-rF-P28"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-JU-sNE">
+                                                <rect key="frame" x="200" y="0.0" width="140" height="47.5"/>
+                                                <color key="backgroundColor" red="0.87450980389999999" green="0.6588235294" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="-1" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didSelectCancel:" destination="R9T-Uq-DcC" eventType="touchUpInside" id="ZGf-Ie-2kX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.38623715753424659" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Uc4-W2-YYY" secondAttribute="trailing" constant="70" id="1VD-0a-9Qa"/>
+                                    <constraint firstItem="ffb-g4-TEb" firstAttribute="leading" secondItem="xBM-15-nSB" secondAttribute="leading" constant="80" id="1XL-em-aGA"/>
+                                    <constraint firstItem="Uc4-W2-YYY" firstAttribute="leading" secondItem="xBM-15-nSB" secondAttribute="leading" constant="70" id="LEb-P1-hlC"/>
+                                    <constraint firstItem="EEP-KY-syL" firstAttribute="centerX" secondItem="xBM-15-nSB" secondAttribute="centerX" id="fbZ-UI-Fwn"/>
+                                    <constraint firstAttribute="trailing" secondItem="ffb-g4-TEb" secondAttribute="trailing" constant="80" id="nfP-Zt-W47"/>
+                                    <constraint firstItem="ffb-g4-TEb" firstAttribute="top" secondItem="Scu-W0-cJ6" secondAttribute="bottom" constant="60" id="qWA-Jg-NQZ"/>
+                                    <constraint firstItem="EEP-KY-syL" firstAttribute="leading" secondItem="xBM-15-nSB" secondAttribute="leading" constant="26" id="v3n-BI-Udi"/>
+                                    <constraint firstAttribute="bottom" secondItem="ffb-g4-TEb" secondAttribute="bottom" constant="70" id="ybA-pQ-mYH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP9-UX-TU5">
+                                <rect key="frame" x="55" y="70" width="430" height="59.5"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="53"/>
+                                <color key="textColor" red="0.57254901960000004" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="-1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19213637709617615" green="0.1921699047088623" blue="0.19212907552719116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FlM-Sf-g4F" firstAttribute="trailing" secondItem="xBM-15-nSB" secondAttribute="trailing" constant="20" id="5Ow-tN-kU5"/>
+                            <constraint firstItem="zP9-UX-TU5" firstAttribute="top" secondItem="FlM-Sf-g4F" secondAttribute="top" constant="70" id="Mqw-Jh-ewA"/>
+                            <constraint firstItem="FlM-Sf-g4F" firstAttribute="bottom" secondItem="xBM-15-nSB" secondAttribute="bottom" constant="20" id="OAl-4V-YYo"/>
+                            <constraint firstItem="zP9-UX-TU5" firstAttribute="centerX" secondItem="xBM-15-nSB" secondAttribute="centerX" id="Op3-1Z-NIU"/>
+                            <constraint firstItem="xBM-15-nSB" firstAttribute="leading" secondItem="FlM-Sf-g4F" secondAttribute="leading" constant="20" id="SJR-84-K2c"/>
+                            <constraint firstItem="xBM-15-nSB" firstAttribute="top" secondItem="FlM-Sf-g4F" secondAttribute="top" constant="20" id="Sm8-Vb-f4q"/>
+                            <constraint firstItem="EEP-KY-syL" firstAttribute="top" secondItem="zP9-UX-TU5" secondAttribute="bottom" constant="-0.5" id="ZfT-Je-nnS"/>
+                            <constraint firstItem="zP9-UX-TU5" firstAttribute="leading" secondItem="FlM-Sf-g4F" secondAttribute="leading" constant="55" id="pjE-XV-gbc"/>
+                            <constraint firstItem="Uc4-W2-YYY" firstAttribute="top" secondItem="zP9-UX-TU5" secondAttribute="bottom" constant="50" id="vlv-uQ-xce"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FlM-Sf-g4F"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstNameField" destination="pei-3E-uzc" id="FLr-w1-dtE"/>
+                        <outlet property="lastNameField" destination="Bh1-nO-PLI" id="ccA-re-2XV"/>
+                        <outlet property="passwordField" destination="Scu-W0-cJ6" id="XQo-8M-CuS"/>
+                        <outlet property="userNameField" destination="zZr-5w-ZtC" id="ghr-Qt-HyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ed-gU-huQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14.934114202049779" y="772.8515625"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="igE-Tg-pSF">
