@@ -37,8 +37,19 @@ class MainMenuViewController: UIViewController {
         ref.child("User").setValue("A.Lincoln")
         
         
-    
-        functions.httpsCallable("helloWorldCallable").call(["data": self.messageFromBeyone.text]) { (result, error) in
+
+//        functions.httpsCallable("helloWorldCallable").call(["data": self.messageFromBeyone.text]) { (result, error) in
+//            if let error = error as NSError? {
+//                if error.domain == FunctionsErrorDomain {
+//                    let code = FunctionsErrorCode(rawValue: error.code)
+//                    let message = error.localizedDescription
+//                    let details = error.userInfo[FunctionsErrorDetailsKey]
+//                    print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
+//                }
+//                // ...
+//            }
+
+        functions.httpsCallable("getUserCallable").call(["firstName": "Sally"]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
                     let code = FunctionsErrorCode(rawValue: error.code)
@@ -50,9 +61,8 @@ class MainMenuViewController: UIViewController {
             }
             
             
-            
             if let text = (result?.data as? [String: Any])/*?["data"] as? String*/ {
-              
+                
                 print(self.messageFromBeyone.text!)
             }
         }
@@ -75,9 +85,16 @@ class MainMenuViewController: UIViewController {
 
     @IBAction func didSelectBeginner(_ sender: Any) {
         //this function is called when the user selects the Beginner Button in the Main Menu Storyboard and segues the user to the Beginner Panel View
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "PanelCollection", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PanelCollectionViewController") as! PanelCollectionViewController
+        self.show(vc, sender: self)
         
     }
+    
+    @IBAction func didSelectBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func didSelectIntermediate(_ sender: Any) {
         
