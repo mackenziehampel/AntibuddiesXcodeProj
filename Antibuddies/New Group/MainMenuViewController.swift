@@ -17,6 +17,7 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var intermediateBtn: UIButton!
     @IBOutlet weak var advancedBtn: UIButton!
     lazy var functions = Functions.functions()
+    @IBOutlet weak var firstNameLbl: UILabel!
     
     var ref:DatabaseReference = Database.database().reference()
     
@@ -25,10 +26,41 @@ class MainMenuViewController: UIViewController {
     
 
     override func viewDidLoad() {
-    
-        
         super.viewDidLoad()
        
+//                functions.httpsCallable("helloWorldCallable").call(["data":"test"]) { (result, error) in
+//                    if let error = error as NSError? {
+//                        if error.domain == FunctionsErrorDomain {
+//                            let code = FunctionsErrorCode(rawValue: error.code)
+//                            let message = error.localizedDescription
+//                            let details = error.userInfo[FunctionsErrorDetailsKey]
+//                            print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
+//                        }
+//                        // ...
+//                    }
+//                    if let text = (result?.data as? [String: Any])?["data"] as? String {
+//
+//                    }
+//        }
+        
+
+        functions.httpsCallable("getUserCallable").call(["firstName": "Sally"]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    let code = FunctionsErrorCode(rawValue: error.code)
+                    let message = error.localizedDescription
+                    let details = error.userInfo[FunctionsErrorDetailsKey]
+                    print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
+                }
+                // ...
+            }
+
+
+            if let text = (result?.data as? [String: Any])/*?["data"] as? String*/ { //user.firstName
+                self.firstNameLbl.text = result?.data as? String
+            }
+        }
+
        
     }
     
@@ -49,23 +81,6 @@ class MainMenuViewController: UIViewController {
 //                // ...
 //            }
 
-        functions.httpsCallable("getUserCallable").call(["firstName": "Sally"]) { (result, error) in
-            if let error = error as NSError? {
-                if error.domain == FunctionsErrorDomain {
-                    let code = FunctionsErrorCode(rawValue: error.code)
-                    let message = error.localizedDescription
-                    let details = error.userInfo[FunctionsErrorDetailsKey]
-                    print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
-                }
-                // ...
-            }
-            
-            
-            if let text = (result?.data as? [String: Any])/*?["data"] as? String*/ {
-                
-                print(self.messageFromBeyone.text!)
-            }
-        }
         
     }
 //        functions.httpsCallable("helloWorldCallable").call(["data":"test"]) { (result, error) in

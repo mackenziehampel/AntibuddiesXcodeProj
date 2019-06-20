@@ -711,7 +711,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWt-6h-Pga">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWt-6h-Pga" userLabel="bottom tab bar">
                                 <rect key="frame" x="487" y="941" width="387" height="83"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-bM-Yzf">
@@ -786,6 +786,7 @@
                     <connections>
                         <outlet property="advancedBtn" destination="hZl-cD-edt" id="Z8u-vr-9I5"/>
                         <outlet property="beginnerBtn" destination="A4p-cP-7Fb" id="rx7-Lb-eHZ"/>
+                        <outlet property="firstNameLbl" destination="cC2-zZ-Qsa" id="EzT-uN-ZVy"/>
                         <outlet property="intermediateBtn" destination="SE4-qy-OSl" id="MSH-bM-Hc7"/>
                     </connections>
                 </viewController>

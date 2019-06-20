@@ -15,5 +15,9 @@ class PanelPickerCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func setUpCard(number: String){
+        numberLbl?.text = number
+    }
 
 }

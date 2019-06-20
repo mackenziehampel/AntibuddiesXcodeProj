@@ -45,7 +45,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Oyk-HV-0b8" firstAttribute="bottom" secondItem="K9R-XU-fDV" secondAttribute="bottom" constant="50" id="Ryb-pX-VZ1"/>
                             <constraint firstItem="K9R-XU-fDV" firstAttribute="leading" secondItem="Oyk-HV-0b8" secondAttribute="leading" id="S2A-dT-jhG"/>
@@ -56,6 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="spreadsheetView" destination="K9R-XU-fDV" id="qvC-hb-mgO"/>
+                        <outlet property="tableView" destination="9ma-rA-CPF" id="0kJ-nF-dsw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yO-cC-Fkd" userLabel="First Responder" sceneMemberID="firstResponder"/>

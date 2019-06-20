@@ -17,8 +17,10 @@ class PanelCollectionViewController: UIViewController, UICollectionViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
        
-//        self.collectionView.register(UINib(nibName: "PanelPickerCard", bundle: nil), forCellWithReuseIdentifier: "PanelPickerCard")
-        self.collectionView.register(PanelPickerCollectionViewCell.self, forCellWithReuseIdentifier: "PanelPickerCollectionViewCell")
+    //    self.collectionView.regis
+       self.collectionView.register(UINib(nibName: "PanelPickerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier:
+        String(describing: PanelPickerCollectionViewCell.self))
+        //self.collectionView.register(PanelPickerCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: PanelPickerCollectionViewCell.self))
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.reloadData()
@@ -30,20 +32,21 @@ class PanelCollectionViewController: UIViewController, UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PanelPickerCollectionViewCell", for: indexPath) as! PanelPickerCollectionViewCell
-        let cell : PanelPickerCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PanelPickerCollectionViewCell", for: indexPath) as! PanelPickerCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"PanelPickerCollectionViewCell", for: indexPath) as! PanelPickerCollectionViewCell
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
        // cell.text = self.items[indexPath.item]
        // cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
-        cell.numberLbl?.text = object[indexPath.item]
-        cell.backgroundColor = .white
+        cell.setUpCard(number: object[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Panel", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
-            self.show(vc, sender: self)
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Panel", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
+//            self.show(vc, sender: self)
+            let page = PanelViewController()
+            present(page, animated: true, completion: nil)
             
         }
     }
