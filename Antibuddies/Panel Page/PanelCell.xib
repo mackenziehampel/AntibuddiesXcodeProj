@@ -249,30 +249,45 @@
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6V5-MY-dju">
                         <rect key="frame" x="41.5" y="51" width="40.5" height="48.5"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-X6-dGB">
                         <rect key="frame" x="83" y="51" width="40.5" height="48.5"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="c" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WEk-vx-Bn6">
                         <rect key="frame" x="124.5" y="51" width="40.5" height="48.5"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-nW-sdH">
                         <rect key="frame" x="166" y="51" width="40.5" height="48.5"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TrV-6v-OfJ">
                         <rect key="frame" x="207.5" y="51" width="40.5" height="48.5"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -697,6 +712,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="Cw" destination="17F-N6-yuX" id="zh3-UA-ga4"/>
+                <outlet property="E" destination="dEE-nW-sdH" id="PDe-We-eld"/>
             </connections>
             <point key="canvasLocation" x="-323.1884057971015" y="-143.30357142857142"/>
         </tableViewCell>

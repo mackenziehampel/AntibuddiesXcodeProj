@@ -56,8 +56,9 @@ class MainMenuViewController: UIViewController {
             }
 
 
-            if let text = (result?.data as? [String: Any])/*?["data"] as? String*/ { //user.firstName
-                self.firstNameLbl.text = result?.data as? String
+            if let text = (result?.data as? [String: Any])?["firstName"] as? String { //user.firstName
+               // self.firstNameLbl.text =
+               
             }
         }
 
