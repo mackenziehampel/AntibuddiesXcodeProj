@@ -12,6 +12,7 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Functions'
 pod 'Firebase/Database'
 pod 'Firebase/Firestore'
+pod 'Alamofire'
 
 
   target 'AntibuddiesTests' do
