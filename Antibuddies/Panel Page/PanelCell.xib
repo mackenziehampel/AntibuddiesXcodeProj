@@ -710,6 +710,7 @@
                     <constraint firstItem="T9d-ax-ogn" firstAttribute="leading" secondItem="zko-pd-vIQ" secondAttribute="trailing" id="zsS-66-osJ"/>
                 </constraints>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="PanelCell"/>
             <connections>
                 <outlet property="Cw" destination="17F-N6-yuX" id="zh3-UA-ga4"/>
                 <outlet property="E" destination="dEE-nW-sdH" id="PDe-We-eld"/>

@@ -67,14 +67,14 @@ class MainMenuViewController: UIViewController {
         
         let urlReq = URLRequest(url: url)
         
-        let students = Alamofire.request(urlReq).validate().responseJSON { (response) in
-            switch response.result{
-            case .success(let value):
-                completion(JSON(value), nil)
-            case .failure(let error):
-                completion(nil, String(describing: error))
-            }
-        }
+//        let students = Alamofire.request(urlReq).validate().responseJSON { (response) in
+//            switch response.result{
+//            case .success(let value):
+//                completion(JSON(value), nil)
+//            case .failure(let error):
+//                completion(nil, String(describing: error))
+//            }
+//        }
        
     }
     

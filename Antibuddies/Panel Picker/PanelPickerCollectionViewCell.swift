@@ -11,6 +11,9 @@ import UIKit
 class PanelPickerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberLbl: UILabel!
     
+    @IBOutlet weak var scoreView: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +21,10 @@ class PanelPickerCollectionViewCell: UICollectionViewCell {
     
     func setUpCard(number: String){
         numberLbl?.text = number
+        
+        if numberLbl.text == "3"{
+            //show starx
+        }
     }
 
 }

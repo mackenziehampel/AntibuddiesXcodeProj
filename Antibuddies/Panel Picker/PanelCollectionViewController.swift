@@ -12,7 +12,7 @@ import UIKit
 class PanelCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let object = ["a", "b", "c"]
+    let object = ["1", "2", "3","4","5","6","7","8","9","10","11"]
     var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +45,9 @@ class PanelCollectionViewController: UIViewController, UICollectionViewDelegate,
 //            let storyboard: UIStoryboard = UIStoryboard(name: "Panel", bundle: nil)
 //            let vc = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
 //            self.show(vc, sender: self)
-            let page = PanelViewController()
-            present(page, animated: true, completion: nil)
-            
+            let storyboard = UIStoryboard(name: "PanelViewController", bundle: nil)
+//            self = storyboard.instantiateViewControllerWithIdentifer("PanelViewController") as! PanelViewController
+//            
         }
     }
     
