@@ -19,8 +19,8 @@ class PanelCell: UITableViewCell {
         super.awakeFromNib()
         let font:UIFont? = UIFont(name: "Arial", size:27)
         let fontSuper:UIFont? = UIFont(name: "Arial", size:15)
-        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "Cw", attributes: [.font:font!])
-        attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:8,length:2))
-        Cw.attributedText = attString
+//        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "Cw", attributes: [.font:font!])
+//        attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:8,length:2))
+//        Cw.attributedText = attString
     }
 }

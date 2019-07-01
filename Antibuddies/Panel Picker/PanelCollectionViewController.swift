@@ -41,14 +41,17 @@ class PanelCollectionViewController: UIViewController, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        
         if indexPath.row == 0 {
-//            let storyboard: UIStoryboard = UIStoryboard(name: "Panel", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
-//            self.show(vc, sender: self)
-            let storyboard = UIStoryboard(name: "PanelViewController", bundle: nil)
-//            self = storyboard.instantiateViewControllerWithIdentifer("PanelViewController") as! PanelViewController
-//            
+
+//            performSegue(withIdentifier: "PanelViewController", sender: cell)
+            let detailController = UIStoryboard(name: "Panel", bundle: nil).instantiateViewController(withIdentifier: "PanelViewController") as! PanelViewController
+           self.present(detailController, animated: true, completion: nil)
+            //self.navigationController?.pushViewController(detailController, animated: true)
         }
+        
+
     }
     
     @IBAction func didSelectBack(_ sender: Any) {
