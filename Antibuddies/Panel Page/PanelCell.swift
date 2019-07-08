@@ -11,7 +11,6 @@ import UIKit
 
 class PanelCell: UITableViewCell {
     
-    
     @IBOutlet weak var E: UILabel!
     @IBOutlet weak var Cw: UILabel!
     
