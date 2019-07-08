@@ -13,7 +13,7 @@ class PanelCell: UITableViewCell {
     
     @IBOutlet weak var E: UILabel!
     @IBOutlet weak var Cw: UILabel!
-    
+    let x = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         let font:UIFont? = UIFont(name: "Arial", size:27)
