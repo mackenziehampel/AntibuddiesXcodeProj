@@ -116,6 +116,7 @@ class MainMenuViewController: UIViewController {
         //this function is called when the user selects the Beginner Button in the Main Menu Storyboard and segues the user to the Beginner Panel View
         let storyboard: UIStoryboard = UIStoryboard(name: "PanelCollection", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PanelCollectionViewController") as! PanelCollectionViewController
+        vc.level = "b"
         self.show(vc, sender: self)
         
     }
@@ -126,10 +127,16 @@ class MainMenuViewController: UIViewController {
     
     
     @IBAction func didSelectIntermediate(_ sender: Any) {
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "PanelCollection", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PanelCollectionViewController") as! PanelCollectionViewController
+        vc.level = "i"
+        self.show(vc, sender: self)
     }
     
     @IBAction func didSelectAdvanced(_ sender: Any) {
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "PanelCollection", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PanelCollectionViewController") as! PanelCollectionViewController
+        vc.level = "a"
+        self.show(vc, sender: self)
     }
 }

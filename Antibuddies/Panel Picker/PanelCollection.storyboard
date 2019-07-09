@@ -124,6 +124,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="mti-FB-PeN" id="Icv-gw-BvL"/>
+                        <outlet property="lblLevel" destination="ziH-OZ-AMX" id="pMI-cr-k3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtz-gz-TRL" userLabel="First Responder" sceneMemberID="firstResponder"/>

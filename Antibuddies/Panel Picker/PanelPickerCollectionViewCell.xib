@@ -95,6 +95,7 @@
             <size key="customSize" width="231" height="155"/>
             <connections>
                 <outlet property="numberLbl" destination="rrf-rN-bV7" id="yLu-Fq-AxB"/>
+                <outlet property="scoreLbl" destination="bP2-fg-gQQ" id="fLy-Lo-k1K"/>
                 <outlet property="scoreView" destination="9l9-aY-ZjS" id="Oi0-ac-v6f"/>
             </connections>
             <point key="canvasLocation" x="0.7246376811594204" y="51.227678571428569"/>

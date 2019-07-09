@@ -714,9 +714,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWt-6h-Pga" userLabel="bottom tab bar">
                                 <rect key="frame" x="487" y="941" width="387" height="83"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-bM-Yzf">
-                                        <rect key="frame" x="43" y="1" width="73" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-bM-Yzf">
+                                        <rect key="frame" x="43" y="1" width="61" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -725,9 +724,8 @@
                                             <action selector="didSelectBack:" destination="Cys-ZI-8PL" eventType="touchUpInside" id="KDK-Hl-sNG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-eE-Nrw">
-                                        <rect key="frame" x="247" y="1" width="76" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-eE-Nrw">
+                                        <rect key="frame" x="241" y="1" width="76" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Profile">
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -735,6 +733,14 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11763278394937515" green="0.11765617877244949" blue="0.11762764304876328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rOV-bM-Yzf" firstAttribute="leading" secondItem="WWt-6h-Pga" secondAttribute="leading" constant="43" id="30f-AD-xXU"/>
+                                    <constraint firstAttribute="bottom" secondItem="rOV-bM-Yzf" secondAttribute="bottom" constant="27" id="3mu-t0-eFX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Abu-eE-Nrw" secondAttribute="bottom" constant="27" id="9YB-U3-bY4"/>
+                                    <constraint firstItem="rOV-bM-Yzf" firstAttribute="top" secondItem="WWt-6h-Pga" secondAttribute="top" constant="1" id="alS-zo-cWS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Abu-eE-Nrw" secondAttribute="trailing" constant="70" id="bKG-tz-GXR"/>
+                                    <constraint firstItem="Abu-eE-Nrw" firstAttribute="top" secondItem="WWt-6h-Pga" secondAttribute="top" constant="1" id="pwS-1h-b2Z"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
