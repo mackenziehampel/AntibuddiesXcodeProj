@@ -178,10 +178,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apc-Ou-6XE" userLabel="bottom tab bar">
-                                <rect key="frame" x="490" y="948" width="387" height="83"/>
+                                <rect key="frame" x="460" y="948" width="446" height="83"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFV-mp-HsG">
-                                        <rect key="frame" x="37" y="1" width="325" height="55"/>
+                                        <rect key="frame" x="165" y="1" width="292" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Search for Patient">
@@ -189,6 +189,17 @@
                                         </state>
                                         <connections>
                                             <segue destination="MIQ-C4-Pzn" kind="presentation" id="u9C-R4-zqr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQQ-aE-3uV">
+                                        <rect key="frame" x="0.0" y="-3" width="157" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectBack:" destination="0Ea-B2-NtS" eventType="touchUpInside" id="5dx-9c-Svg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -218,8 +229,8 @@
                             <constraint firstItem="apc-Ou-6XE" firstAttribute="top" secondItem="9ma-rA-CPF" secondAttribute="bottom" constant="55" id="PUr-Dr-REO"/>
                             <constraint firstItem="Oyk-HV-0b8" firstAttribute="bottom" secondItem="K9R-XU-fDV" secondAttribute="bottom" constant="111" id="Ryb-pX-VZ1"/>
                             <constraint firstItem="K9R-XU-fDV" firstAttribute="leading" secondItem="Oyk-HV-0b8" secondAttribute="leading" id="S2A-dT-jhG"/>
-                            <constraint firstItem="Oyk-HV-0b8" firstAttribute="trailing" secondItem="apc-Ou-6XE" secondAttribute="trailing" constant="489" id="gf6-gn-tZu"/>
-                            <constraint firstItem="apc-Ou-6XE" firstAttribute="leading" secondItem="Oyk-HV-0b8" secondAttribute="leading" constant="490" id="jID-PR-a9v"/>
+                            <constraint firstItem="Oyk-HV-0b8" firstAttribute="trailing" secondItem="apc-Ou-6XE" secondAttribute="trailing" constant="460" id="gf6-gn-tZu"/>
+                            <constraint firstItem="apc-Ou-6XE" firstAttribute="leading" secondItem="Oyk-HV-0b8" secondAttribute="leading" constant="460" id="jID-PR-a9v"/>
                             <constraint firstItem="K9R-XU-fDV" firstAttribute="top" secondItem="Oyk-HV-0b8" secondAttribute="top" constant="262" id="u4P-CJ-b6j"/>
                             <constraint firstItem="Oyk-HV-0b8" firstAttribute="trailing" secondItem="K9R-XU-fDV" secondAttribute="trailing" id="yAS-ck-AWV"/>
                         </constraints>

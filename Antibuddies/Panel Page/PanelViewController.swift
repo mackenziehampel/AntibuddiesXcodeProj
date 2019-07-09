@@ -23,6 +23,10 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         tableView.backgroundView?.backgroundColor = .clear
        // tableView.allowsSelection = false;
     }
+    @IBAction func didSelectBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 12
     }
