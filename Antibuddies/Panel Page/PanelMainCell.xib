@@ -250,11 +250,17 @@
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFU-eT-bCS" userLabel="1+0">
                         <rect key="frame" x="40" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-Au-pjF" userLabel="2+0">
                         <rect key="frame" x="81.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectBigC:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ifd-WI-PCq"/>
                             <action selector="didSelectD:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AEc-LX-lPc"/>
@@ -262,132 +268,187 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-Ka-KTS" userLabel="3+0">
                         <rect key="frame" x="123" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectLittleC:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Fo-mc-tD8"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXU-fO-aDy" userLabel="4+0">
                         <rect key="frame" x="164.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectBigE:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Rz-b1-pCa"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu7-7R-I0e" userLabel="5+0">
                         <rect key="frame" x="206" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectLittleE:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="w4W-cU-rCq"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="am9-vH-CVY" userLabel="6+0">
                         <rect key="frame" x="247.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectF:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6xB-NE-kRY"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKp-px-oOX" userLabel="7+0">
                         <rect key="frame" x="289" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectV:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jnB-5A-yEi"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVw-0y-CQz" userLabel="8+0">
                         <rect key="frame" x="330.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectCW:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xaX-Jv-opy"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opK-EN-Gc7" userLabel="9+0">
                         <rect key="frame" x="372" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectBigK:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Bco-2P-ADU"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhr-0t-EZn" userLabel="10+0">
                         <rect key="frame" x="413.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectLittleK:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="U3W-I1-1Q8"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbu-Fd-5Tl" userLabel="11+0">
                         <rect key="frame" x="455" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectKPA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="E80-gi-SRg"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-KS-BAw" userLabel="12+0">
                         <rect key="frame" x="496.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectKPB:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IG6-UZ-1Up"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsn-jO-GdO" userLabel="13+0">
                         <rect key="frame" x="538" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectJSA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xy8-Lt-1Jp"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dm-Lx-pM4" userLabel="14+0">
                         <rect key="frame" x="579.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectJSB:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mrd-O0-lGg"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDS-BV-e0l" userLabel="15+0">
                         <rect key="frame" x="621" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectFYA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d2Y-8F-oze"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE2-WI-cUf" userLabel="16+0">
                         <rect key="frame" x="662.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectFYB:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ad6-4l-G4i"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lw-Yt-INw" userLabel="17+0">
                         <rect key="frame" x="704" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectJKA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8EO-7n-0nA"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-sy-rt2" userLabel="18+0">
                         <rect key="frame" x="745.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectJKB:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="H9d-TL-8o8"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3i-Tb-hYI" userLabel="19+0">
                         <rect key="frame" x="787" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectLEA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iw5-rx-1FQ"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-bl-ULA" userLabel="20+0">
                         <rect key="frame" x="828.5" y="0.0" width="40.5" height="49.5"/>
-                        <state key="normal" title="+"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                         <connections>
                             <action selector="didSelectLEB:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ya2-d9-Wi8"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA9-l5-JAY" userLabel="21+0">
                         <rect key="frame" x="870" y="0.0" width="40.5" height="49.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <state key="normal" title="+"/>
                         <connections>
                             <action selector="didSelectP1:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4yy-Sy-JWC"/>
@@ -462,8 +523,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="39" height="49.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGg-ng-Mgc">
-                                <rect key="frame" x="15.5" y="14.5" width="8" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="12" y="5" width="15.5" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
