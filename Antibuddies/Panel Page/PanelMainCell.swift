@@ -101,61 +101,82 @@ class PanelMainCell: UITableViewCell {
     }
     
     @IBAction func didSelectCW(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "Cw")
     }
     
     @IBAction func didSelectBigK(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "BigK")
     }
     
     @IBAction func didSelectLittleK(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "LittleK")
     }
     
     @IBAction func didSelectKPA(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "KPA")
     }
     
     @IBAction func didSelectKPB(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "KPB")
     }
     
     @IBAction func didSelectJSA(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "JSA")
     }
     
     @IBAction func didSelectJSB(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "JSB")
     }
     @IBAction func didSelectFYA(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "FYA")
     }
     
     @IBAction func didSelectFYB(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "FYB")
     }
     
     @IBAction func didSelectJKA(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "JKA")
     }
     @IBAction func didSelectJKB(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "JKB")
     }
     
     @IBAction func didSelectLEA(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "LEA")
     }
     @IBAction func didSelectLEB(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "LEB")
     }
     @IBAction func didSelectP1(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "P1")
     }
     
     @IBAction func didSelectM(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "M")
     }
     
     @IBAction func didSelectN(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "N")
     }
     
     @IBAction func didSelectBigS(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "BigS")
     }
     
     @IBAction func didSelectLittleS(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "LittleS")
     }
     
     @IBAction func didSelectLUA(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "LUA")
     }
     
     @IBAction func didSelectLUB(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "LUB")
     }
     @IBAction func didSelectXGA(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "XGA")
     }
     
 }

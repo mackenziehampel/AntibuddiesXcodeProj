@@ -269,10 +269,49 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yo-Mh-mJR">
+                                <rect key="frame" x="503" y="23" width="331" height="207"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="allelic pair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzn-0c-61W">
+                                        <rect key="frame" x="62" y="23" width="87" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2iJ-Np-tZX">
+                                        <rect key="frame" x="196" y="20" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didSwitchAllelicPair:" destination="0Ea-B2-NtS" eventType="valueChanged" id="aY6-BP-Ehz"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25487628579139709" green="0.25491836667060852" blue="0.25486710667610168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="331" id="aD3-ai-sYb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9ma-rA-CPF" firstAttribute="top" secondItem="crH-fX-UIb" secondAttribute="bottom" constant="14" id="5fm-Tb-bgh"/>
+                            <constraint firstItem="Oyk-HV-0b8" firstAttribute="top" secondItem="6yo-Mh-mJR" secondAttribute="top" constant="1" id="90s-i7-p34"/>
+                            <constraint firstItem="crH-fX-UIb" firstAttribute="leading" secondItem="6yo-Mh-mJR" secondAttribute="trailing" constant="36" id="ENb-x8-Dr8"/>
                             <constraint firstItem="apc-Ou-6XE" firstAttribute="bottom" secondItem="Oyk-HV-0b8" secondAttribute="bottom" constant="25" id="Fbo-f3-vm5"/>
                             <constraint firstItem="apc-Ou-6XE" firstAttribute="top" secondItem="9ma-rA-CPF" secondAttribute="bottom" constant="41" id="PUr-Dr-REO"/>
                             <constraint firstItem="Oyk-HV-0b8" firstAttribute="bottom" secondItem="K9R-XU-fDV" secondAttribute="bottom" constant="111" id="Ryb-pX-VZ1"/>
@@ -281,11 +320,13 @@
                             <constraint firstItem="crH-fX-UIb" firstAttribute="top" secondItem="Oyk-HV-0b8" secondAttribute="top" constant="-1" id="g5l-RS-mFJ"/>
                             <constraint firstItem="Oyk-HV-0b8" firstAttribute="trailing" secondItem="crH-fX-UIb" secondAttribute="trailing" constant="50" id="mnp-pk-hNv"/>
                             <constraint firstItem="K9R-XU-fDV" firstAttribute="top" secondItem="Oyk-HV-0b8" secondAttribute="top" constant="262" id="u4P-CJ-b6j"/>
+                            <constraint firstItem="9ma-rA-CPF" firstAttribute="top" secondItem="6yo-Mh-mJR" secondAttribute="bottom" constant="14" id="vvZ-no-U7E"/>
                             <constraint firstItem="Oyk-HV-0b8" firstAttribute="trailing" secondItem="K9R-XU-fDV" secondAttribute="trailing" id="yAS-ck-AWV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oyk-HV-0b8"/>
                     </view>
                     <connections>
+                        <outlet property="allelicSwitch" destination="2iJ-Np-tZX" id="OdB-BU-zmk"/>
                         <outlet property="tableView" destination="9ma-rA-CPF" id="cv0-Ih-zvX"/>
                     </connections>
                 </viewController>

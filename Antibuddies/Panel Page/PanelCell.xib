@@ -533,6 +533,13 @@
                             <constraint firstAttribute="height" constant="2" id="cfz-Hr-Bj5"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-Wz-KhA" userLabel="PairCc">
+                        <rect key="frame" x="101" y="32" width="47" height="41"/>
+                        <color key="backgroundColor" red="0.96991601970139896" green="0.97647899389266968" blue="0.30592532566625158" alpha="0.51134417808219179" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="5ZS-eN-nV3"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Poc-1b-De0" firstAttribute="leading" secondItem="Pow-lH-rlH" secondAttribute="trailing" id="0TV-Ez-hg0"/>
@@ -590,6 +597,7 @@
                     <constraint firstItem="aMn-zU-zuV" firstAttribute="top" secondItem="5wh-Po-wIO" secondAttribute="bottom" id="HZr-HA-zJo"/>
                     <constraint firstItem="5wh-Po-wIO" firstAttribute="top" secondItem="T9d-ax-ogn" secondAttribute="bottom" id="I6H-VY-fGW"/>
                     <constraint firstAttribute="bottom" secondItem="dEE-nW-sdH" secondAttribute="bottom" id="I6O-c8-sIW"/>
+                    <constraint firstAttribute="bottom" secondItem="VDn-Wz-KhA" secondAttribute="bottom" constant="26.5" id="Ilx-l1-h5d"/>
                     <constraint firstItem="zko-pd-vIQ" firstAttribute="leading" secondItem="vMR-Uv-iLC" secondAttribute="trailing" id="JtM-gl-0qV"/>
                     <constraint firstItem="yRQ-My-9me" firstAttribute="leading" secondItem="Nf4-EP-V61" secondAttribute="trailing" id="K4r-fS-P1Z"/>
                     <constraint firstItem="b0w-Gy-OFI" firstAttribute="top" secondItem="wjJ-vy-4aP" secondAttribute="top" id="KJO-8u-tNV"/>
@@ -610,6 +618,7 @@
                     <constraint firstItem="5wh-Po-wIO" firstAttribute="top" secondItem="lIm-pB-q9i" secondAttribute="bottom" id="RqK-ko-10X"/>
                     <constraint firstItem="7fO-5n-m4S" firstAttribute="leading" secondItem="q99-m1-dPk" secondAttribute="trailing" id="S1y-MF-6wI"/>
                     <constraint firstAttribute="bottom" secondItem="nUh-aW-c6T" secondAttribute="bottom" id="T7d-bA-6Iy"/>
+                    <constraint firstItem="Mog-OZ-Aeh" firstAttribute="leading" secondItem="VDn-Wz-KhA" secondAttribute="trailing" constant="17" id="THn-k3-yVA"/>
                     <constraint firstItem="CJf-Tw-bpD" firstAttribute="leading" secondItem="guj-8b-QTP" secondAttribute="trailing" id="TpR-GX-LbX"/>
                     <constraint firstAttribute="bottom" secondItem="aMn-zU-zuV" secondAttribute="bottom" id="TvO-zx-rYc"/>
                     <constraint firstItem="g2c-za-8gO" firstAttribute="leading" secondItem="Ed5-Ir-7MG" secondAttribute="trailing" id="Tva-jC-TPR"/>
@@ -697,6 +706,7 @@
                     <constraint firstItem="5wh-Po-wIO" firstAttribute="top" secondItem="Zkp-be-Cg6" secondAttribute="bottom" id="viW-KV-hQq"/>
                     <constraint firstItem="Mog-OZ-Aeh" firstAttribute="leading" secondItem="WEk-vx-Bn6" secondAttribute="trailing" id="vok-Aq-19E"/>
                     <constraint firstAttribute="bottom" secondItem="Uf9-26-AFn" secondAttribute="bottom" id="wGt-HP-8WP"/>
+                    <constraint firstItem="VDn-Wz-KhA" firstAttribute="leading" secondItem="4nR-W5-Ogq" secondAttribute="trailing" constant="18" id="wLe-qU-DNe"/>
                     <constraint firstAttribute="bottom" secondItem="txF-iv-7kc" secondAttribute="bottom" id="wfO-bI-GW1"/>
                     <constraint firstItem="MCd-nF-S91" firstAttribute="leading" secondItem="lIm-pB-q9i" secondAttribute="trailing" id="woh-42-5N1"/>
                     <constraint firstItem="5wh-Po-wIO" firstAttribute="leading" secondItem="wjJ-vy-4aP" secondAttribute="leading" id="xY6-7K-fj0"/>
@@ -728,7 +738,9 @@
                 <outlet property="Leb" destination="gOJ-rl-KxL" id="9e5-rA-Mdb"/>
                 <outlet property="Lua" destination="WYO-rV-IFg" id="RaF-xA-sEv"/>
                 <outlet property="Lub" destination="buo-w5-Ekr" id="o0B-Kq-Ymh"/>
+                <outlet property="P1" destination="4ey-X5-7WL" id="Yvi-Rf-8Kq"/>
                 <outlet property="Xga" destination="dvt-6a-zNf" id="pWk-bC-FDs"/>
+                <outlet property="pairCc" destination="VDn-Wz-KhA" id="y69-Kk-Agr"/>
             </connections>
             <point key="canvasLocation" x="-323.1884057971015" y="-143.30357142857142"/>
         </tableViewCell>

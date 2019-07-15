@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class PanelCell: UITableViewCell {
+
+//Allelic Pairs
+class PanelCell: UITableViewCell, AllelicSwitchDelegate {
+   
+    
+    @IBOutlet weak var pairCc: UIView!
     
     @IBOutlet weak var E: UILabel!
     @IBOutlet weak var Cw: UILabel!
@@ -26,10 +31,16 @@ class PanelCell: UITableViewCell {
     @IBOutlet weak var Lua: UILabel!
     @IBOutlet weak var Lub: UILabel!
     @IBOutlet weak var Xga: UILabel!
+    @IBOutlet weak var P1: UILabel!
+    
     
     let x = 0
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.pairCc.backgroundColor = UIColor.clear
+       
+        
         let font:UIFont? = UIFont(name: "HelveticaNeue-Bold", size:22)
         let fontSuper:UIFont? = UIFont(name: "HelveticaNeue-Bold", size:15)
         
@@ -90,10 +101,53 @@ class PanelCell: UITableViewCell {
         xgaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
         self.Xga.attributedText = xgaAttString
         
+        let pAttString:NSMutableAttributedString = NSMutableAttributedString(string: "P1", attributes: [.font:font!])
+        pAttString.setAttributes([.font:fontSuper!,.baselineOffset:-4], range: NSRange(location:1,length:1))
+        self.P1.attributedText =  pAttString
+        
     }
     
     
     
     
+   
     
+    func turnOnAllelicPairs() {
+        let highlightColor = UIColor.init(red: (247.0/255.0), green: (249.0/255.0), blue: (78.0/255.0), alpha: 1.0)
+        
+        self.pairCc.addBorder(toSide: .left, withColor: highlightColor as! CGColor, andThickness: 5.0)
+        self.pairCc.addBorder(toSide: .top, withColor: highlightColor as! CGColor, andThickness: 5.0)
+        self.pairCc.addBorder(toSide: .right, withColor: highlightColor as! CGColor, andThickness: 2.0)
+        
+        self.pairCc.backgroundColor = UIColor.init(red: (247.0/255.0), green: (249.0/255.0), blue: (78.0/255.0), alpha: 0.51)
+    }
+    
+    func turnOffAllelicPairs() {
+        print("test")
+    }
+    
+    
+}
+extension UIView {
+    
+    // Example use: myView.addBorder(toSide: .Left, withColor: UIColor.redColor().CGColor, andThickness: 1.0)
+    
+    enum ViewSide {
+        case left, right, top, bottom
+    }
+    
+    func addBorder(toSide side: ViewSide, withColor color: CGColor, andThickness thickness: CGFloat) {
+        
+        let border = CALayer()
+        border.backgroundColor = color
+        
+        switch side {
+        case .left: border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height)
+        case .right: border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height)
+        case .top: border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness)
+        case .bottom: border.frame = CGRect(x: frame.minX, y: frame.maxY, width: frame.width, height: thickness)
+        }
+        
+        layer.addSublayer(border)
+    }
 }
