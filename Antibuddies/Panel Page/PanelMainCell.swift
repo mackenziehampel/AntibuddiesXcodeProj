@@ -49,10 +49,13 @@ class PanelMainCell: UITableViewCell {
     @IBOutlet weak var CC: UIButton!
     var panelData = [UIButton]()
     var delegate: buttonTapped!
+    var cellIndexPath = 0
+    var cellRow = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         
         panelData = [D, bigC, littleC, bigE, littleE, f, V, Cw, BigK, littleK, Kpa, Kpb,Jsa,JSb,Fya,Fyb,Jka, Jkb,Lea,Leb,P1,M,N,S,littleS,Lua,Lub,Xga,IS,thirtySeven,AHG,CC]
     }
@@ -61,6 +64,9 @@ class PanelMainCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         //get data from server and load.
         // Configure the view for the selected state
+        
+    }
+    func setCells(){
         
     }
     
@@ -88,8 +94,10 @@ class PanelMainCell: UITableViewCell {
     }
     
     @IBAction func didSelectF(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "F")
     }
     @IBAction func didSelectV(_ sender: Any) {
+        self.delegate.buttonTapped(cell: self, buttonColumn: "V")
     }
     
     @IBAction func didSelectCW(_ sender: Any) {

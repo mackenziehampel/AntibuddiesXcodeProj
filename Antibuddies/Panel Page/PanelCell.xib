@@ -716,6 +716,19 @@
             <connections>
                 <outlet property="Cw" destination="17F-N6-yuX" id="zh3-UA-ga4"/>
                 <outlet property="E" destination="dEE-nW-sdH" id="PDe-We-eld"/>
+                <outlet property="Fya" destination="yRQ-My-9me" id="eST-i3-eGB"/>
+                <outlet property="Fyb" destination="Uf9-26-AFn" id="Tja-l6-nAk"/>
+                <outlet property="Jka" destination="txF-iv-7kc" id="J3u-cG-0YF"/>
+                <outlet property="Jkb" destination="M9a-0L-05w" id="hDd-3V-YYY"/>
+                <outlet property="Jsa" destination="z5E-6S-WeQ" id="6k1-aL-Gd6"/>
+                <outlet property="Jsb" destination="CJf-Tw-bpD" id="uEu-pz-DBu"/>
+                <outlet property="Kpa" destination="vcW-sI-6Ps" id="H8c-Vf-xeP"/>
+                <outlet property="Kpb" destination="SyK-pp-2ws" id="qHF-SR-gTY"/>
+                <outlet property="Lea" destination="J3o-4Y-fBK" id="6Um-0b-ejp"/>
+                <outlet property="Leb" destination="gOJ-rl-KxL" id="9e5-rA-Mdb"/>
+                <outlet property="Lua" destination="WYO-rV-IFg" id="RaF-xA-sEv"/>
+                <outlet property="Lub" destination="buo-w5-Ekr" id="o0B-Kq-Ymh"/>
+                <outlet property="Xga" destination="dvt-6a-zNf" id="pWk-bC-FDs"/>
             </connections>
             <point key="canvasLocation" x="-323.1884057971015" y="-143.30357142857142"/>
         </tableViewCell>

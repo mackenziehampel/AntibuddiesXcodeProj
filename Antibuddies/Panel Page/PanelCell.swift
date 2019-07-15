@@ -13,13 +13,87 @@ class PanelCell: UITableViewCell {
     
     @IBOutlet weak var E: UILabel!
     @IBOutlet weak var Cw: UILabel!
+    @IBOutlet weak var Kpa: UILabel!
+    @IBOutlet weak var Kpb: UILabel!
+    @IBOutlet weak var Jsa: UILabel!
+    @IBOutlet weak var Jsb: UILabel!
+    @IBOutlet weak var Fya: UILabel!
+    @IBOutlet weak var Fyb: UILabel!
+    @IBOutlet weak var Jka: UILabel!
+    @IBOutlet weak var Jkb: UILabel!
+    @IBOutlet weak var Lea: UILabel!
+    @IBOutlet weak var Leb: UILabel!
+    @IBOutlet weak var Lua: UILabel!
+    @IBOutlet weak var Lub: UILabel!
+    @IBOutlet weak var Xga: UILabel!
+    
     let x = 0
     override func awakeFromNib() {
         super.awakeFromNib()
-        let font:UIFont? = UIFont(name: "Arial", size:27)
-        let fontSuper:UIFont? = UIFont(name: "Arial", size:15)
-//        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "Cw", attributes: [.font:font!])
-//        attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:8,length:2))
-//        Cw.attributedText = attString
+        let font:UIFont? = UIFont(name: "HelveticaNeue-Bold", size:22)
+        let fontSuper:UIFont? = UIFont(name: "HelveticaNeue-Bold", size:15)
+        
+        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "Cw", attributes: [.font:font!])
+        attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:1,length:1))
+        self.Cw.attributedText = attString
+        
+        let kpaAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Kpa", attributes: [.font:font!])
+        kpaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Kpa.attributedText = kpaAttString
+        
+        let kpbAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Kpb", attributes: [.font:font!])
+        kpbAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Kpb.attributedText = kpbAttString
+        
+        
+        let jsaAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Jsa", attributes: [.font:font!])
+        jsaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Jsa.attributedText = jsaAttString
+        
+        let jsbAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Jsb", attributes: [.font:font!])
+        jsbAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Jsb.attributedText = jsbAttString
+        
+        let fyaAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Fya", attributes: [.font:font!])
+        fyaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Fya.attributedText = fyaAttString
+        
+        let fybAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Fyb", attributes: [.font:font!])
+        fybAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Fyb.attributedText = fybAttString
+        
+        let jkaAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Jka", attributes: [.font:font!])
+        jkaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Jka.attributedText = jkaAttString
+        
+        let jkbAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Jkb", attributes: [.font:font!])
+        jkbAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Jkb.attributedText = jkbAttString
+        
+        let leaAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Lea", attributes: [.font:font!])
+        leaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Lea.attributedText = leaAttString
+        
+        let lebAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Leb", attributes: [.font:font!])
+        lebAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Leb.attributedText = lebAttString
+        
+        let luaAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Lua", attributes: [.font:font!])
+        luaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Lua.attributedText = luaAttString
+        
+        let lubAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Lub", attributes: [.font:font!])
+        lubAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Lub.attributedText = lubAttString
+        
+        let xgaAttString:NSMutableAttributedString = NSMutableAttributedString(string: "Xga", attributes: [.font:font!])
+        xgaAttString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:2,length:1))
+        self.Xga.attributedText = xgaAttString
+        
     }
+    
+    
+    
+    
+    
 }

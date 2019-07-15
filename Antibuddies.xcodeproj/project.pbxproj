@@ -10,6 +10,7 @@
 		1577CA5DD19FFFEF6E189E61 /* Pods_AntibuddiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */; };
 		1DBEAA71CC12049E29AED7D4 /* Pods_Antibuddies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFF53C769C22903D7037432 /* Pods_Antibuddies.framework */; };
 		2143EA5E8F4BDF41141BDF00 /* Pods_AntibuddiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */; };
+		850242C922D80BB100102E1F /* ViewWithDiagonalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850242C822D80BB100102E1F /* ViewWithDiagonalLine.swift */; };
 		8537B9D822A74B4D00B61ED7 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537B9D722A74B4D00B61ED7 /* PanelViewController.swift */; };
 		855182CE229CB9430002225B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855182CD229CB9430002225B /* Extensions.swift */; };
 		8552B1ED22AB200000FA3E3C /* PanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8552B1EC22AB200000FA3E3C /* PanelCell.xib */; };
@@ -61,6 +62,7 @@
 		412C4C4DC6F5584FFA8E5151 /* Pods-AntibuddiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesTests.release.xcconfig"; path = "Target Support Files/Pods-AntibuddiesTests/Pods-AntibuddiesTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EFF53C769C22903D7037432 /* Pods_Antibuddies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Antibuddies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EAD00665E884A6E8FC5DAF /* Pods-AntibuddiesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.release.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		850242C822D80BB100102E1F /* ViewWithDiagonalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithDiagonalLine.swift; sourceTree = "<group>"; };
 		8537B9D722A74B4D00B61ED7 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 		855182CD229CB9430002225B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8552B1EC22AB200000FA3E3C /* PanelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanelCell.xib; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				85AE153822B074E6005DCE14 /* PanelCell.swift */,
 				856620AF22B9B25F00E7BCD9 /* PanelMainCell.swift */,
 				856620B022B9B25F00E7BCD9 /* PanelMainCell.xib */,
+				850242C822D80BB100102E1F /* ViewWithDiagonalLine.swift */,
 				8537B9D722A74B4D00B61ED7 /* PanelViewController.swift */,
 			);
 			path = "Panel Page";
@@ -480,6 +483,7 @@
 				856E989122D56D4E00569597 /* SelectCourseViewController.swift in Sources */,
 				8537B9D822A74B4D00B61ED7 /* PanelViewController.swift in Sources */,
 				859AA6C322D41CA5002260A2 /* PatientFinderTableViewController.swift in Sources */,
+				850242C922D80BB100102E1F /* ViewWithDiagonalLine.swift in Sources */,
 				858EEB7822A9E0CF007E8018 /* PanelCollectionViewController.swift in Sources */,
 				856620B122B9B26000E7BCD9 /* PanelMainCell.swift in Sources */,
 				859AA6C622D41DF2002260A2 /* PatientCell.swift in Sources */,
