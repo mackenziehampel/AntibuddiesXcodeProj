@@ -739,6 +739,7 @@
                 <outlet property="Xga" destination="bD2-hq-sMy" id="3i6-dB-QE2"/>
                 <outlet property="bigC" destination="7n4-Au-pjF" id="7j2-ce-F0r"/>
                 <outlet property="bigE" destination="eXU-fO-aDy" id="7L0-6H-GFF"/>
+                <outlet property="cellContentView" destination="H2p-sc-9uM" id="sb9-KN-fvB"/>
                 <outlet property="f" destination="am9-vH-CVY" id="K6x-oc-ra9"/>
                 <outlet property="greyNumberLbl" destination="dGg-ng-Mgc" id="BHu-PL-Gkx"/>
                 <outlet property="littleC" destination="zHg-Ka-KTS" id="fuX-P6-yiI"/>

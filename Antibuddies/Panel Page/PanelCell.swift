@@ -11,10 +11,15 @@ import UIKit
 
 
 //Allelic Pairs
-class PanelCell: UITableViewCell, AllelicSwitchDelegate {
+class PanelCell: UITableViewCell {
    
     
     @IBOutlet weak var pairCc: UIView!
+    @IBOutlet weak var pairEe: UIView!
+    @IBOutlet weak var pairJkaJkb: UIView!
+    @IBOutlet weak var pairFyaFyb: UIView!
+    @IBOutlet weak var pairMN: UIView!
+    @IBOutlet weak var PairSs: UIView!
     
     @IBOutlet weak var E: UILabel!
     @IBOutlet weak var Cw: UILabel!
@@ -34,12 +39,26 @@ class PanelCell: UITableViewCell, AllelicSwitchDelegate {
     @IBOutlet weak var P1: UILabel!
     
     
+    
+    
     let x = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.pairCc.backgroundColor = UIColor.clear
-       
+        self.turnOnAllelicPairs(passedView: self.pairCc)
+        self.turnOnAllelicPairs(passedView: self.pairEe)
+        self.turnOnAllelicPairs(passedView: self.pairFyaFyb)
+        self.turnOnAllelicPairs(passedView: self.pairJkaJkb)
+        self.turnOnAllelicPairs(passedView: self.pairMN)
+        self.turnOnAllelicPairs(passedView: self.PairSs)
+        
+        self.pairCc.isHidden = true
+        self.pairEe.isHidden = true
+        self.pairFyaFyb.isHidden = true
+        self.pairJkaJkb.isHidden = true
+        self.pairMN.isHidden = true
+        self.PairSs.isHidden = true
+        
         
         let font:UIFont? = UIFont(name: "HelveticaNeue-Bold", size:22)
         let fontSuper:UIFont? = UIFont(name: "HelveticaNeue-Bold", size:15)
@@ -107,47 +126,27 @@ class PanelCell: UITableViewCell, AllelicSwitchDelegate {
         
     }
     
-    
-    
-    
-   
-    
-    func turnOnAllelicPairs() {
-        let highlightColor = UIColor.init(red: (247.0/255.0), green: (249.0/255.0), blue: (78.0/255.0), alpha: 1.0)
+    func turnOnAllelicPairs(passedView: UIView) {
+        let highlightColor = UIColor.init(red: (223.0/255.0), green: (168.0/255.0), blue: (1.0/255.0), alpha: 1.0)
         
-        self.pairCc.addBorder(toSide: .left, withColor: highlightColor as! CGColor, andThickness: 5.0)
-        self.pairCc.addBorder(toSide: .top, withColor: highlightColor as! CGColor, andThickness: 5.0)
-        self.pairCc.addBorder(toSide: .right, withColor: highlightColor as! CGColor, andThickness: 2.0)
+       // self.pairCc.addBorder(toSide: .left, withColor: highlightColor as! CGColor, andThickness: 5.0)
+        //self.pairCc.addBorder(toSide: .top, withColor: highlightColor as! CGColor, andThickness: 5.0)
+        //self.pairCc.addBorder(toSide: .right, withColor: highlightColor as! CGColor, andThickness: 2.0)
+        let topBorder: CALayer = CALayer()
+        topBorder.frame = CGRect(x: 0.0, y: 0.0, width: passedView.frame.size.width, height: 3.0)
+        topBorder.backgroundColor = highlightColor.cgColor
+        passedView.layer.addSublayer(topBorder)
+        let leftSideBorder: CALayer = CALayer()
+        leftSideBorder.frame = CGRect(x: 0.0, y: 0.0, width: 3.0, height: passedView.frame.size.height)
+        leftSideBorder.backgroundColor = highlightColor.cgColor
+        passedView.layer.addSublayer(leftSideBorder)
+        let rightSideBorder: CALayer = CALayer()
+        rightSideBorder.frame = CGRect(x: passedView.frame.size.width - 3.0, y: 0.0, width: 3.0, height: passedView.frame.size.height)
+        rightSideBorder.backgroundColor = highlightColor.cgColor
+        passedView.layer.addSublayer(rightSideBorder)
         
-        self.pairCc.backgroundColor = UIColor.init(red: (247.0/255.0), green: (249.0/255.0), blue: (78.0/255.0), alpha: 0.51)
+        passedView.backgroundColor =  UIColor.init(red: (247.0/255.0), green: (249.0/255.0), blue: (78.0/255.0), alpha: 0.30)
     }
     
-    func turnOffAllelicPairs() {
-        print("test")
-    }
     
-    
-}
-extension UIView {
-    
-    // Example use: myView.addBorder(toSide: .Left, withColor: UIColor.redColor().CGColor, andThickness: 1.0)
-    
-    enum ViewSide {
-        case left, right, top, bottom
-    }
-    
-    func addBorder(toSide side: ViewSide, withColor color: CGColor, andThickness thickness: CGFloat) {
-        
-        let border = CALayer()
-        border.backgroundColor = color
-        
-        switch side {
-        case .left: border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height)
-        case .right: border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height)
-        case .top: border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness)
-        case .bottom: border.frame = CGRect(x: frame.minX, y: frame.maxY, width: frame.width, height: thickness)
-        }
-        
-        layer.addSublayer(border)
-    }
 }

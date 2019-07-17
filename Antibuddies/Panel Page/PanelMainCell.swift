@@ -14,6 +14,7 @@ protocol buttonTapped {
 
 class PanelMainCell: UITableViewCell {
 
+    @IBOutlet var cellContentView: UIView!
     @IBOutlet weak var greyNumberLbl: UILabel!
     @IBOutlet weak var D: UIButton!
     @IBOutlet weak var bigC: UIButton!

@@ -16,18 +16,16 @@ struct Cells {
     var row = Int() //so we can send row answers to server
 }
 
-protocol AllelicSwitchDelegate {
-    func turnOnAllelicPairs()
-    func turnOffAllelicPairs()
-}
 //TODO: remove from CELLS
 class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource, buttonTapped {
    
   @IBOutlet weak var tableView: UITableView!
     var cells = [Cells]()
     @IBOutlet weak var allelicSwitch: UISwitch!
-    var allelicDelegate: AllelicSwitchDelegate!
-    
+    @IBOutlet weak var gradeRowBtn: UIButton!
+    @IBOutlet weak var gradeAllRowsBtn: UIButton!
+    var selectedCell = -1
+    var regularBackgroundColor = UIColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +34,7 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         self.tableView.register(UINib(nibName: "PanelCell", bundle: nil), forCellReuseIdentifier: "PanelCell")
         self.tableView.register(UINib(nibName: "PanelMainCell", bundle: nil), forCellReuseIdentifier: "PanelMainCell")
         tableView.backgroundView?.backgroundColor = .clear
-       
+        
        // tableView.allowsSelection = false;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,9 +53,34 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PanelCell", for: indexPath) as! PanelCell
             
+            if allelicSwitch.isOn {
+                cell.pairCc.isHidden = false
+                cell.pairEe.isHidden = false
+                cell.pairFyaFyb.isHidden = false
+                cell.pairJkaJkb.isHidden = false
+                cell.pairMN.isHidden = false
+                cell.PairSs.isHidden = false
+            } else {
+                cell.pairCc.isHidden = true
+                cell.pairEe.isHidden = true
+                cell.pairFyaFyb.isHidden = true
+                cell.pairJkaJkb.isHidden = true
+                cell.pairMN.isHidden = true
+                cell.PairSs.isHidden = true
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PanelMainCell", for: indexPath) as! PanelMainCell
+         //   regularBackgroundColor = cell.contentView.backgroundColor!
+            cell.selectionStyle = .none
+            if indexPath.row == selectedCell {
+                UIView.animate(withDuration: 0.1, animations: {
+                    cell.contentView.backgroundColor = UIColor.init(red: (255.0/255.0), green: (247.0/255.0), blue: (109.0/255.0), alpha: 0.80)
+                    
+                })
+            } else {
+                 cell.contentView.backgroundColor = UIColor.clear
+            }
             cell.greyNumberLbl.text = indexPath.row.description
             cell.delegate = self
             return cell
@@ -67,7 +90,17 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("here")
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            
+            if indexPath.row == 0 {
+                cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            } else {
+                 self.selectedCell = indexPath.row
+                 tableView.reloadData()
+               
+            }
+        }
     }
     
     @objc func checkAction(sender : UITapGestureRecognizer) {
@@ -646,9 +679,9 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     
     @IBAction func didSwitchAllelicPair(_ sender: Any) {
         if allelicSwitch.isOn {
-            self.allelicDelegate?.turnOnAllelicPairs()
+            self.tableView.reloadData()
         } else {
-           // allelicDelegate.turnOffAllelicPairs()
+           self.tableView.reloadData()
         }
         
     }

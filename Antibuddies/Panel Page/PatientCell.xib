@@ -70,6 +70,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="patientNumber" destination="E9S-ec-8sS" id="Aip-Uo-aNf"/>
+                <outlet property="roundedView" destination="56x-Cz-sLU" id="jgX-Ss-AFf"/>
             </connections>
             <point key="canvasLocation" x="84.782608695652186" y="96.09375"/>
         </tableViewCell>
