@@ -6,14 +6,9 @@ target 'Antibuddies' do
   use_frameworks!
 
   # Pods for Antibuddies
-pod 'Firebase/Core'
-pod 'Firebase/Auth'
-pod 'Firebase/Analytics'
-pod 'Firebase/Functions'
-pod 'Firebase/Database'
-pod 'Firebase/Firestore'
-pod 'Alamofire'
-
+     pod 'AWSCognito'
+     pod 'AWSCognitoIdentityProvider'
+     pod 'AWSLambda'
 
   target 'AntibuddiesTests' do
     inherit! :search_paths
