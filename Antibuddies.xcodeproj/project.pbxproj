@@ -40,6 +40,9 @@
 		85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */; };
 		9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353222E0129E00992868 /* User+CoreDataClass.swift */; };
 		9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */; };
+		9A9B353822E013AC00992868 /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353722E013AC00992868 /* LambdaBase.swift */; };
+		9A9B353A22E0148300992868 /* DownloadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353922E0148300992868 /* DownloadUser.swift */; };
+		9A9B353D22E0152C00992868 /* EntityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353C22E0152C00992868 /* EntityInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A9B353222E0129E00992868 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9A9B353722E013AC00992868 /* LambdaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaBase.swift; sourceTree = "<group>"; };
+		9A9B353922E0148300992868 /* DownloadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUser.swift; sourceTree = "<group>"; };
+		9A9B353C22E0152C00992868 /* EntityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityInteractor.swift; sourceTree = "<group>"; };
 		ABE4C2421122535EA0894A59 /* Pods-Antibuddies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.debug.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.debug.xcconfig"; sourceTree = "<group>"; };
 		B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -224,6 +230,8 @@
 		855FBA2D228E1C1900C086F2 /* Antibuddies */ = {
 			isa = PBXGroup;
 			children = (
+				9A9B353B22E0150700992868 /* AppManagement */,
+				9A9B353622E0137800992868 /* Sync */,
 				9A9B353122E0123200992868 /* CoreDataEntities */,
 				8552B1EB22AB1F7300FA3E3C /* Panel Page */,
 				8552B1EA22AB1F2500FA3E3C /* Main Menu and Login */,
@@ -264,6 +272,23 @@
 				9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */,
 			);
 			path = CoreDataEntities;
+			sourceTree = "<group>";
+		};
+		9A9B353622E0137800992868 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				9A9B353722E013AC00992868 /* LambdaBase.swift */,
+				9A9B353922E0148300992868 /* DownloadUser.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		9A9B353B22E0150700992868 /* AppManagement */ = {
+			isa = PBXGroup;
+			children = (
+				9A9B353C22E0152C00992868 /* EntityInteractor.swift */,
+			);
+			path = AppManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +534,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9B353822E013AC00992868 /* LambdaBase.swift in Sources */,
+				9A9B353D22E0152C00992868 /* EntityInteractor.swift in Sources */,
 				856E989122D56D4E00569597 /* SelectCourseViewController.swift in Sources */,
 				8537B9D822A74B4D00B61ED7 /* PanelViewController.swift in Sources */,
 				859AA6C322D41CA5002260A2 /* PatientFinderTableViewController.swift in Sources */,
@@ -516,6 +543,7 @@
 				858EEB7822A9E0CF007E8018 /* PanelCollectionViewController.swift in Sources */,
 				856620B122B9B26000E7BCD9 /* PanelMainCell.swift in Sources */,
 				859AA6C622D41DF2002260A2 /* PatientCell.swift in Sources */,
+				9A9B353A22E0148300992868 /* DownloadUser.swift in Sources */,
 				85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */,
 				9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */,
 				9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */,
