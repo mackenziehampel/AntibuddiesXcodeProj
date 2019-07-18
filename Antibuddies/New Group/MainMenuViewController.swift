@@ -8,18 +8,13 @@
 
 import Foundation
 import UIKit
-import FirebaseDatabase
-import FirebaseFunctions
 
 class MainMenuViewController: UIViewController {
     
     @IBOutlet weak var beginnerBtn: UIButton!
     @IBOutlet weak var intermediateBtn: UIButton!
     @IBOutlet weak var advancedBtn: UIButton!
-    lazy var functions = Functions.functions()
     @IBOutlet weak var firstNameLbl: UILabel!
-    
-    var ref:DatabaseReference = Database.database().reference()
     
    // @IBOutlet weak var messageFromBeyond: UILabel!
     @IBOutlet weak var messageFromBeyone: UITextField!
@@ -28,88 +23,12 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-//                functions.httpsCallable("helloWorldCallable").call(["data":"test"]) { (result, error) in
-//                    if let error = error as NSError? {
-//                        if error.domain == FunctionsErrorDomain {
-//                            let code = FunctionsErrorCode(rawValue: error.code)
-//                            let message = error.localizedDescription
-//                            let details = error.userInfo[FunctionsErrorDetailsKey]
-//                            print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
-//                        }
-//                        // ...
-//                    }
-//                    if let text = (result?.data as? [String: Any])?["data"] as? String {
-//
-//                    }
-//        }
-        
-
-//        functions.httpsCallable("getUserCallable").call(["firstName": "Sally"]) { (result, error) in
-//            if let error = error as NSError? {
-//                if error.domain == FunctionsErrorDomain {
-//                    let code = FunctionsErrorCode(rawValue: error.code)
-//                    let message = error.localizedDescription
-//                    let details = error.userInfo[FunctionsErrorDetailsKey]
-//                    print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
-//                }
-//                // ...
-//            }
-//
-//
-//            if let text = (result?.data as? [String: Any])?["firstName"] as? String { //user.firstName
-//               // self.firstNameLbl.text =
-//
-//            }
-//        }
-
-        
-        let url = URL(string:  "https://us-central1-antibuddies-274a7.cloudfunctions.net/helloWorld")!
-        
-        let urlReq = URLRequest(url: url)
-        
-//        let students = Alamofire.request(urlReq).validate().responseJSON { (response) in
-//            switch response.result{
-//            case .success(let value):
-//                completion(JSON(value), nil)
-//            case .failure(let error):
-//                completion(nil, String(describing: error))
-//            }
-//        }
        
     }
     
     @IBAction func didselect(_ sender: Any) {
         
-        ref.child("User").setValue("A.Lincoln")
-        
-        
-
-//        functions.httpsCallable("helloWorldCallable").call(["data": self.messageFromBeyone.text]) { (result, error) in
-//            if let error = error as NSError? {
-//                if error.domain == FunctionsErrorDomain {
-//                    let code = FunctionsErrorCode(rawValue: error.code)
-//                    let message = error.localizedDescription
-//                    let details = error.userInfo[FunctionsErrorDetailsKey]
-//                    print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
-//                }
-//                // ...
-//            }
-
-        
     }
-//        functions.httpsCallable("helloWorldCallable").call(["data":"test"]) { (result, error) in
-//            if let error = error as NSError? {
-//                if error.domain == FunctionsErrorDomain {
-//                    let code = FunctionsErrorCode(rawValue: error.code)
-//                    let message = error.localizedDescription
-//                    let details = error.userInfo[FunctionsErrorDetailsKey]
-//                    print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
-//                }
-//                // ...
-//            }
-//            if let text = (result?.data as? [String: Any])?["data"] as? String {
-//                self.messageFromBeyone.text = text
-//            }
    
 
     @IBAction func didSelectBeginner(_ sender: Any) {

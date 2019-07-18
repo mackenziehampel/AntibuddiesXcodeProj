@@ -38,6 +38,8 @@
 		85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */; };
 		85C39C2E22A74048008D2E96 /* Panel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2D22A74048008D2E96 /* Panel.storyboard */; };
 		85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */; };
+		9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353222E0129E00992868 /* User+CoreDataClass.swift */; };
+		9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.release.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.release.xcconfig"; sourceTree = "<group>"; };
 		96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A9B353222E0129E00992868 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABE4C2421122535EA0894A59 /* Pods-Antibuddies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.debug.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.debug.xcconfig"; sourceTree = "<group>"; };
 		B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,6 +224,7 @@
 		855FBA2D228E1C1900C086F2 /* Antibuddies */ = {
 			isa = PBXGroup;
 			children = (
+				9A9B353122E0123200992868 /* CoreDataEntities */,
 				8552B1EB22AB1F7300FA3E3C /* Panel Page */,
 				8552B1EA22AB1F2500FA3E3C /* Main Menu and Login */,
 				8552B1E922AB1EF000FA3E3C /* Panel Picker */,
@@ -250,6 +255,15 @@
 				855FBA53228E1C1E00C086F2 /* Info.plist */,
 			);
 			path = AntibuddiesUITests;
+			sourceTree = "<group>";
+		};
+		9A9B353122E0123200992868 /* CoreDataEntities */ = {
+			isa = PBXGroup;
+			children = (
+				9A9B353222E0129E00992868 /* User+CoreDataClass.swift */,
+				9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreDataEntities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,6 +517,8 @@
 				856620B122B9B26000E7BCD9 /* PanelMainCell.swift in Sources */,
 				859AA6C622D41DF2002260A2 /* PatientCell.swift in Sources */,
 				85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */,
+				9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */,
+				9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */,
 				855FBA31228E1C1900C086F2 /* ViewController.swift in Sources */,
 				857011EF229E075E00FBA10F /* MainMenuViewController.swift in Sources */,
 				855FBA37228E1C1900C086F2 /* Antibuddies.xcdatamodeld in Sources */,
@@ -686,8 +702,9 @@
 			baseConfigurationReference = ABE4C2421122535EA0894A59 /* Pods-Antibuddies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7S6D9G55V;
+				DEVELOPMENT_TEAM = W7UF55P2U7;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -695,6 +712,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WeberStateUniversity.Antibuddies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -705,8 +723,9 @@
 			baseConfigurationReference = 87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7S6D9G55V;
+				DEVELOPMENT_TEAM = W7UF55P2U7;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -714,6 +733,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WeberStateUniversity.Antibuddies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

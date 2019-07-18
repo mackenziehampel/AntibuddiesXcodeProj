@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import FirebaseFunctions
 
 class CreateAccountViewController: UIViewController {
     
@@ -17,7 +16,6 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    lazy var functions = Functions.functions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,27 +34,6 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func didSelectCreateAccount(_ sender: Any) {
     
-        //add funciton to create user and sent to main menu
-     
-        
-        functions.httpsCallable("helloWorldCallable").call(["data": self.passwordField]) { (result, error) in
-            if let error = error as NSError? {
-                if error.domain == FunctionsErrorDomain {
-                    let code = FunctionsErrorCode(rawValue: error.code)
-                    let message = error.localizedDescription
-                    let details = error.userInfo[FunctionsErrorDetailsKey]
-                    print("CODE:",code!, "  ", "MESSAGE:", message,"   ", "DETAILS:" ,details! )
-                }
-                // ...
-            }
-            
-            
-            
-            if let text = (result?.data as? [String: Any])/*?["data"] as? String*/ {
-                
-               // print(self.messageFromBeyone.text!)
-            }
-        }
         
     }
     
