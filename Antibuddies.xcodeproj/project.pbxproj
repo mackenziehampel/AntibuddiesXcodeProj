@@ -23,6 +23,7 @@
 		855FBA47228E1C1E00C086F2 /* AntibuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA46228E1C1E00C086F2 /* AntibuddiesTests.swift */; };
 		855FBA52228E1C1E00C086F2 /* AntibuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA51228E1C1E00C086F2 /* AntibuddiesUITests.swift */; };
 		855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */; };
+		8562589322E00E3900F9D52C /* ACCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562589122E00E3900F9D52C /* ACCell.swift */; };
 		856620B122B9B26000E7BCD9 /* PanelMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856620AF22B9B25F00E7BCD9 /* PanelMainCell.swift */; };
 		856620B222B9B26000E7BCD9 /* PanelMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856620B022B9B25F00E7BCD9 /* PanelMainCell.xib */; };
 		856E989122D56D4E00569597 /* SelectCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E989022D56D4E00569597 /* SelectCourseViewController.swift */; };
@@ -81,6 +82,8 @@
 		855FBA51228E1C1E00C086F2 /* AntibuddiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntibuddiesUITests.swift; sourceTree = "<group>"; };
 		855FBA53228E1C1E00C086F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855FBA5F228E1EB300C086F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8562589122E00E3900F9D52C /* ACCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ACCell.swift; path = ../../ACCell.swift; sourceTree = "<group>"; };
+		8562589222E00E3900F9D52C /* ACCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ACCell.xib; path = "/Users/mackenziehampel/Desktop/personal/Antibuddies/Antibuddies/Panel Page/ACCell.xib"; sourceTree = "<absolute>"; };
 		856620AF22B9B25F00E7BCD9 /* PanelMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelMainCell.swift; sourceTree = "<group>"; };
 		856620B022B9B25F00E7BCD9 /* PanelMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanelMainCell.xib; sourceTree = "<group>"; };
 		856E989022D56D4E00569597 /* SelectCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCourseViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 		8552B1EB22AB1F7300FA3E3C /* Panel Page */ = {
 			isa = PBXGroup;
 			children = (
+				8562589122E00E3900F9D52C /* ACCell.swift */,
+				8562589222E00E3900F9D52C /* ACCell.xib */,
 				85C39C2D22A74048008D2E96 /* Panel.storyboard */,
 				859AA6C422D41DF2002260A2 /* PatientCell.swift */,
 				859AA6C522D41DF2002260A2 /* PatientCell.xib */,
@@ -493,6 +498,7 @@
 				855FBA37228E1C1900C086F2 /* Antibuddies.xcdatamodeld in Sources */,
 				855FBA2F228E1C1900C086F2 /* AppDelegate.swift in Sources */,
 				85AE153C22B08579005DCE14 /* PanelPickerCollectionViewCell.swift in Sources */,
+				8562589322E00E3900F9D52C /* ACCell.swift in Sources */,
 				856E989322D573AE00569597 /* ImmunohematologyViewController.swift in Sources */,
 				85AE153922B074E6005DCE14 /* PanelCell.swift in Sources */,
 				855182CE229CB9430002225B /* Extensions.swift in Sources */,

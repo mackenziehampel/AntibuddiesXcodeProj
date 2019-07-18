@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ACCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/mackenziehampel/Desktop/personal/Antibuddies/Antibuddies/Panel Page/ACCell.xib">
+   </FileRef>
+   <FileRef
       location = "group:Antibuddies.xcodeproj">
    </FileRef>
    <FileRef

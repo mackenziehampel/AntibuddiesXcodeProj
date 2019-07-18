@@ -33,6 +33,7 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "PanelCell", bundle: nil), forCellReuseIdentifier: "PanelCell")
         self.tableView.register(UINib(nibName: "PanelMainCell", bundle: nil), forCellReuseIdentifier: "PanelMainCell")
+        self.tableView.register(UINib(nibName: "ACCell", bundle: nil), forCellReuseIdentifier: "ACCell")
         tableView.backgroundView?.backgroundColor = .clear
         
        // tableView.allowsSelection = false;
@@ -68,6 +69,9 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
                 cell.pairMN.isHidden = true
                 cell.PairSs.isHidden = true
             }
+            return cell
+        } else if indexPath.row == 11 {
+             let cell = tableView.dequeueReusableCell(withIdentifier: "ACCell", for: indexPath) as! ACCell
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PanelMainCell", for: indexPath) as! PanelMainCell
