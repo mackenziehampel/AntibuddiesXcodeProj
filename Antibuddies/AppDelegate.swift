@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import Firebase
+import AWSLambda
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        FirebaseApp.configure()
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+            regionType: AWSRegionType.USEast2,
+            identityPoolId: "us-east-2:ae65310a-354d-4f4b-a770-e5d13c2cc74e")
+        let configuration = AWSServiceConfiguration(
+            region: AWSRegionType.USEast2,
+            credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
         
         return true
     }
