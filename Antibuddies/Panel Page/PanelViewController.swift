@@ -51,6 +51,8 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
+       
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PanelCell", for: indexPath) as! PanelCell
             
@@ -70,10 +72,13 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
                 cell.PairSs.isHidden = true
             }
             return cell
-        } else if indexPath.row == 11 {
-             let cell = tableView.dequeueReusableCell(withIdentifier: "ACCell", for: indexPath) as! ACCell
-            return cell
-        } else {
+            
+           
+        } //else if indexPath.row == 12 {
+            // let cell = tableView.dequeueReusableCell(withIdentifier: "ACCell", for: indexPath) as! ACCell
+            //return cell
+   // }
+         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PanelMainCell", for: indexPath) as! PanelMainCell
          //   regularBackgroundColor = cell.contentView.backgroundColor!
             cell.selectionStyle = .none
@@ -87,9 +92,9 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
             }
             cell.greyNumberLbl.text = indexPath.row.description
             cell.delegate = self
-            return cell
+                return cell
         }
-        
+    
         
     }
     
@@ -119,9 +124,26 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         }
     }
     
+    func slashButtonColumn(buttonColumn: String){
+        
+        var candiesFiltered = cells.filter{$0.buttonColumn == buttonColumn}
+            
+       
+        if candiesFiltered.count == 0 {
+            //no slashes
+            
+        }
+        else if candiesFiltered.count == 1 {
+            //one slash
+            
+        } else if candiesFiltered.count > 1 {
+            //two slashes
+        }
+        
+        
+    }
+
     func buttonTapped(cell: PanelMainCell, buttonColumn: String) {
-        //send in button
-        //button.titleLabel?.text = "/"
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
        
@@ -145,7 +167,7 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
             if x == false {
               cell.D.addSubview(v)
             }
-        
+            
             cells.append(Cells(cell: cell, buttonColumn: "D", tag: v.tag, row: tableView.indexPath(for: cell)!.row))
             break
         case "BigC":
@@ -673,12 +695,13 @@ class PanelViewController: UIViewController,  UITableViewDelegate, UITableViewDa
                 cell.Xga.addSubview(v)
             }
             cells.append(Cells(cell: cell, buttonColumn: "XGA", tag: v.tag, row: tableView.indexPath(for: cell)!.row))
+            
             break
         default:
             break
         }
-     
-       
+        
+        
     }
     
     @IBAction func didSwitchAllelicPair(_ sender: Any) {

@@ -283,7 +283,6 @@
                     <constraint firstItem="cCj-IV-hL6" firstAttribute="leading" secondItem="9k5-if-Eou" secondAttribute="trailing" id="tln-X7-9lp"/>
                 </constraints>
             </tableViewCellContentView>
-            <accessibility key="accessibilityConfiguration" identifier="ACCell"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="48.550724637681164" y="34.821428571428569"/>
         </tableViewCell>

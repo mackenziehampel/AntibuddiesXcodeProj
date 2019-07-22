@@ -39,8 +39,6 @@ class PanelCell: UITableViewCell {
     @IBOutlet weak var P1: UILabel!
     
     
-    
-    
     let x = 0
     override func awakeFromNib() {
         super.awakeFromNib()
