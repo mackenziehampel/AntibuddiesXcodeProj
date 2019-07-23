@@ -21,4 +21,7 @@ class ImmunohematologyViewController: UIViewController {
         PracticeQuestionsButton.isEnabled = false
         
     }
+    @IBAction func didSelectBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

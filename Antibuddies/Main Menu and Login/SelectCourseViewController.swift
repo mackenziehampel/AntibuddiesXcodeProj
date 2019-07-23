@@ -28,4 +28,7 @@ class SelectCourseViewController: UIViewController {
     
         
     }
+    @IBAction func didSelectBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
