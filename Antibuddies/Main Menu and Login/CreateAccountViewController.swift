@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class CreateAccountViewController: UIViewController {
     
@@ -33,7 +34,29 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func didSelectCreateAccount(_ sender: Any) {
-    
+        if userNameField.text != "" && passwordField.text != ""{
+            DispatchQueue.global(qos: .background).async {
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
+                user.firstName = self.firstNameField.text
+                user.lastName = self.lastNameField.text
+                user.username = self.userNameField.text
+                let password = self.passwordField.text != nil ? (self.passwordField.text?.sha256())! : "No Password"
+                
+                do {
+                    try context.save()
+                } catch{
+                    print("Unexpected error: \(error).")
+                }
+                
+                user.syncWithServer(pass: password)
+            }
+        } else {
+            let alert = UIAlertController(title: "Almost There", message: "Please enter a username and password to create an account.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
         
     }
     

@@ -11,7 +11,8 @@ import Foundation
 import CoreData
 
 
-extension User {
+extension User: Uploadable {
+    
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest<User>(entityName: "User")
@@ -20,6 +21,6 @@ extension User {
     @NSManaged public var firstName: String?
     @NSManaged public var lastName: String?
     @NSManaged public var username: String?
-    @NSManaged public var serverKey: Int32
+    @NSManaged dynamic public var serverKey: Int32
 
 }
