@@ -28,18 +28,14 @@ class ViewController: UIViewController {
     
     @IBAction func didSelectLogin(_ sender: Any) {
         
-        var DU = DownloadUser()
+        let DU = DownloadUser()
         DU.downloadUser(userId: 1)
     }
     
     
     func createUser(email: String, password: String){
         
-        
-        
     }
-    
-    
     
 }
 

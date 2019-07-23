@@ -18,7 +18,15 @@ class ImmunohematologyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         PanelExamplesButton.isEnabled = false
-        PracticeQuestionsButton.isEnabled = false
+       // PracticeQuestionsButton.isEnabled = false
+        
+    }
+    @IBAction func didSelectPracticeQuestions(_ sender: Any) {
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PracticeQuestionLevelSelectVC") as! PracticeQuestionLevelSelectVC
+        self.present(nextViewController, animated:true, completion:nil)
+        
         
     }
     @IBAction func didSelectBack(_ sender: Any) {

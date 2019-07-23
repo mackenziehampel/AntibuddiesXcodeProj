@@ -12,6 +12,7 @@
 		2143EA5E8F4BDF41141BDF00 /* Pods_AntibuddiesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */; };
 		850242C922D80BB100102E1F /* ViewWithDiagonalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850242C822D80BB100102E1F /* ViewWithDiagonalLine.swift */; };
 		8537B9D822A74B4D00B61ED7 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537B9D722A74B4D00B61ED7 /* PanelViewController.swift */; };
+		853812D222E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853812D122E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift */; };
 		855182CE229CB9430002225B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855182CD229CB9430002225B /* Extensions.swift */; };
 		8552B1ED22AB200000FA3E3C /* PanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8552B1EC22AB200000FA3E3C /* PanelCell.xib */; };
 		855FBA2F228E1C1900C086F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA2E228E1C1900C086F2 /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 		80EAD00665E884A6E8FC5DAF /* Pods-AntibuddiesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.release.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		850242C822D80BB100102E1F /* ViewWithDiagonalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithDiagonalLine.swift; sourceTree = "<group>"; };
 		8537B9D722A74B4D00B61ED7 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
+		853812D122E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeQuestionLevelSelectVC.swift; sourceTree = "<group>"; };
 		855182CD229CB9430002225B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8552B1EC22AB200000FA3E3C /* PanelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanelCell.xib; sourceTree = "<group>"; };
 		855FBA2B228E1C1900C086F2 /* Antibuddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antibuddies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */,
+				853812D122E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift */,
 				857011EE229E075E00FBA10F /* MainMenuViewController.swift */,
 				855FBA32228E1C1900C086F2 /* Main.storyboard */,
 				856E989222D573AE00569597 /* ImmunohematologyViewController.swift */,
@@ -563,6 +566,7 @@
 			files = (
 				9A9B353822E013AC00992868 /* LambdaBase.swift in Sources */,
 				9A9B353D22E0152C00992868 /* EntityInteractor.swift in Sources */,
+				853812D222E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift in Sources */,
 				856E989122D56D4E00569597 /* SelectCourseViewController.swift in Sources */,
 				9A9B354122E13F6900992868 /* Protocols.swift in Sources */,
 				8537B9D822A74B4D00B61ED7 /* PanelViewController.swift in Sources */,
@@ -762,7 +766,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W7UF55P2U7;
+				DEVELOPMENT_TEAM = Q7S6D9G55V;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -783,7 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W7UF55P2U7;
+				DEVELOPMENT_TEAM = Q7S6D9G55V;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

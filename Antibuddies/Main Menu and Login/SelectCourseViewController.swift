@@ -28,6 +28,13 @@ class SelectCourseViewController: UIViewController {
     
         
     }
+    @IBAction func didSelectImmunohematology(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ImmunohematologyViewController") as! ImmunohematologyViewController
+        self.present(nextViewController, animated:true, completion:nil)
+        
+        
+    }
     @IBAction func didSelectBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
