@@ -19,11 +19,14 @@ class MainMenuViewController: UIViewController {
    // @IBOutlet weak var messageFromBeyond: UILabel!
     @IBOutlet weak var messageFromBeyone: UITextField!
     
+    var currentUser: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-       
+        if let currentUserId = UserDefaults.standard.value(forKey: "CurrentUserId") as? Int32{
+            currentUser = User.getUserWithId(userId: currentUserId)
+            firstNameLbl.text = currentUser.firstName
+        }
     }
     
     @IBAction func didselect(_ sender: Any) {

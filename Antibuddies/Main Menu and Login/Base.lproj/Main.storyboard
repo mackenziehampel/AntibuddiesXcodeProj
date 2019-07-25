@@ -49,7 +49,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didSelectLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afy-DH-LPT"/>
-                                            <segue destination="rBc-OH-4gK" kind="showDetail" id="Jea-X2-2S4"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet a member? Create a new user." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7W-fg-EIn">
@@ -178,7 +177,7 @@
         <!--Select Course View Controller-->
         <scene sceneID="fGw-ih-f4T">
             <objects>
-                <viewController id="rBc-OH-4gK" customClass="SelectCourseViewController" customModule="Antibuddies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectCourseViewController" id="rBc-OH-4gK" customClass="SelectCourseViewController" customModule="Antibuddies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JMr-G7-hWt">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

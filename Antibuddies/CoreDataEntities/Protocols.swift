@@ -12,3 +12,8 @@ import CoreData
 protocol Uploadable: NSObject{
     var serverKey: Int32 {get set}
 }
+
+protocol LambdaBoolResponse {
+    func showUsedUsernameAlert() -> Void
+    func userAuthenticationResponse(response: Bool, userId: Int32) -> Void
+}
