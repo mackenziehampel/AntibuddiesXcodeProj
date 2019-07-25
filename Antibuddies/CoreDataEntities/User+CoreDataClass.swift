@@ -9,6 +9,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 struct CurrentUser {
     static var user: User?
@@ -21,6 +22,16 @@ public class User: NSManagedObject {
         if self.serverKey == 0 {
             let IU = InsertUser()
             IU.createUserDictionary(user: self, pass: pass)
+        }
+    }
+    
+    class func getUserWithId(userId: Int32) -> User? {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let user:User? = EntityInteractor.getEntityWithId(entityName: "User", entityId: userId, context: context) as? User
+        if user != nil{
+            return user
+        } else{
+            return nil
         }
     }
 
