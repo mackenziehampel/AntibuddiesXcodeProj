@@ -9,10 +9,12 @@
 import UIKit
 
 
-class ViewController: UIViewController, LambdaBoolResponse {
- 
+class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
+    var originalConstraint = CGFloat()
     
     var currentUserId: Int32 = 0
     
@@ -22,7 +24,9 @@ class ViewController: UIViewController, LambdaBoolResponse {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userNameTxt.delegate = self
+        passwordTxt.delegate = self
+        originalConstraint = self.topConstraint.constant 
 //        GIDSignIn.sharedInstance().uiDelegate = self
 //        GIDSignIn.sharedInstance().signIn()
 //
@@ -31,6 +35,17 @@ class ViewController: UIViewController, LambdaBoolResponse {
         // ...
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.topConstraint.constant = 70.0
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.topConstraint.constant = originalConstraint
+    }
+    
+    @IBAction func didSelectUserName(_ sender: Any) {
+        
+        
+    }
     
     @IBAction func didSelectLogin(_ sender: Any) {
         
@@ -53,7 +68,7 @@ class ViewController: UIViewController, LambdaBoolResponse {
     }
     
     func showUsedUsernameAlert() {} //Implemented in another class
-    
+
     func userAuthenticationResponse(response: Bool, userId: Int32) {
         
         currentUserId = userId
@@ -81,8 +96,6 @@ class ViewController: UIViewController, LambdaBoolResponse {
         }
     }
 
-    
-    
 }
 
 
