@@ -43,6 +43,7 @@
 		85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */; };
 		85C39C2E22A74048008D2E96 /* Panel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2D22A74048008D2E96 /* Panel.storyboard */; };
 		85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */; };
+		9A78753C22E7B86500BD6F87 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78753B22E7B86500BD6F87 /* LoginUser.swift */; };
 		9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353222E0129E00992868 /* User+CoreDataClass.swift */; };
 		9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */; };
 		9A9B353822E013AC00992868 /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353722E013AC00992868 /* LambdaBase.swift */; };
@@ -117,6 +118,7 @@
 		87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.release.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.release.xcconfig"; sourceTree = "<group>"; };
 		96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A78753B22E7B86500BD6F87 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		9A9B353222E0129E00992868 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A9B353722E013AC00992868 /* LambdaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaBase.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				9A9B353F22E13E2B00992868 /* Insert */,
 				9A9B353E22E13DEE00992868 /* Download */,
 				9A9B353722E013AC00992868 /* LambdaBase.swift */,
+				9A78753B22E7B86500BD6F87 /* LoginUser.swift */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9B353822E013AC00992868 /* LambdaBase.swift in Sources */,
+				9A78753C22E7B86500BD6F87 /* LoginUser.swift in Sources */,
 				9A9B353D22E0152C00992868 /* EntityInteractor.swift in Sources */,
 				853812D222E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift in Sources */,
 				856E989122D56D4E00569597 /* SelectCourseViewController.swift in Sources */,
@@ -778,7 +782,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7S6D9G55V;
+				DEVELOPMENT_TEAM = W7UF55P2U7;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -799,7 +803,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7S6D9G55V;
+				DEVELOPMENT_TEAM = W7UF55P2U7;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

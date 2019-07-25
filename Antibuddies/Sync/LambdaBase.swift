@@ -11,6 +11,8 @@ import AWSLambda
 class LambdaBase: NSObject {
     
     var object: NSManagedObject! = nil
+    var validateUsernameDelegate: LambdaBoolResponse?
+    var loginDelegate: LambdaBoolResponse?
     
     func downloadEntity(functionName: String, jsonRequest: [String: String]) -> Void {
         var jsonResponse: [String : Any] = [String : Any]()
@@ -45,6 +47,34 @@ class LambdaBase: NSObject {
                 
             }else{
                 print("Error: \(String(describing: task.error))")
+            }
+            return nil
+        })
+    }
+    
+    func serverValidation(functionName: String, jsonRequest: [String:String], type: Int) -> Void {
+        var lambdaResponse = false
+        
+        let lambda = AWSLambdaInvoker.default()
+        lambda.invokeFunction(functionName, jsonObject: jsonRequest).continueWith(block: { (task) in
+            if (task.result != nil){
+                let json = task.result as! Dictionary<String, Any>
+                let result = json["response"] ?? 0
+                let respResult = String(describing: result)
+                lambdaResponse = respResult.boolValue ?? false
+                switch type{
+                case 0:
+                    if lambdaResponse{
+                        self.validateUsernameDelegate?.showUsedUsernameAlert()
+                    }
+                    break
+                case 1:
+                    let id = Int32(task.result?.value(forKey: "ID") as? String ?? "0")
+                    self.loginDelegate?.userAuthenticationResponse(response: lambdaResponse, userId: id!)
+                    break
+                default:
+                    self.validateUsernameDelegate?.showUsedUsernameAlert()
+                }
             }
             return nil
         })
