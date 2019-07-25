@@ -9,14 +9,18 @@
 import UIKit
 
 
-class ViewController: UIViewController {
- 
+class ViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
+    var originalConstraint = CGFloat()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userNameTxt.delegate = self
+        passwordTxt.delegate = self
+        originalConstraint = self.topConstraint.constant 
 //        GIDSignIn.sharedInstance().uiDelegate = self
 //        GIDSignIn.sharedInstance().signIn()
 //
@@ -25,6 +29,17 @@ class ViewController: UIViewController {
         // ...
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.topConstraint.constant = 70.0
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.topConstraint.constant = originalConstraint
+    }
+    
+    @IBAction func didSelectUserName(_ sender: Any) {
+        
+        
+    }
     
     @IBAction func didSelectLogin(_ sender: Any) {
         

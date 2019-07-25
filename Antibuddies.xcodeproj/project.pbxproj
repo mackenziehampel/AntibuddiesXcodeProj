@@ -15,6 +15,8 @@
 		853812D222E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853812D122E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift */; };
 		855182CE229CB9430002225B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855182CD229CB9430002225B /* Extensions.swift */; };
 		8552B1ED22AB200000FA3E3C /* PanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8552B1EC22AB200000FA3E3C /* PanelCell.xib */; };
+		8559B6C622E7DBC60041B469 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8559B6C422E7DBC60041B469 /* QuestionCell.swift */; };
+		8559B6C722E7DBC60041B469 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8559B6C522E7DBC60041B469 /* QuestionCell.xib */; };
 		855FBA2F228E1C1900C086F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA2E228E1C1900C086F2 /* AppDelegate.swift */; };
 		855FBA31228E1C1900C086F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FBA30228E1C1900C086F2 /* ViewController.swift */; };
 		855FBA34228E1C1900C086F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855FBA32228E1C1900C086F2 /* Main.storyboard */; };
@@ -34,6 +36,7 @@
 		859AA6C322D41CA5002260A2 /* PatientFinderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AA6C222D41CA5002260A2 /* PatientFinderTableViewController.swift */; };
 		859AA6C622D41DF2002260A2 /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AA6C422D41DF2002260A2 /* PatientCell.swift */; };
 		859AA6C722D41DF2002260A2 /* PatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859AA6C522D41DF2002260A2 /* PatientCell.xib */; };
+		85A3201222E7C01900B69AB1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3201122E7C01900B69AB1 /* QuestionViewController.swift */; };
 		85AE153922B074E6005DCE14 /* PanelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AE153822B074E6005DCE14 /* PanelCell.swift */; };
 		85AE153C22B08579005DCE14 /* PanelPickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AE153A22B08579005DCE14 /* PanelPickerCollectionViewCell.swift */; };
 		85AE153D22B08579005DCE14 /* PanelPickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85AE153B22B08579005DCE14 /* PanelPickerCollectionViewCell.xib */; };
@@ -76,6 +79,8 @@
 		853812D122E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeQuestionLevelSelectVC.swift; sourceTree = "<group>"; };
 		855182CD229CB9430002225B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8552B1EC22AB200000FA3E3C /* PanelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanelCell.xib; sourceTree = "<group>"; };
+		8559B6C422E7DBC60041B469 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		8559B6C522E7DBC60041B469 /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
 		855FBA2B228E1C1900C086F2 /* Antibuddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antibuddies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855FBA2E228E1C1900C086F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855FBA30228E1C1900C086F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		859AA6C222D41CA5002260A2 /* PatientFinderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientFinderTableViewController.swift; sourceTree = "<group>"; };
 		859AA6C422D41DF2002260A2 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCell.swift; sourceTree = "<group>"; };
 		859AA6C522D41DF2002260A2 /* PatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientCell.xib; sourceTree = "<group>"; };
+		85A3201122E7C01900B69AB1 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		85AE153822B074E6005DCE14 /* PanelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelCell.swift; sourceTree = "<group>"; };
 		85AE153A22B08579005DCE14 /* PanelPickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelPickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		85AE153B22B08579005DCE14 /* PanelPickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanelPickerCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 				85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */,
 				853812D122E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift */,
 				857011EE229E075E00FBA10F /* MainMenuViewController.swift */,
+				8559B6C422E7DBC60041B469 /* QuestionCell.swift */,
+				8559B6C522E7DBC60041B469 /* QuestionCell.xib */,
+				85A3201122E7C01900B69AB1 /* QuestionViewController.swift */,
 				855FBA32228E1C1900C086F2 /* Main.storyboard */,
 				856E989222D573AE00569597 /* ImmunohematologyViewController.swift */,
 				856E989022D56D4E00569597 /* SelectCourseViewController.swift */,
@@ -429,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8559B6C722E7DBC60041B469 /* QuestionCell.xib in Resources */,
 				856620B222B9B26000E7BCD9 /* PanelMainCell.xib in Resources */,
 				855FBA3C228E1C1E00C086F2 /* LaunchScreen.storyboard in Resources */,
 				85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */,
@@ -570,6 +580,8 @@
 				856E989122D56D4E00569597 /* SelectCourseViewController.swift in Sources */,
 				9A9B354122E13F6900992868 /* Protocols.swift in Sources */,
 				8537B9D822A74B4D00B61ED7 /* PanelViewController.swift in Sources */,
+				8559B6C622E7DBC60041B469 /* QuestionCell.swift in Sources */,
+				85A3201222E7C01900B69AB1 /* QuestionViewController.swift in Sources */,
 				859AA6C322D41CA5002260A2 /* PatientFinderTableViewController.swift in Sources */,
 				850242C922D80BB100102E1F /* ViewWithDiagonalLine.swift in Sources */,
 				858EEB7822A9E0CF007E8018 /* PanelCollectionViewController.swift in Sources */,
