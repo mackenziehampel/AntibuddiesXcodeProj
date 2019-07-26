@@ -25,4 +25,15 @@ class QuestionCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func didSelectBubble(_ sender: Any) {
+        
+        if bubble.backgroundColor == .clear {
+        self.bubble.backgroundColor = UIColor.init(red: (223.0/255.0), green: (168.0/255.0), blue: (1.0/255.0), alpha: 1.0)
+        } else {
+            bubble.backgroundColor = .clear
+        }
+        
+    }
+    
+    
 }
