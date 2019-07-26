@@ -39,6 +39,10 @@ class LambdaBase: NSObject {
                 
                 (self.object as! Uploadable).serverKey = id ?? 0
                 
+                if self.object.isKind(of: User.self){
+                    UserDefaults.standard.set(id, forKey: "CurrentUserId")
+                }
+                
                 do {
                     try self.object.managedObjectContext?.save()
                 } catch{
