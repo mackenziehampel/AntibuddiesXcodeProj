@@ -10,13 +10,17 @@ import Foundation
 import UIKit
 import CoreData
 
+protocol CreateAccountDelegate {
+    func accountCreated()
+}
+
 class CreateAccountViewController: UIViewController {
     
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
+    var delegate: CreateAccountDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,21 +39,25 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func didSelectCreateAccount(_ sender: Any) {
         if userNameField.text != "" && passwordField.text != ""{
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
+            user.firstName = self.firstNameField.text
+            user.lastName = self.lastNameField.text
+            user.username = self.userNameField.text
+            do {
+                try context.save()
+            } catch{
+                print("Unexpected error: \(error).")
+            }
             DispatchQueue.global(qos: .background).async {
-                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
-                user.firstName = self.firstNameField.text
-                user.lastName = self.lastNameField.text
-                user.username = self.userNameField.text
                 let password = self.passwordField.text != nil ? (self.passwordField.text?.sha256())! : "No Password"
-                
-                do {
-                    try context.save()
-                } catch{
-                    print("Unexpected error: \(error).")
-                }
-                
                 user.syncWithServer(pass: password)
+                DispatchQueue.main.async {
+                    
+                    self.dismiss(animated: true, completion: { () in
+                        self.delegate?.accountCreated()
+                    })
+                }
             }
         } else {
             let alert = UIAlertController(title: "Almost There", message: "Please enter a username and password to create an account.", preferredStyle: .alert)
@@ -60,15 +68,4 @@ class CreateAccountViewController: UIViewController {
         
     }
     
-}
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }

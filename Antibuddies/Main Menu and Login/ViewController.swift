@@ -9,7 +9,8 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {
+class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse, CreateAccountDelegate {
+    
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var userNameTxt: UITextField!
@@ -21,6 +22,13 @@ class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse 
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
     var blurEffectView: UIVisualEffectView!
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createUser"{
+            let vc = segue.destination as! CreateAccountViewController
+            vc.delegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,9 +89,7 @@ class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse 
                 UserDefaults.standard.set(userId, forKey: "CurrentUserId")
                 self.stopActivityIndicator(blur: self.blurEffectView, ai: self.activityIndicator)
                 if response{
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let controller = storyboard.instantiateViewController(withIdentifier: "SelectCourseViewController") as! SelectCourseViewController
-                    self.present(controller, animated: true, completion: nil)
+                    self.proceedToCourseGateway()
                 } else {
                     let alert = UIAlertController(title: "Oh No...", message: "Your username or password was not found. Please try again or create a new account.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
@@ -94,6 +100,16 @@ class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse 
                 }
             }
         }
+    }
+    
+    func accountCreated() {
+        self.proceedToCourseGateway()
+    }
+    
+    func proceedToCourseGateway() -> Void {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SelectCourseViewController") as! SelectCourseViewController
+        self.present(controller, animated: true, completion: nil)
     }
 
 }
