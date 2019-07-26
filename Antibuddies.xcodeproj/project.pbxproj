@@ -51,6 +51,7 @@
 		9A9B353D22E0152C00992868 /* EntityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353C22E0152C00992868 /* EntityInteractor.swift */; };
 		9A9B354122E13F6900992868 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B354022E13F6900992868 /* Protocols.swift */; };
 		9A9B354322E13FEC00992868 /* InsertUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B354222E13FEC00992868 /* InsertUser.swift */; };
+		9A9EB6AE22EA8945008F6E9A /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A9EB6AD22EA8945008F6E9A /* fa-regular-400.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		9A9B353C22E0152C00992868 /* EntityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityInteractor.swift; sourceTree = "<group>"; };
 		9A9B354022E13F6900992868 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9A9B354222E13FEC00992868 /* InsertUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertUser.swift; sourceTree = "<group>"; };
+		9A9EB6AD22EA8945008F6E9A /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		ABE4C2421122535EA0894A59 /* Pods-Antibuddies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.debug.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.debug.xcconfig"; sourceTree = "<group>"; };
 		B31DA573EE005D540ECB2B53 /* Pods_AntibuddiesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -253,6 +255,7 @@
 		855FBA2D228E1C1900C086F2 /* Antibuddies */ = {
 			isa = PBXGroup;
 			children = (
+				9A9EB6AC22EA88A9008F6E9A /* SupportingFiles */,
 				9A9B353B22E0150700992868 /* AppManagement */,
 				9A9B353622E0137800992868 /* Sync */,
 				9A9B353122E0123200992868 /* CoreDataEntities */,
@@ -331,6 +334,14 @@
 				9A9B354222E13FEC00992868 /* InsertUser.swift */,
 			);
 			path = Insert;
+			sourceTree = "<group>";
+		};
+		9A9EB6AC22EA88A9008F6E9A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9A9EB6AD22EA8945008F6E9A /* fa-regular-400.ttf */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +461,7 @@
 				855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */,
 				8552B1ED22AB200000FA3E3C /* PanelCell.xib in Resources */,
 				85AE153D22B08579005DCE14 /* PanelPickerCollectionViewCell.xib in Resources */,
+				9A9EB6AE22EA8945008F6E9A /* fa-regular-400.ttf in Resources */,
 				855FBA39228E1C1E00C086F2 /* Assets.xcassets in Resources */,
 				855FBA34228E1C1900C086F2 /* Main.storyboard in Resources */,
 			);
