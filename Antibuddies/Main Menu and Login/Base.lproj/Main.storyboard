@@ -414,13 +414,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="380" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-uR-1jo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="45"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pei-3E-uzc">
-                                                        <rect key="frame" x="118" y="0.0" width="262" height="45"/>
+                                                        <rect key="frame" x="131.5" y="0.0" width="248.5" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="yOw-T9-Rz0"/>
                                                         </constraints>
@@ -434,13 +434,13 @@
                                                 <rect key="frame" x="0.0" y="70" width="380" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbJ-Kn-fN0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="45"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bh1-nO-PLI">
-                                                        <rect key="frame" x="118" y="0.0" width="262" height="45"/>
+                                                        <rect key="frame" x="131.5" y="0.0" width="248.5" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="XJ7-xQ-eJs"/>
                                                         </constraints>
@@ -454,13 +454,13 @@
                                                 <rect key="frame" x="0.0" y="140" width="380" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Eb-Da-TF2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="45"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZr-5w-ZtC">
-                                                        <rect key="frame" x="118" y="0.0" width="262" height="45"/>
+                                                        <rect key="frame" x="131.5" y="0.0" width="248.5" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="s1H-mh-EYn"/>
                                                         </constraints>
@@ -474,13 +474,13 @@
                                                 <rect key="frame" x="0.0" y="210" width="380" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrD-kg-NdT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="45"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Scu-W0-cJ6">
-                                                        <rect key="frame" x="118" y="0.0" width="262" height="45"/>
+                                                        <rect key="frame" x="131.5" y="0.0" width="248.5" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="pcT-zV-Qsn"/>
                                                         </constraints>
