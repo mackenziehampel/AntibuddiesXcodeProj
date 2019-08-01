@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionCell: UITableViewCell {
-
+   
     @IBOutlet weak var letter: UILabel!
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var bubble: UIButton!
@@ -32,6 +32,9 @@ class QuestionCell: UITableViewCell {
         } else {
             bubble.backgroundColor = .clear
         }
+        
+    }
+    func selectedCorrectAnswer(correctAnswer: Bool) {
         
     }
     

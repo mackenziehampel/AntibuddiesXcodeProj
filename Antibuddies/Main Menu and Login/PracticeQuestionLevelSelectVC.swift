@@ -16,5 +16,9 @@ class PracticeQuestionLevelSelectVC: UIViewController {
     }
     
     
+    @IBAction func didSelectBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }

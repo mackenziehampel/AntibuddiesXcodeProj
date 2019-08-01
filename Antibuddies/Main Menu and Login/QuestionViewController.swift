@@ -9,12 +9,19 @@
 import Foundation
 import UIKit
 
+protocol SelectedCorrectAnswer {
+    func selectedCorrectAnswer(correctAnswer: Bool)
+}
+
 class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var explanationView: UIView!
     @IBOutlet weak var explaination: UILabel!
     @IBOutlet weak var backBtn: UIView!
     @IBOutlet weak var tableView: UITableView!
+    var correctAnswer = true
+    var delegate: SelectedCorrectAnswer!
+    
     var testQuesitons = ["anti-Kna", "anit-Ch", "anti-Yka", "anti-Csa", "A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick fromA REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end here"]
     
     override func viewDidLoad() {
@@ -77,7 +84,15 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
        
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+//            delegate.selectedCorrectAnswer(correctAnswer: true)
+//            
+            self.explanationView.isHidden = false
+        } else {
+            self.explanationView.isHidden = true
+        }
+    }
     
     
 }

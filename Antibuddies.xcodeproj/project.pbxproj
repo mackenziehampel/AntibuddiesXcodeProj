@@ -32,6 +32,11 @@
 		856E989122D56D4E00569597 /* SelectCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E989022D56D4E00569597 /* SelectCourseViewController.swift */; };
 		856E989322D573AE00569597 /* ImmunohematologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E989222D573AE00569597 /* ImmunohematologyViewController.swift */; };
 		857011EF229E075E00FBA10F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857011EE229E075E00FBA10F /* MainMenuViewController.swift */; };
+		8585B13D22F111C1002244CD /* QuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8585B13C22F111C1002244CD /* QuestionListViewController.swift */; };
+		8585B14022F11256002244CD /* QuestionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8585B13E22F11256002244CD /* QuestionListCell.swift */; };
+		8585B14122F11256002244CD /* QuestionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8585B13F22F11256002244CD /* QuestionListCell.xib */; };
+		8585B14422F11B8C002244CD /* QuestionListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8585B14222F11B8C002244CD /* QuestionListHeader.swift */; };
+		8585B14522F11B8C002244CD /* QuestionListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8585B14322F11B8C002244CD /* QuestionListHeader.xib */; };
 		858EEB7822A9E0CF007E8018 /* PanelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EEB7722A9E0CF007E8018 /* PanelCollectionViewController.swift */; };
 		859AA6C322D41CA5002260A2 /* PatientFinderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AA6C222D41CA5002260A2 /* PatientFinderTableViewController.swift */; };
 		859AA6C622D41DF2002260A2 /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AA6C422D41DF2002260A2 /* PatientCell.swift */; };
@@ -105,6 +110,11 @@
 		856E989022D56D4E00569597 /* SelectCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCourseViewController.swift; sourceTree = "<group>"; };
 		856E989222D573AE00569597 /* ImmunohematologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmunohematologyViewController.swift; sourceTree = "<group>"; };
 		857011EE229E075E00FBA10F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = "../New Group/MainMenuViewController.swift"; sourceTree = "<group>"; };
+		8585B13C22F111C1002244CD /* QuestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListViewController.swift; sourceTree = "<group>"; };
+		8585B13E22F11256002244CD /* QuestionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListCell.swift; sourceTree = "<group>"; };
+		8585B13F22F11256002244CD /* QuestionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionListCell.xib; sourceTree = "<group>"; };
+		8585B14222F11B8C002244CD /* QuestionListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListHeader.swift; sourceTree = "<group>"; };
+		8585B14322F11B8C002244CD /* QuestionListHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionListHeader.xib; sourceTree = "<group>"; };
 		858EEB7722A9E0CF007E8018 /* PanelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelCollectionViewController.swift; sourceTree = "<group>"; };
 		859AA6C222D41CA5002260A2 /* PatientFinderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientFinderTableViewController.swift; sourceTree = "<group>"; };
 		859AA6C422D41DF2002260A2 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCell.swift; sourceTree = "<group>"; };
@@ -198,10 +208,15 @@
 			isa = PBXGroup;
 			children = (
 				85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */,
+				8585B13C22F111C1002244CD /* QuestionListViewController.swift */,
+				8585B13E22F11256002244CD /* QuestionListCell.swift */,
+				8585B13F22F11256002244CD /* QuestionListCell.xib */,
 				853812D122E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift */,
 				857011EE229E075E00FBA10F /* MainMenuViewController.swift */,
 				8559B6C422E7DBC60041B469 /* QuestionCell.swift */,
 				8559B6C522E7DBC60041B469 /* QuestionCell.xib */,
+				8585B14222F11B8C002244CD /* QuestionListHeader.swift */,
+				8585B14322F11B8C002244CD /* QuestionListHeader.xib */,
 				85A3201122E7C01900B69AB1 /* QuestionViewController.swift */,
 				855FBA32228E1C1900C086F2 /* Main.storyboard */,
 				856E989222D573AE00569597 /* ImmunohematologyViewController.swift */,
@@ -454,9 +469,11 @@
 			files = (
 				8559B6C722E7DBC60041B469 /* QuestionCell.xib in Resources */,
 				856620B222B9B26000E7BCD9 /* PanelMainCell.xib in Resources */,
+				8585B14122F11256002244CD /* QuestionListCell.xib in Resources */,
 				855FBA3C228E1C1E00C086F2 /* LaunchScreen.storyboard in Resources */,
 				85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */,
 				859AA6C722D41DF2002260A2 /* PatientCell.xib in Resources */,
+				8585B14522F11B8C002244CD /* QuestionListHeader.xib in Resources */,
 				85C39C2E22A74048008D2E96 /* Panel.storyboard in Resources */,
 				855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */,
 				8552B1ED22AB200000FA3E3C /* PanelCell.xib in Resources */,
@@ -589,7 +606,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8585B14422F11B8C002244CD /* QuestionListHeader.swift in Sources */,
 				9A9B353822E013AC00992868 /* LambdaBase.swift in Sources */,
+				8585B14022F11256002244CD /* QuestionListCell.swift in Sources */,
 				9A78753C22E7B86500BD6F87 /* LoginUser.swift in Sources */,
 				9A9B353D22E0152C00992868 /* EntityInteractor.swift in Sources */,
 				853812D222E7AF74006131FF /* PracticeQuestionLevelSelectVC.swift in Sources */,
@@ -605,6 +624,7 @@
 				859AA6C622D41DF2002260A2 /* PatientCell.swift in Sources */,
 				9A9B353A22E0148300992868 /* DownloadUser.swift in Sources */,
 				85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */,
+				8585B13D22F111C1002244CD /* QuestionListViewController.swift in Sources */,
 				9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */,
 				9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */,
 				9A9B354322E13FEC00992868 /* InsertUser.swift in Sources */,
