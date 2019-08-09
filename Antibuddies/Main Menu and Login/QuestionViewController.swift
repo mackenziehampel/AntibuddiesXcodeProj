@@ -13,25 +13,33 @@ protocol SelectedCorrectAnswer {
     func selectedCorrectAnswer(correctAnswer: Bool)
 }
 
+
+
 class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var explanationView: UIView!
     @IBOutlet weak var explaination: UILabel!
     @IBOutlet weak var backBtn: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var moveRight: UIButton!
+    @IBOutlet weak var moveLeft: UIButton!
+    
     var correctAnswer = true
     var delegate: SelectedCorrectAnswer!
     
-    var testQuesitons = ["anti-Kna", "anit-Ch", "anti-Yka", "anti-Csa", "A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick fromA REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end here"]
+    var testQuesitons = ["anti-Kna", "anit-Ch", "anti-Yka", "anti-Csa", "A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick fromA REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end here A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
          self.tableView.register(UINib(nibName: "QuestionCell", bundle: nil), forCellReuseIdentifier: "QuestionCell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.allowsSelection = false
         
         self.explaination.text = "REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION "
-        
+    
         
         explanationView.isHidden = true
     }
@@ -86,13 +94,18 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-//            delegate.selectedCorrectAnswer(correctAnswer: true)
-//            
             self.explanationView.isHidden = false
         } else {
             self.explanationView.isHidden = true
         }
     }
     
+    @IBAction func didSelectMoveLeft(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func didSelectMoveRight(_ sender: Any) {
+    }
     
 }

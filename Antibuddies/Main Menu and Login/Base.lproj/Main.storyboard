@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="fa-solid-900.ttf">
+            <string>FontAwesome5Free-Solid</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1016,12 +1021,36 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZU-T6-fxx">
+                                        <rect key="frame" x="62" y="9.5" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="24"/>
+                                        <state key="normal" title="">
+                                            <color key="titleColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectMoveLeft:" destination="wcH-P3-ULd" eventType="touchUpInside" id="8Yt-Mk-aor"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvM-XK-4k9">
+                                        <rect key="frame" x="1274" y="9.5" width="30" height="36"/>
+                                        <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="24"/>
+                                        <state key="normal" title="">
+                                            <color key="titleColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectMoveRight:" destination="wcH-P3-ULd" eventType="touchUpInside" id="aAQ-6J-1VK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="TZU-T6-fxx" firstAttribute="centerY" secondItem="9h5-P8-tB1" secondAttribute="centerY" id="5UH-Tt-4Bj"/>
                                     <constraint firstAttribute="height" constant="55" id="5iD-bL-DNn"/>
+                                    <constraint firstItem="TZU-T6-fxx" firstAttribute="leading" secondItem="9h5-P8-tB1" secondAttribute="leading" constant="62" id="IEQ-hO-fmc"/>
                                     <constraint firstItem="n3k-mf-M7x" firstAttribute="centerY" secondItem="9h5-P8-tB1" secondAttribute="centerY" id="M4R-jt-vDE"/>
+                                    <constraint firstAttribute="trailing" secondItem="lvM-XK-4k9" secondAttribute="trailing" constant="62" id="eYr-JJ-c17"/>
                                     <constraint firstItem="n3k-mf-M7x" firstAttribute="centerX" secondItem="9h5-P8-tB1" secondAttribute="centerX" id="fXe-d0-F2t"/>
+                                    <constraint firstItem="lvM-XK-4k9" firstAttribute="centerY" secondItem="9h5-P8-tB1" secondAttribute="centerY" id="rax-LD-emc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1085,7 +1114,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="ilR-RI-mPU">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" rowHeight="100" id="ilR-RI-mPU">
                                                 <rect key="frame" x="0.0" y="28" width="1136" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ilR-RI-mPU" id="cSg-8A-AIl">
@@ -1233,6 +1262,8 @@
                         <outlet property="backBtn" destination="yE9-j4-oVL" id="UzM-AZ-lgh"/>
                         <outlet property="explaination" destination="EqH-yq-zdr" id="yO5-qt-Yai"/>
                         <outlet property="explanationView" destination="YOS-to-djy" id="lCt-1r-rRZ"/>
+                        <outlet property="moveLeft" destination="TZU-T6-fxx" id="7tW-ms-TAj"/>
+                        <outlet property="moveRight" destination="lvM-XK-4k9" id="TYa-OP-B7t"/>
                         <outlet property="tableView" destination="ynx-bI-Bsu" id="VLL-qy-c4U"/>
                     </connections>
                 </viewController>

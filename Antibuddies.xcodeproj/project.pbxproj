@@ -48,6 +48,7 @@
 		85C39C2C22A620D4008D2E96 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */; };
 		85C39C2E22A74048008D2E96 /* Panel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2D22A74048008D2E96 /* Panel.storyboard */; };
 		85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */; };
+		85FD8EAF22FA5BF500FFFA2B /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85FD8EAE22FA5BEC00FFFA2B /* fa-solid-900.ttf */; };
 		9A78753C22E7B86500BD6F87 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A78753B22E7B86500BD6F87 /* LoginUser.swift */; };
 		9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353222E0129E00992868 /* User+CoreDataClass.swift */; };
 		9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */; };
@@ -126,6 +127,7 @@
 		85C39C2B22A620D4008D2E96 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		85C39C2D22A74048008D2E96 /* Panel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Panel.storyboard; sourceTree = "<group>"; };
 		85C39C2F22A7409C008D2E96 /* PanelCollection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PanelCollection.storyboard; sourceTree = "<group>"; };
+		85FD8EAE22FA5BEC00FFFA2B /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
 		87AA6C44C0885484BA6A180B /* Pods-Antibuddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antibuddies.release.xcconfig"; path = "Target Support Files/Pods-Antibuddies/Pods-Antibuddies.release.xcconfig"; sourceTree = "<group>"; };
 		96BFD1532CF6DFB3120BA243 /* Pods_AntibuddiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AntibuddiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3AC1E4AD7DD55AB5AEA860 /* Pods-AntibuddiesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntibuddiesUITests.debug.xcconfig"; path = "Target Support Files/Pods-AntibuddiesUITests/Pods-AntibuddiesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				9A9EB6AD22EA8945008F6E9A /* fa-regular-400.ttf */,
+				85FD8EAE22FA5BEC00FFFA2B /* fa-solid-900.ttf */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				855FBA3C228E1C1E00C086F2 /* LaunchScreen.storyboard in Resources */,
 				85C39C3022A7409C008D2E96 /* PanelCollection.storyboard in Resources */,
 				859AA6C722D41DF2002260A2 /* PatientCell.xib in Resources */,
+				85FD8EAF22FA5BF500FFFA2B /* fa-solid-900.ttf in Resources */,
 				8585B14522F11B8C002244CD /* QuestionListHeader.xib in Resources */,
 				85C39C2E22A74048008D2E96 /* Panel.storyboard in Resources */,
 				855FBA60228E1EB300C086F2 /* GoogleService-Info.plist in Resources */,

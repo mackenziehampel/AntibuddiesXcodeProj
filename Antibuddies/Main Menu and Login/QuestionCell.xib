@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kap-Kk-cob">
-                        <rect key="frame" x="81" y="4" width="553" height="35.5"/>
+                        <rect key="frame" x="81" y="15" width="553" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -57,9 +57,9 @@
                     <constraint firstAttribute="trailing" secondItem="kap-Kk-cob" secondAttribute="trailing" constant="20" id="Srn-CY-PHG"/>
                     <constraint firstItem="kap-Kk-cob" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="81" id="U2T-g6-nLP"/>
                     <constraint firstItem="uHu-qg-8bv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="avT-KT-TeE"/>
-                    <constraint firstItem="kap-Kk-cob" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="dxJ-gU-ee3"/>
+                    <constraint firstItem="kap-Kk-cob" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="dxJ-gU-ee3"/>
                     <constraint firstItem="uHu-qg-8bv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="ffS-aJ-ZCn"/>
-                    <constraint firstAttribute="bottom" secondItem="kap-Kk-cob" secondAttribute="bottom" constant="4" id="sBE-GK-OP9"/>
+                    <constraint firstAttribute="bottom" secondItem="kap-Kk-cob" secondAttribute="bottom" constant="15" id="sBE-GK-OP9"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
