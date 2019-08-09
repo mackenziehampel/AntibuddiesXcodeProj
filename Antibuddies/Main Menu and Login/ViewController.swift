@@ -35,12 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse,
         userNameTxt.delegate = self
         passwordTxt.delegate = self
         originalConstraint = self.topConstraint.constant 
-//        GIDSignIn.sharedInstance().uiDelegate = self
-//        GIDSignIn.sharedInstance().signIn()
-//
-        
-        // TODO(developer) Configure the sign-in button look/feel
-        // ...
+
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
