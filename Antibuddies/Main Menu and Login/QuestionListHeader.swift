@@ -14,6 +14,7 @@ class QuestionListHeader: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 

@@ -18,11 +18,12 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "QuestionListCell", bundle: nil), forCellReuseIdentifier: "QuestionListCell")
+        self.tableView.register(UINib(nibName: "QuestionListHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "QuestionListHeader")
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return 10
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,14 +42,13 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
-   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+ 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+      
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "QuestionListHeader") as! QuestionListHeader
+        headerView.sectionTitle.text = "Section \(section)"
+        return headerView
     }
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//   let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "QuestionListHeader") as! QuestionListHeader
-//        headerView.sectionTitle.text = "Section \(section)"
-//        return headerView
-//    }
  
     
     @IBAction func didSelectBack(_ sender: Any) {

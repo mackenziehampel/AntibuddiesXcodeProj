@@ -21,12 +21,12 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Start of Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-d6-YNO">
                         <rect key="frame" x="66" y="11" width="206" height="22"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcq-ck-9Ta">
-                        <rect key="frame" x="30" y="12" width="26" height="21"/>
+                        <rect key="frame" x="30" y="11" width="26" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="26" id="pQB-3Y-wgD"/>
                         </constraints>
@@ -35,16 +35,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.1176327839" green="0.1176561788" blue="0.117627643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.18821519610000001" green="0.18824818730000001" blue="0.18820798399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Xcq-ck-9Ta" secondAttribute="bottom" constant="10.5" id="0Zq-mn-ZbR"/>
                     <constraint firstAttribute="bottom" secondItem="9fk-d6-YNO" secondAttribute="bottom" constant="10.5" id="F91-sp-GRJ"/>
                     <constraint firstItem="9fk-d6-YNO" firstAttribute="leading" secondItem="Xcq-ck-9Ta" secondAttribute="trailing" constant="10" id="Yka-qT-BVB"/>
                     <constraint firstItem="Xcq-ck-9Ta" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="gUx-3k-Gh6"/>
                     <constraint firstItem="9fk-d6-YNO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="jox-BT-hBb"/>
-                    <constraint firstItem="Xcq-ck-9Ta" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="omh-xS-xqz"/>
+                    <constraint firstItem="Xcq-ck-9Ta" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="omh-xS-xqz"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.18821519610000001" green="0.18824818730000001" blue="0.18820798399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.5018026862548246" green="1" blue="0.14846988202129419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="9fk-d6-YNO" secondAttribute="trailing" constant="48" id="PAb-QG-W66"/>
             </constraints>

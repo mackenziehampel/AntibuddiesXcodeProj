@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol RadialButtonDelegate {
+    func didSelectRadial(cell: QuestionCell, index:IndexPath)
+}
+
 class QuestionCell: UITableViewCell {
    
     @IBOutlet weak var letter: UILabel!
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var bubble: UIButton!
+    var isCorrectAnswer = false
+    var delegate : RadialButtonDelegate!
+    var index: IndexPath!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,14 +35,21 @@ class QuestionCell: UITableViewCell {
     @IBAction func didSelectBubble(_ sender: Any) {
         
         if bubble.backgroundColor == .clear {
-        self.bubble.backgroundColor = UIColor.init(red: (223.0/255.0), green: (168.0/255.0), blue: (1.0/255.0), alpha: 1.0)
+            self.delegate.didSelectRadial(cell: self, index: getIndexPath()!)
+            
         } else {
             bubble.backgroundColor = .clear
         }
         
     }
-    func selectedCorrectAnswer(correctAnswer: Bool) {
-        
+    
+    func getIndexPath() -> IndexPath? {
+        guard let superView = self.superview as? UITableView else {
+            print("superview is not a UITableView - getIndexPath")
+            return nil
+        }
+        index = superView.indexPath(for: self)
+        return index
     }
     
     
