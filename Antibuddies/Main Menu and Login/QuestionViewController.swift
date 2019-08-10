@@ -15,17 +15,21 @@ protocol SelectedCorrectAnswer {
 
 class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RadialButtonDelegate {
   
-    
     @IBOutlet weak var explanationView: UIView!
     @IBOutlet weak var explanation: UILabel!
     @IBOutlet weak var backBtn: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var moveRight: UIButton!
     @IBOutlet weak var moveLeft: UIButton!
+    @IBOutlet weak var question: UILabel!
     
     var selectedAnswer = ""
     var delegate: SelectedCorrectAnswer!
     var selectedIndex: IndexPath!
+    var questionList = [PracticeQuestion]()
+    var questionCount = 1
+    var arrowEnabledColor = UIColor()
+    var correctAnswer = Int()
     
     var testQuesitons = ["anti-Kna", "anit-Ch", "anti-Yka", "anti-Csa", "A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick fromA REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end here A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her"]
     
@@ -40,8 +44,10 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.explanation.text = "REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION "
     
-        
+    
         explanationView.isHidden = true
+        setQuestionAndExpalnationForView()  
+     
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +55,8 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         cell.question.text = testQuesitons[indexPath.row]
         cell.delegate = self
         
@@ -60,29 +67,59 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
                 cell.bubble.backgroundColor = UIColor.init(red: (223.0/255.0), green: (168.0/255.0), blue: (1.0/255.0), alpha: 1.0)
             }
         }
-        
+       
         switch indexPath.row {
         case 0:
+            
+            if indexPath.row + 1 == Int(correctAnswer) {
+                 cell.isCorrectAnswer = true
+            } else {
+                cell.isCorrectAnswer = false
+            }
             cell.letter.text = "A."
-            cell.isCorrectAnswer = true
+           
         case 1:
             cell.letter.text = "B."
-            cell.isCorrectAnswer = false
+            if indexPath.row + 1 == Int(correctAnswer) {
+                cell.isCorrectAnswer = true
+            } else {
+                cell.isCorrectAnswer = false
+            }
         case 2:
             cell.letter.text = "C."
-            cell.isCorrectAnswer = false
+            if indexPath.row + 1 == Int(correctAnswer) {
+                cell.isCorrectAnswer = true
+            } else {
+                cell.isCorrectAnswer = false
+            }
         case 3:
             cell.letter.text = "D."
-            cell.isCorrectAnswer = false
+            if indexPath.row + 1 == Int(correctAnswer) {
+                cell.isCorrectAnswer = true
+            } else {
+                cell.isCorrectAnswer = false
+            }
         case 4:
             cell.letter.text = "E."
-            cell.isCorrectAnswer = false
+            if indexPath.row + 1 == Int(correctAnswer) {
+                cell.isCorrectAnswer = true
+            } else {
+                cell.isCorrectAnswer = false
+            }
         case 5:
             cell.letter.text = "F."
-            cell.isCorrectAnswer = false
+            if indexPath.row + 1 == Int(correctAnswer) {
+                cell.isCorrectAnswer = true
+            } else {
+                cell.isCorrectAnswer = false
+            }
         default:
             cell.letter.text = "X."
-            cell.isCorrectAnswer = false
+            if indexPath.row + 1 == Int(correctAnswer) {
+                cell.isCorrectAnswer = true
+            } else {
+                cell.isCorrectAnswer = false
+            }
             
         }
     
@@ -91,8 +128,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func didSelectBackBtn(_ sender: Any) {
         
-        
-        let alertController = UIAlertController(title: "Hey!", message: "Are you sure you want to exit this practice exam?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Hey!", message: "Are you sure you want to exit these practice questions?", preferredStyle: .alert)
         let action2 = UIAlertAction(title: "Get Brain Swole, I'll stay", style: .cancel) { (action:UIAlertAction) in
             
         }
@@ -109,10 +145,6 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let cell = tableView.cellForRow(at: indexPath) as! QuestionCell
-//        if cell.isCorrectAnswer == true && cell.bubble.backgroundColor != .clear {
-//            
-//        }
     
     }
     
@@ -128,14 +160,39 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    
+    func setQuestionAndExpalnationForView() {
+        question.text = questionList[questionCount - 1].question // need to pass the questionCount index just incase it isn't always zero
+        explanation.text = questionList[questionCount - 1].correctDescription
+        correctAnswer = Int(questionList[questionCount - 1].correctAnswer)
+        
+        if questionCount - 1 <= 0 {
+            moveLeft.isEnabled = false
+            moveLeft.setTitleColor(.lightGray, for: .normal)
+        }else {
+            moveLeft.isEnabled = true
+            moveLeft.setTitleColor(arrowEnabledColor, for: .normal)
+        }
+        if questionCount == questionList.count {
+            moveRight.isEnabled = false
+            moveRight.setTitleColor(.lightGray, for: .normal)
+        } else {
+            moveRight.isEnabled = true
+            moveRight.setTitleColor(arrowEnabledColor, for: .normal)
+        }
+    }
     
     @IBAction func didSelectMoveLeft(_ sender: Any) {
-        
+
+            questionCount -= 1
+            setQuestionAndExpalnationForView()
         
     }
     
     @IBAction func didSelectMoveRight(_ sender: Any) {
+       
+            questionCount += 1
+            setQuestionAndExpalnationForView()
+        
     }
     
 }

@@ -1028,7 +1028,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZU-T6-fxx">
-                                        <rect key="frame" x="62" y="9.5" width="30" height="36"/>
+                                        <rect key="frame" x="62" y="7.5" width="30" height="40"/>
                                         <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="24"/>
                                         <state key="normal" title="">
                                             <color key="titleColor" red="0.2627450980392157" green="0.58823529411764708" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1038,7 +1038,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvM-XK-4k9">
-                                        <rect key="frame" x="1274" y="9.5" width="30" height="36"/>
+                                        <rect key="frame" x="1274" y="7.5" width="30" height="40"/>
                                         <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="24"/>
                                         <state key="normal" title="">
                                             <color key="titleColor" red="0.2627450980392157" green="0.58823529411764708" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1270,6 +1270,7 @@
                         <outlet property="explanationView" destination="YOS-to-djy" id="lCt-1r-rRZ"/>
                         <outlet property="moveLeft" destination="TZU-T6-fxx" id="7tW-ms-TAj"/>
                         <outlet property="moveRight" destination="lvM-XK-4k9" id="TYa-OP-B7t"/>
+                        <outlet property="question" destination="tUh-z4-WYp" id="S19-dB-X9Q"/>
                         <outlet property="tableView" destination="ynx-bI-Bsu" id="VLL-qy-c4U"/>
                     </connections>
                 </viewController>
@@ -1694,7 +1695,7 @@
                                 <color key="backgroundColor" red="0.094105310740000003" green="0.094125546510000005" blue="0.094100885090000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.094105310740000003" green="0.094125546510000005" blue="0.094100885090000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Q9f-FF-Sch">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Q9f-FF-Sch">
                                         <rect key="frame" x="0.0" y="28" width="1286" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q9f-FF-Sch" id="7ar-CK-L5N">
