@@ -1,12 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="User" representedClassName="User" syncable="YES">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Class" representedClassName=".Class" syncable="YES">
+        <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="classes" inverseEntity="Course" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="classes" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Course" representedClassName=".Course" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="classes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Class" inverseName="course" inverseEntity="Class" syncable="YES"/>
+        <relationship name="courseItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseItem" inverseName="course" inverseEntity="CourseItem" syncable="YES"/>
+    </entity>
+    <entity name="CourseItem" representedClassName=".CourseItem" syncable="YES">
+        <attribute name="createdBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="courseItems" inverseEntity="Course" syncable="YES"/>
+        <relationship name="practiceQuestions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PracticeQuestion" inverseName="courseItem" inverseEntity="PracticeQuestion" syncable="YES"/>
+    </entity>
+    <entity name="Panel" representedClassName=".Panel" syncable="YES"/>
+    <entity name="PanelRow" representedClassName=".PanelRow" syncable="YES"/>
+    <entity name="PanelScore" representedClassName=".PanelScore" syncable="YES"/>
+    <entity name="PracticeQuestion" representedClassName=".PracticeQuestion" syncable="YES">
+        <attribute name="correctAnswer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="correctDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="difficulty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="section" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="answers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticeQuestionAnswer" inverseName="practiceQuestion" inverseEntity="PracticeQuestionAnswer" syncable="YES"/>
+        <relationship name="courseItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseItem" inverseName="practiceQuestions" inverseEntity="CourseItem" syncable="YES"/>
+        <relationship name="questionScore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticeQuestionScore" inverseName="practiceQuestion" inverseEntity="PracticeQuestionScore" syncable="YES"/>
+    </entity>
+    <entity name="PracticeQuestionAnswer" representedClassName=".PracticeQuestionAnswer" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="practiceQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticeQuestion" inverseName="answers" inverseEntity="PracticeQuestion" syncable="YES"/>
+    </entity>
+    <entity name="PracticeQuestionScore" representedClassName=".PracticeQuestionScore" syncable="YES">
+        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="correct" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="practiceQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticeQuestion" inverseName="questionScore" inverseEntity="PracticeQuestion" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="practiceQuestionScores" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="classes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Class" inverseName="user" inverseEntity="Class" syncable="YES"/>
+        <relationship name="practiceQuestionScores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PracticeQuestionScore" inverseName="user" inverseEntity="PracticeQuestionScore" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Class" positionX="-18" positionY="36" width="128" height="90"/>
+        <element name="Course" positionX="-36" positionY="27" width="128" height="105"/>
+        <element name="CourseItem" positionX="0" positionY="45" width="128" height="135"/>
+        <element name="Panel" positionX="36" positionY="81" width="128" height="45"/>
+        <element name="PanelRow" positionX="0" positionY="45" width="128" height="45"/>
+        <element name="PanelScore" positionX="-9" positionY="36" width="128" height="45"/>
+        <element name="PracticeQuestion" positionX="-63" positionY="9" width="128" height="180"/>
+        <element name="PracticeQuestionAnswer" positionX="-54" positionY="18" width="128" height="105"/>
+        <element name="PracticeQuestionScore" positionX="18" positionY="63" width="128" height="120"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

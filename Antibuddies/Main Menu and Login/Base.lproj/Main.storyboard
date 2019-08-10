@@ -868,7 +868,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="4uG-nj-Hye" kind="show" id="yQx-Cm-yOZ"/>
+                                            <action selector="didSelectBeginner:" destination="2nd-4a-eLV" eventType="touchUpInside" id="EXk-JL-fiU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6F-lo-345">
@@ -901,6 +901,9 @@
                                                 <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didSelectIntermediate:" destination="2nd-4a-eLV" eventType="touchUpInside" id="YKS-Bd-Vbj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzL-dn-KmP">
                                         <rect key="frame" x="0.0" y="404.5" width="1166" height="152.5"/>
@@ -932,6 +935,9 @@
                                                 <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didSelectAdvanced:" destination="2nd-4a-eLV" eventType="touchUpInside" id="oGh-0U-h4q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <userDefinedRuntimeAttributes>

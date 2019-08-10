@@ -36,5 +36,24 @@ class EntityInteractor: NSObject {
         return result
     }
     
+    class func getEntityWithPredicate(entityName: String, predicate: String, context: NSManagedObjectContext) -> Any {
+        let request = NSFetchRequest<NSFetchRequestResult>.init()
+        let entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
+        request.entity = entity
+        let predicate = NSPredicate.init(format: predicate)
+        request.predicate = predicate
+        
+        var items: [Any] = []
+        
+        context.persistentStoreCoordinator?.performAndWait {
+            do{
+                items = try context.fetch(request)
+            }catch{
+                print(error)
+            }
+        }
+        
+        return items
+    }
     
 }
