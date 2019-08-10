@@ -12,6 +12,8 @@ import UIKit
 class QuestionListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
     @IBOutlet weak var tableView: UITableView!
+    var selectedDifficulty = 0
+    var practiceQuestions = [PracticeQuestion]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,9 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "QuestionListCell", bundle: nil), forCellReuseIdentifier: "QuestionListCell")
         self.tableView.register(UINib(nibName: "QuestionListHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "QuestionListHeader")
+        
+        practiceQuestions = QuestionListWorker.getPracticeQuestionsWithDifficulty(difficulty: selectedDifficulty)
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int

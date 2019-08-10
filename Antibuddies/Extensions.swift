@@ -176,3 +176,7 @@ extension String {
         return hexString
     }
 }
+
+extension Notification.Name {
+    static let practiceQuestionsDownloadedNotification = Notification.Name("practiceQuestionsDownloadedNotification")
+}
