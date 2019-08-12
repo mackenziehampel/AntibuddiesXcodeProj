@@ -69,7 +69,9 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
                 cell.bubble.backgroundColor = UIColor.init(red: (223.0/255.0), green: (168.0/255.0), blue: (1.0/255.0), alpha: 1.0)
             }
         }
-       
+        else {
+          cell.bubble.backgroundColor = .clear
+        }
         switch indexPath.row {
         case 0:
             
@@ -158,7 +160,8 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             self.explanationView.isHidden = true
         }
         selectedIndex = index
-        tableView.reloadData()
+        self.tableView.reloadData()
+        
     }
     
     
@@ -167,7 +170,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         explanation.text = questionList[questionCount - 1].correctDescription
         correctAnswer = Int(questionList[questionCount - 1].correctAnswer)
         questionLbl.text = "Question \(questionCount)"
-        
+      //  self.tableView.reloadData()
         if questionCount - 1 <= 0 {
             moveLeft.isEnabled = false
             moveLeft.setTitleColor(.lightGray, for: .normal)
@@ -182,19 +185,24 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             moveRight.isEnabled = true
             moveRight.setTitleColor(.green, for: .normal)
         }
+        tableView.reloadData()
     }
     
     @IBAction func didSelectMoveLeft(_ sender: Any) {
 
             questionCount -= 1
+        selectedIndex = nil
             setQuestionAndExpalnationForView()
+        
         
     }
     
     @IBAction func didSelectMoveRight(_ sender: Any) {
        
             questionCount += 1
+        selectedIndex = nil
             setQuestionAndExpalnationForView()
+        
         
     }
     
