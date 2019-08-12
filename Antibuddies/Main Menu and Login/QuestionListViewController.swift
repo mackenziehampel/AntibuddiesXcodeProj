@@ -63,8 +63,8 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         let questionView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
         //only pass section
         questionView.questionList = sections[indexPath.section]
-        
-        
+        questionView.questionLbl?.text = String(format: "Question %@", indexPath.row + 1)
+        questionView.questionCount = indexPath.row + 1
         self.present(questionView, animated: true, completion: nil)
     }
     

@@ -22,12 +22,13 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var moveRight: UIButton!
     @IBOutlet weak var moveLeft: UIButton!
     @IBOutlet weak var question: UILabel!
+    @IBOutlet weak var questionLbl: UILabel!
     
     var selectedAnswer = ""
     var delegate: SelectedCorrectAnswer!
     var selectedIndex: IndexPath!
     var questionList = [PracticeQuestion]()
-    var questionCount = 1
+    var questionCount = Int()
     var arrowEnabledColor = UIColor()
     var correctAnswer = Int()
     
@@ -44,7 +45,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.explanation.text = "REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION "
     
-    
+        
         explanationView.isHidden = true
         setQuestionAndExpalnationForView()  
      
@@ -59,6 +60,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         cell.question.text = testQuesitons[indexPath.row]
         cell.delegate = self
+        cell.selectionStyle = .none
         
         if (selectedIndex != nil){
             if indexPath.row != selectedIndex.row {
@@ -164,20 +166,21 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         question.text = questionList[questionCount - 1].question // need to pass the questionCount index just incase it isn't always zero
         explanation.text = questionList[questionCount - 1].correctDescription
         correctAnswer = Int(questionList[questionCount - 1].correctAnswer)
+        questionLbl.text = "Question \(questionCount)"
         
         if questionCount - 1 <= 0 {
             moveLeft.isEnabled = false
             moveLeft.setTitleColor(.lightGray, for: .normal)
         }else {
             moveLeft.isEnabled = true
-            moveLeft.setTitleColor(arrowEnabledColor, for: .normal)
+            moveLeft.setTitleColor(.green, for: .normal)//arrowEnabledColor
         }
         if questionCount == questionList.count {
             moveRight.isEnabled = false
             moveRight.setTitleColor(.lightGray, for: .normal)
         } else {
             moveRight.isEnabled = true
-            moveRight.setTitleColor(arrowEnabledColor, for: .normal)
+            moveRight.setTitleColor(.green, for: .normal)
         }
     }
     

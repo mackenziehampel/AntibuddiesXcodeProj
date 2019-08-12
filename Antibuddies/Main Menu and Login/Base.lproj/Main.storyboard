@@ -1271,6 +1271,7 @@
                         <outlet property="moveLeft" destination="TZU-T6-fxx" id="7tW-ms-TAj"/>
                         <outlet property="moveRight" destination="lvM-XK-4k9" id="TYa-OP-B7t"/>
                         <outlet property="question" destination="tUh-z4-WYp" id="S19-dB-X9Q"/>
+                        <outlet property="questionLbl" destination="n3k-mf-M7x" id="Ide-Kn-6w7"/>
                         <outlet property="tableView" destination="ynx-bI-Bsu" id="VLL-qy-c4U"/>
                     </connections>
                 </viewController>
