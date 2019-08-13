@@ -23,6 +23,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var moveLeft: UIButton!
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var questionLbl: UILabel!
+    @IBOutlet var sideImage: UIImageView!
     
     var selectedAnswer = ""
     var delegate: SelectedCorrectAnswer!
@@ -31,6 +32,10 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     var questionCount = Int()
     var arrowEnabledColor = UIColor()
     var correctAnswer = Int()
+    var noImgArray = [String]()
+    var goodImgArray = [UIImage]()
+    @IBOutlet weak var sideImageRightConstraint: NSLayoutConstraint!
+    
     
     var testQuesitonAnswers = [PracticeQuestionAnswer]()
     
@@ -44,16 +49,44 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.allowsSelection = false
         
         self.explanation.text = ""
-    
+        
+        self.noImgArray = [ "no.png", "no2.png", "no3.png", "no4.png", "no5.png", "no6.png", "no7.png"]
         
         explanationView.isHidden = true
-        setQuestionAndExpalnationForView()  
-     
+       // self.sideImage.isHidden = true
+        self.sideImageRightConstraint.constant = -320.0
+        setQuestionAndExpalnationForView()
+        
+    }
+    
+    func randomNoPhoto(isCorrectAnswer: Bool){
+        let randomImg = noImgArray.randomElement()
+        sideImage.image = UIImage(named: randomImg!)
+        
+        UIView.animate(withDuration: 1.0) {
+            self.sideImageRightConstraint.constant = 0.0
+
+            self.view.layoutIfNeeded()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            UIView.animate(withDuration: 1.0) {
+                self.sideImageRightConstraint.constant = -320.0
+                self.view.layoutIfNeeded()
+            }
+        })
+    }
+    
+    func randomYesPhoto(isCorrectAnswer: Bool) {
+
+       
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testQuesitonAnswers.count
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -156,8 +189,13 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
         if cell.isCorrectAnswer == true {
             self.explanationView.isHidden = false
+            UIView.animate(withDuration: 1.0) {
+                self.sideImageRightConstraint.constant = -320.0
+            }
         } else {
+            self.sideImageRightConstraint.constant = -320.0
             self.explanationView.isHidden = true
+            self.randomNoPhoto(isCorrectAnswer: true)
         }
         selectedIndex = index
         self.tableView.reloadData()
@@ -176,7 +214,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             moveLeft.setTitleColor(.lightGray, for: .normal)
         }else {
             moveLeft.isEnabled = true
-            moveLeft.setTitleColor(.green, for: .normal)//arrowEnabledColor
+            moveLeft.setTitleColor(.green, for: .normal)
         }
         if questionCount == questionList.count {
             moveRight.isEnabled = false
@@ -202,7 +240,6 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             questionCount += 1
         selectedIndex = nil
             setQuestionAndExpalnationForView()
-        
         
     }
     

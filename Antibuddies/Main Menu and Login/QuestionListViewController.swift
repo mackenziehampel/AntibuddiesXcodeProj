@@ -4,7 +4,7 @@
 //
 //  Created by Mackenzie Hampel on 7/30/19.
 //  Copyright © 2019 WeberStateUniversity. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
