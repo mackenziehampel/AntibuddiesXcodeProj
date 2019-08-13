@@ -13,6 +13,10 @@ protocol SelectedCorrectAnswer {
     func selectedCorrectAnswer(correctAnswer: Bool)
 }
 
+protocol DismissDelegate {
+    func dismissView()
+}
+
 class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RadialButtonDelegate {
   
     @IBOutlet weak var explanationView: UIView!
@@ -27,6 +31,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     var selectedAnswer = ""
     var delegate: SelectedCorrectAnswer!
+    var dismissDelegate: DismissDelegate!
     var selectedIndex: IndexPath!
     var questionList = [PracticeQuestion]()
     var questionCount = Int()
@@ -49,7 +54,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.allowsSelection = false
         
         self.explanation.text = "REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION "
-        self.noImgArray = [ "no.png", "no2.png", "no3.png", "no4.png", "no5.png", "no6.png", "no7.png"]
+        self.noImgArray = [ "no.png", "no2.png", "no3.png", "no4.png", "no5.png", "no6.png", "no7.png", "no8.png", "no9.png", "no10.png", "no11.png", "no12.png", "no13.png", "no14.png", "no15.png"]
         
         explanationView.isHidden = true
        // self.sideImage.isHidden = true
@@ -62,7 +67,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         let randomImg = noImgArray.randomElement()
         sideImage.image = UIImage(named: randomImg!)
         
-        UIView.animate(withDuration: 1.0) {
+        UIView.animate(withDuration: 0.3) {
             self.sideImageRightConstraint.constant = 0.0
 
             self.view.layoutIfNeeded()
@@ -163,19 +168,19 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didSelectBackBtn(_ sender: Any) {
-        
-        let alertController = UIAlertController(title: "Hey!", message: "Are you sure you want to exit these practice questions?", preferredStyle: .alert)
-        let action2 = UIAlertAction(title: "Get Brain Swole, I'll stay", style: .cancel) { (action:UIAlertAction) in
-            
-        }
-        let action1 = UIAlertAction(title: "Exit, I make my own choices", style: .default) { (action:UIAlertAction) in
+//
+//        let alertController = UIAlertController(title: "Hey!", message: "Are you sure you want to exit these practice questions?", preferredStyle: .alert)
+//        let action2 = UIAlertAction(title: "Get Brain Swole, I'll stay", style: .cancel) { (action:UIAlertAction) in
+//
+//        }
+      //  let action1 = UIAlertAction(title: "Exit, I make my own choices", style: .default) { (action:UIAlertAction) in
              self.dismiss(animated: true, completion: nil)
-        }
-        
-        alertController.addAction(action2)
-        alertController.addAction(action1)
-    
-        self.present(alertController, animated: true, completion: nil)
+//      //  }
+//        
+//        alertController.addAction(action2)
+//        alertController.addAction(action1)
+//
+//        self.present(alertController, animated: true, completion: nil)
        
     }
     
@@ -241,6 +246,10 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didSelectDifficulty(_ sender: Any) {
+        
+        self.dismiss(animated: false, completion: {
+            self.dismissDelegate.dismissView()
+        })
         
     }
 }

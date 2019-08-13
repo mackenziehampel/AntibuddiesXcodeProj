@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class QuestionListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class QuestionListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DismissDelegate {
+    
+    
   
     @IBOutlet weak var tableView: UITableView!
     var selectedDifficulty = 0
@@ -64,6 +66,7 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         questionView.questionList = sections[indexPath.section]
         questionView.questionLbl?.text = String(format: "Question %@", indexPath.row + 1)
         questionView.questionCount = indexPath.row + 1
+        questionView.dismissDelegate = self
         self.present(questionView, animated: true, completion: nil)
     }
     
@@ -80,6 +83,9 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
  
     @IBAction func didSelectBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    func dismissView() {
+        self.dismiss(animated: false, completion: nil)
     }
     
 }

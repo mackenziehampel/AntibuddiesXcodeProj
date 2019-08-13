@@ -661,7 +661,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ss-Zg-eGx">
                                         <rect key="frame" x="0.0" y="0.0" width="1166" height="186.5"/>
-                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                         <state key="normal" title="Practice Questions">
                                             <color key="titleColor" red="0.423167884349823" green="0.74526125192642212" blue="0.60175716876983643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -760,6 +760,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hey.png" translatesAutoresizingMaskIntoConstraints="NO" id="up8-Xg-pBa">
+                                <rect key="frame" x="0.0" y="733" width="304" height="291"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="291" id="Ih6-Bu-SWR"/>
+                                    <constraint firstAttribute="width" constant="304" id="zM7-D6-feE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -767,12 +792,14 @@
                             <constraint firstItem="DfR-n8-Qq7" firstAttribute="leading" secondItem="K0k-v6-6GC" secondAttribute="trailing" constant="11" id="CEX-oe-KTg"/>
                             <constraint firstItem="3b9-Os-Obl" firstAttribute="bottom" secondItem="Hgr-bG-23N" secondAttribute="bottom" constant="119" id="Gof-qj-4tP"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="leading" secondItem="3b9-Os-Obl" secondAttribute="leading" constant="437" id="IaE-XS-ZhC"/>
+                            <constraint firstItem="up8-Xg-pBa" firstAttribute="leading" secondItem="jWU-cf-0xZ" secondAttribute="leading" id="Ltn-AP-pTx"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="centerY" secondItem="DfR-n8-Qq7" secondAttribute="centerY" id="Mbh-OX-M25"/>
                             <constraint firstItem="3b9-Os-Obl" firstAttribute="trailing" secondItem="Hgr-bG-23N" secondAttribute="trailing" constant="100" id="PVN-CD-h5d"/>
                             <constraint firstItem="pEE-OM-nac" firstAttribute="top" secondItem="K0k-v6-6GC" secondAttribute="bottom" constant="8" id="Rde-Xs-2Pd"/>
                             <constraint firstItem="Hgr-bG-23N" firstAttribute="centerX" secondItem="3b9-Os-Obl" secondAttribute="centerX" id="SJL-Yp-rEt"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="centerY" secondItem="F8n-1d-Ov7" secondAttribute="centerY" id="XWW-O7-y5H"/>
                             <constraint firstItem="3b9-Os-Obl" firstAttribute="leading" secondItem="F8n-1d-Ov7" secondAttribute="leading" id="aLP-U4-mhU"/>
+                            <constraint firstAttribute="bottom" secondItem="up8-Xg-pBa" secondAttribute="bottom" id="ai1-Fq-zQo"/>
                             <constraint firstItem="Hgr-bG-23N" firstAttribute="top" secondItem="K0k-v6-6GC" secondAttribute="bottom" constant="119" id="crw-6a-3IN"/>
                             <constraint firstItem="Hgr-bG-23N" firstAttribute="leading" secondItem="3b9-Os-Obl" secondAttribute="leading" constant="100" id="dae-BE-xwb"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="leading" secondItem="F8n-1d-Ov7" secondAttribute="trailing" constant="11" id="geh-aU-oz3"/>
@@ -789,6 +816,8 @@
                         <outlet property="PanelExamplesButton" destination="zcq-ZE-rfo" id="Lne-Yj-w98"/>
                         <outlet property="PanelsButton" destination="wi3-od-NSk" id="ubs-rp-Kuz"/>
                         <outlet property="PracticeQuestionsButton" destination="3Ss-Zg-eGx" id="0JI-mg-iwu"/>
+                        <outlet property="heyImage" destination="up8-Xg-pBa" id="lXf-Fs-RO6"/>
+                        <outlet property="heyImageRightConstraint" destination="Ltn-AP-pTx" id="KQe-bz-odC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0Y-BA-8eo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1861,6 +1890,7 @@
     </scenes>
     <resources>
         <image name="Weber_State_University_seal.svg" width="1200" height="1726"/>
+        <image name="hey.png" width="398" height="398"/>
         <image name="no4.png" width="398" height="398"/>
     </resources>
 </document>
