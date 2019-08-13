@@ -1028,7 +1028,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZU-T6-fxx">
-                                        <rect key="frame" x="62" y="7.5" width="30" height="40"/>
+                                        <rect key="frame" x="62" y="9.5" width="30" height="36"/>
                                         <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="24"/>
                                         <state key="normal" title="">
                                             <color key="titleColor" red="0.2627450980392157" green="0.58823529411764708" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1038,7 +1038,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvM-XK-4k9">
-                                        <rect key="frame" x="1274" y="7.5" width="30" height="40"/>
+                                        <rect key="frame" x="1274" y="9.5" width="30" height="36"/>
                                         <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="24"/>
                                         <state key="normal" title="">
                                             <color key="titleColor" red="0.2627450980392157" green="0.58823529411764708" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1242,6 +1242,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no4.png" translatesAutoresizingMaskIntoConstraints="NO" id="aPR-Xf-7sZ">
+                                <rect key="frame" x="1062" y="390" width="304" height="248"/>
+                                <color key="backgroundColor" red="0.5070061535" green="0.5070061535" blue="0.5070061535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="Nl7-NT-I6j"/>
+                                    <constraint firstAttribute="height" constant="248" id="SKH-GP-ONS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.11763278394937515" green="0.11765617877244949" blue="0.11762764304876328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1257,6 +1282,8 @@
                             <constraint firstItem="E9Y-bL-KGD" firstAttribute="trailing" secondItem="YOS-to-djy" secondAttribute="trailing" constant="127" id="Wke-3N-S5q"/>
                             <constraint firstItem="yE9-j4-oVL" firstAttribute="top" secondItem="YOS-to-djy" secondAttribute="bottom" constant="28" id="X9j-fJ-DUV"/>
                             <constraint firstAttribute="bottom" secondItem="yE9-j4-oVL" secondAttribute="bottom" id="Xbh-t9-w1O"/>
+                            <constraint firstItem="E9Y-bL-KGD" firstAttribute="trailing" secondItem="aPR-Xf-7sZ" secondAttribute="trailing" id="YHA-qt-tfN"/>
+                            <constraint firstItem="aPR-Xf-7sZ" firstAttribute="centerY" secondItem="E9Y-bL-KGD" secondAttribute="centerY" id="htR-Ow-FGt"/>
                             <constraint firstItem="E9Y-bL-KGD" firstAttribute="trailing" secondItem="9h5-P8-tB1" secondAttribute="trailing" id="n7V-oV-nkr"/>
                             <constraint firstItem="E9Y-bL-KGD" firstAttribute="trailing" secondItem="GR4-Dq-w9W" secondAttribute="trailing" constant="127" id="qbO-Jb-fHo"/>
                             <constraint firstItem="YOS-to-djy" firstAttribute="leading" secondItem="E9Y-bL-KGD" secondAttribute="leading" constant="103" id="rZx-9j-IeT"/>
@@ -1272,12 +1299,14 @@
                         <outlet property="moveRight" destination="lvM-XK-4k9" id="TYa-OP-B7t"/>
                         <outlet property="question" destination="tUh-z4-WYp" id="S19-dB-X9Q"/>
                         <outlet property="questionLbl" destination="n3k-mf-M7x" id="Ide-Kn-6w7"/>
+                        <outlet property="sideImage" destination="aPR-Xf-7sZ" id="Sua-dM-Jkt"/>
+                        <outlet property="sideImageRightConstraint" destination="YHA-qt-tfN" id="s6S-zR-nuw"/>
                         <outlet property="tableView" destination="ynx-bI-Bsu" id="VLL-qy-c4U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEE-Hg-FOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686.8228404099559" y="665.625"/>
+            <point key="canvasLocation" x="2681" y="679"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="igE-Tg-pSF">
@@ -1819,5 +1848,6 @@
     </scenes>
     <resources>
         <image name="Weber_State_University_seal.svg" width="1200" height="1726"/>
+        <image name="no4.png" width="398" height="398"/>
     </resources>
 </document>

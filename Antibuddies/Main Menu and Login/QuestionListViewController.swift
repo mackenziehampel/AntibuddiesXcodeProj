@@ -4,7 +4,7 @@
 //
 //  Created by Mackenzie Hampel on 7/30/19.
 //  Copyright © 2019 WeberStateUniversity. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
@@ -27,7 +27,6 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.register(UINib(nibName: "QuestionListCell", bundle: nil), forCellReuseIdentifier: "QuestionListCell")
         self.tableView.register(UINib(nibName: "QuestionListHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "QuestionListHeader")
         self.tableView.tableFooterView = UIView()
-     //   self.tableView.allowsSelection = false
         
         practiceQuestions = QuestionListWorker.getPracticeQuestionsWithDifficulty(difficulty: selectedDifficulty)
         print("TEST")
