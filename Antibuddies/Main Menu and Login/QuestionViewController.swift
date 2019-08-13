@@ -13,6 +13,10 @@ protocol SelectedCorrectAnswer {
     func selectedCorrectAnswer(correctAnswer: Bool)
 }
 
+protocol DismissDelegate {
+    func dismissView()
+}
+
 class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RadialButtonDelegate {
   
     @IBOutlet weak var explanationView: UIView!
@@ -27,6 +31,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     var selectedAnswer = ""
     var delegate: SelectedCorrectAnswer!
+    var dismissDelegate: DismissDelegate!
     var selectedIndex: IndexPath!
     var questionList = [PracticeQuestion]()
     var questionCount = Int()
@@ -50,7 +55,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.explanation.text = ""
         
-        self.noImgArray = [ "no.png", "no2.png", "no3.png", "no4.png", "no5.png", "no6.png", "no7.png"]
+        self.noImgArray = [ "no.png", "no2.png", "no3.png", "no4.png", "no5.png", "no6.png", "no7.png", "no8.png", "no9.png", "no10.png", "no11.png", "no12.png", "no13.png", "no14.png", "no15.png"]
         
         explanationView.isHidden = true
        // self.sideImage.isHidden = true
@@ -63,7 +68,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         let randomImg = noImgArray.randomElement()
         sideImage.image = UIImage(named: randomImg!)
         
-        UIView.animate(withDuration: 1.0) {
+        UIView.animate(withDuration: 0.3) {
             self.sideImageRightConstraint.constant = 0.0
 
             self.view.layoutIfNeeded()
@@ -164,20 +169,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didSelectBackBtn(_ sender: Any) {
-        
-        let alertController = UIAlertController(title: "Hey!", message: "Are you sure you want to exit these practice questions?", preferredStyle: .alert)
-        let action2 = UIAlertAction(title: "Get Brain Swole, I'll stay", style: .cancel) { (action:UIAlertAction) in
-            
-        }
-        let action1 = UIAlertAction(title: "Exit, I make my own choices", style: .default) { (action:UIAlertAction) in
-             self.dismiss(animated: true, completion: nil)
-        }
-        
-        alertController.addAction(action2)
-        alertController.addAction(action1)
-    
-        self.present(alertController, animated: true, completion: nil)
-       
+        self.dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -199,11 +191,10 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         }
         selectedIndex = index
         self.tableView.reloadData()
-        
     }
     
-    
     func setQuestionAndExpalnationForView() {
+        
         question.text = questionList[questionCount].question // need to pass the questionCount index just incase it isn't always zero
         explanation.text = questionList[questionCount].correctDescription
         correctAnswer = Int(questionList[questionCount].correctAnswer)
@@ -228,19 +219,22 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func didSelectMoveLeft(_ sender: Any) {
 
-            questionCount -= 1
+        questionCount -= 1
         selectedIndex = nil
-            setQuestionAndExpalnationForView()
-        
-        
+        setQuestionAndExpalnationForView()
     }
     
     @IBAction func didSelectMoveRight(_ sender: Any) {
        
-            questionCount += 1
+        questionCount += 1
         selectedIndex = nil
-            setQuestionAndExpalnationForView()
+        setQuestionAndExpalnationForView()
         
     }
     
+    @IBAction func didSelectDifficulty(_ sender: Any) {
+        self.dismiss(animated: false, completion: {
+            self.dismissDelegate.dismissView()
+        })
+    }
 }

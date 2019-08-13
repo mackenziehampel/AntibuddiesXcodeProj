@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class QuestionListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class QuestionListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DismissDelegate {
+    
+    
   
     @IBOutlet weak var tableView: UITableView!
     var selectedDifficulty = 0
@@ -85,7 +87,6 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
                 DPQA.downloadPracticeQuestionAnswer(practiceQuestionId: self.selectedQuestion!.serverKey)
             }
         }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -101,6 +102,9 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
  
     @IBAction func didSelectBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    func dismissView() {
+        self.dismiss(animated: false, completion: nil)
     }
     
     @objc func showQuestion(notification: Notification) -> Void {

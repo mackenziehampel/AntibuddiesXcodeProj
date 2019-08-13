@@ -14,12 +14,22 @@ class ImmunohematologyViewController: UIViewController {
     @IBOutlet weak var PanelsButton: UIButton!
     @IBOutlet weak var PanelExamplesButton: UIButton!
     @IBOutlet weak var PracticeQuestionsButton: UIButton!
+    @IBOutlet weak var heyImage: UIImageView!
+    @IBOutlet weak var heyImageRightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         PanelExamplesButton.isEnabled = false
-       // PracticeQuestionsButton.isEnabled = false
-        
+          self.heyImageRightConstraint.constant = -320.0
+        UIView.animate(withDuration: 0.50) {
+            self.view.layoutIfNeeded()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            UIView.animate(withDuration: 1.0) {
+                self.heyImageRightConstraint.constant = 0.0
+                self.view.layoutIfNeeded()
+            }
+        })
     }
     @IBAction func didSelectPracticeQuestions(_ sender: Any) {
         

@@ -659,9 +659,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Hgr-bG-23N">
                                 <rect key="frame" x="100" y="234" width="1166" height="651"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi3-od-NSk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ss-Zg-eGx">
                                         <rect key="frame" x="0.0" y="0.0" width="1166" height="186.5"/>
-                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                        <state key="normal" title="Practice Questions">
+                                            <color key="titleColor" red="0.423167884349823" green="0.74526125192642212" blue="0.60175716876983643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.423167884349823" green="0.74526125192642212" blue="0.60175716876983643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didSelectPracticeQuestions:" destination="vPG-tF-Qah" eventType="touchUpInside" id="A8Y-9e-iI9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi3-od-NSk">
+                                        <rect key="frame" x="0.0" y="232.5" width="1166" height="186"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                         <state key="normal" title="Panels">
                                             <color key="titleColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -679,8 +698,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-ZE-rfo">
-                                        <rect key="frame" x="0.0" y="232.5" width="1166" height="186"/>
-                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="40"/>
+                                        <rect key="frame" x="0.0" y="464.5" width="1166" height="186.5"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                         <state key="normal" title="Panel Examples">
                                             <color key="titleColor" red="0.22379350384798716" green="0.4048619923857868" blue="0.32638888356926415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -694,25 +713,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ss-Zg-eGx">
-                                        <rect key="frame" x="0.0" y="464.5" width="1166" height="186.5"/>
-                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="40"/>
-                                        <state key="normal" title="Practice Questions">
-                                            <color key="titleColor" red="0.423167884349823" green="0.74526125192642212" blue="0.60175716876983643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.423167884349823" green="0.74526125192642212" blue="0.60175716876983643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didSelectPracticeQuestions:" destination="vPG-tF-Qah" eventType="touchUpInside" id="A8Y-9e-iI9"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="more options coming soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEE-OM-nac">
@@ -722,7 +722,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EE-lh-i2w" userLabel="bottom tab bar">
-                                <rect key="frame" x="632" y="949" width="102" height="74"/>
+                                <rect key="frame" x="632" y="956" width="102" height="67"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp2-hB-vWR">
                                         <rect key="frame" x="20.5" y="1" width="61" height="46"/>
@@ -760,6 +760,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hey.png" translatesAutoresizingMaskIntoConstraints="NO" id="up8-Xg-pBa">
+                                <rect key="frame" x="0.0" y="733" width="304" height="291"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="291" id="Ih6-Bu-SWR"/>
+                                    <constraint firstAttribute="width" constant="304" id="zM7-D6-feE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14900270099999999" green="0.14903038739999999" blue="0.14899668099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -767,19 +792,21 @@
                             <constraint firstItem="DfR-n8-Qq7" firstAttribute="leading" secondItem="K0k-v6-6GC" secondAttribute="trailing" constant="11" id="CEX-oe-KTg"/>
                             <constraint firstItem="3b9-Os-Obl" firstAttribute="bottom" secondItem="Hgr-bG-23N" secondAttribute="bottom" constant="119" id="Gof-qj-4tP"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="leading" secondItem="3b9-Os-Obl" secondAttribute="leading" constant="437" id="IaE-XS-ZhC"/>
-                            <constraint firstItem="2EE-lh-i2w" firstAttribute="top" secondItem="3Ss-Zg-eGx" secondAttribute="bottom" constant="64" id="KDA-WF-jzf"/>
+                            <constraint firstItem="up8-Xg-pBa" firstAttribute="leading" secondItem="jWU-cf-0xZ" secondAttribute="leading" id="Ltn-AP-pTx"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="centerY" secondItem="DfR-n8-Qq7" secondAttribute="centerY" id="Mbh-OX-M25"/>
                             <constraint firstItem="3b9-Os-Obl" firstAttribute="trailing" secondItem="Hgr-bG-23N" secondAttribute="trailing" constant="100" id="PVN-CD-h5d"/>
                             <constraint firstItem="pEE-OM-nac" firstAttribute="top" secondItem="K0k-v6-6GC" secondAttribute="bottom" constant="8" id="Rde-Xs-2Pd"/>
                             <constraint firstItem="Hgr-bG-23N" firstAttribute="centerX" secondItem="3b9-Os-Obl" secondAttribute="centerX" id="SJL-Yp-rEt"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="centerY" secondItem="F8n-1d-Ov7" secondAttribute="centerY" id="XWW-O7-y5H"/>
                             <constraint firstItem="3b9-Os-Obl" firstAttribute="leading" secondItem="F8n-1d-Ov7" secondAttribute="leading" id="aLP-U4-mhU"/>
+                            <constraint firstAttribute="bottom" secondItem="up8-Xg-pBa" secondAttribute="bottom" id="ai1-Fq-zQo"/>
                             <constraint firstItem="Hgr-bG-23N" firstAttribute="top" secondItem="K0k-v6-6GC" secondAttribute="bottom" constant="119" id="crw-6a-3IN"/>
                             <constraint firstItem="Hgr-bG-23N" firstAttribute="leading" secondItem="3b9-Os-Obl" secondAttribute="leading" constant="100" id="dae-BE-xwb"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="leading" secondItem="F8n-1d-Ov7" secondAttribute="trailing" constant="11" id="geh-aU-oz3"/>
                             <constraint firstItem="K0k-v6-6GC" firstAttribute="top" secondItem="3b9-Os-Obl" secondAttribute="top" constant="39" id="h9U-Le-bHq"/>
                             <constraint firstItem="pEE-OM-nac" firstAttribute="centerX" secondItem="K0k-v6-6GC" secondAttribute="centerX" id="lIX-Ua-9Em"/>
                             <constraint firstItem="2EE-lh-i2w" firstAttribute="bottom" secondItem="3b9-Os-Obl" secondAttribute="bottom" constant="19" id="lxa-iD-wdt"/>
+                            <constraint firstItem="2EE-lh-i2w" firstAttribute="top" secondItem="zcq-ZE-rfo" secondAttribute="bottom" constant="71" id="r4F-Lf-FgT"/>
                             <constraint firstItem="3b9-Os-Obl" firstAttribute="trailing" secondItem="DfR-n8-Qq7" secondAttribute="trailing" id="sXQ-BV-7uz"/>
                             <constraint firstItem="2EE-lh-i2w" firstAttribute="centerX" secondItem="3b9-Os-Obl" secondAttribute="centerX" id="sr3-6b-c6a"/>
                         </constraints>
@@ -789,11 +816,13 @@
                         <outlet property="PanelExamplesButton" destination="zcq-ZE-rfo" id="Lne-Yj-w98"/>
                         <outlet property="PanelsButton" destination="wi3-od-NSk" id="ubs-rp-Kuz"/>
                         <outlet property="PracticeQuestionsButton" destination="3Ss-Zg-eGx" id="0JI-mg-iwu"/>
+                        <outlet property="heyImage" destination="up8-Xg-pBa" id="lXf-Fs-RO6"/>
+                        <outlet property="heyImageRightConstraint" destination="Ltn-AP-pTx" id="KQe-bz-odC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0Y-BA-8eo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="3"/>
+            <point key="canvasLocation" x="1385.7979502196192" y="2.9296875"/>
         </scene>
         <!--Practice Question Level SelectVC-->
         <scene sceneID="t1H-tG-qSi">
@@ -1204,10 +1233,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yE9-j4-oVL" userLabel="bottom tab bar">
-                                <rect key="frame" x="618" y="957" width="130" height="67"/>
+                                <rect key="frame" x="555" y="957" width="256" height="67"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h6-7w-wei">
-                                        <rect key="frame" x="34.5" y="1" width="61" height="46"/>
+                                        <rect key="frame" x="20" y="1" width="61" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1216,13 +1245,26 @@
                                             <action selector="didSelectBackBtn:" destination="wcH-P3-ULd" eventType="touchUpInside" id="l9f-TT-zvd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAd-LG-oGh">
+                                        <rect key="frame" x="128" y="1" width="108" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Difficulty">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectDifficulty:" destination="wcH-P3-ULd" eventType="touchUpInside" id="Vdd-rB-WCf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1176327839" green="0.1176561788" blue="0.117627643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="4h6-7w-wei" firstAttribute="centerX" secondItem="yE9-j4-oVL" secondAttribute="centerX" id="NRI-3V-wXV"/>
-                                    <constraint firstAttribute="width" constant="130" id="QNg-LW-7A4"/>
+                                    <constraint firstItem="ZAd-LG-oGh" firstAttribute="centerY" secondItem="4h6-7w-wei" secondAttribute="centerY" id="F4a-s5-zoX"/>
+                                    <constraint firstAttribute="width" constant="256" id="QNg-LW-7A4"/>
                                     <constraint firstItem="4h6-7w-wei" firstAttribute="top" secondItem="yE9-j4-oVL" secondAttribute="top" constant="1" id="ZNT-fB-Mah"/>
+                                    <constraint firstItem="4h6-7w-wei" firstAttribute="leading" secondItem="yE9-j4-oVL" secondAttribute="leading" constant="20" id="cMP-FV-3EB"/>
                                     <constraint firstAttribute="height" constant="67" id="h3G-OX-dWu"/>
+                                    <constraint firstItem="ZAd-LG-oGh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4h6-7w-wei" secondAttribute="trailing" constant="8" symbolic="YES" id="pak-HB-oHi"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZAd-LG-oGh" secondAttribute="trailing" constant="20" id="rmP-O8-Cqs"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1306,7 +1348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEE-Hg-FOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="679"/>
+            <point key="canvasLocation" x="2680.6734992679353" y="678.515625"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="igE-Tg-pSF">
@@ -1848,6 +1890,7 @@
     </scenes>
     <resources>
         <image name="Weber_State_University_seal.svg" width="1200" height="1726"/>
+        <image name="hey.png" width="398" height="398"/>
         <image name="no4.png" width="398" height="398"/>
     </resources>
 </document>

@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse,
     }
     
     @IBAction func didSelectLogin(_ sender: Any) {
-        
+        self.view.endEditing(true)
         if (userNameTxt.text != nil && userNameTxt.text != "" && passwordTxt.text != nil && passwordTxt.text != "") {
             blurEffectView = UIVisualEffectView(effect: blurEffect)
             startActivityIndicator(blur: blurEffectView, ai: activityIndicator)
