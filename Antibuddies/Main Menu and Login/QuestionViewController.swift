@@ -198,7 +198,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         question.text = questionList[questionCount].question // need to pass the questionCount index just incase it isn't always zero
         explanation.text = questionList[questionCount].correctDescription
         correctAnswer = Int(questionList[questionCount].correctAnswer)
-        questionLbl.text = "Question \(questionCount)"
+        questionLbl.text = "\(questionList[questionCount].section ?? "Immunohematology") - Question \(questionCount + 1)"
       //  self.tableView.reloadData()
         if questionCount <= 0 {
             moveLeft.isEnabled = false

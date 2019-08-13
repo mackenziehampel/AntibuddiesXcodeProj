@@ -123,7 +123,6 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         let questionView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
         //only pass section
         questionView.questionList = practiceQuestions
-        questionView.questionLbl?.text = String(format: "%@  -  Question %@", selectedQuestion?.section ?? "Immunohematology", practiceQuestions.firstIndex(of: selectedQuestion!)!)
         questionView.questionCount = selectedIndex
         questionView.testQuesitonAnswers = selectedQuestionAnswers
         self.present(questionView, animated: true, completion: nil)
