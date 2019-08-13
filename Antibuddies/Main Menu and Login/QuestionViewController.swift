@@ -227,19 +227,20 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func didSelectMoveLeft(_ sender: Any) {
 
-            questionCount -= 1
+        questionCount -= 1
         selectedIndex = nil
-            setQuestionAndExpalnationForView()
-        
-        
+        setQuestionAndExpalnationForView()
     }
     
     @IBAction func didSelectMoveRight(_ sender: Any) {
        
-            questionCount += 1
+        questionCount += 1
         selectedIndex = nil
-            setQuestionAndExpalnationForView()
+        setQuestionAndExpalnationForView()
         
     }
     
+    @IBAction func didSelectDifficulty(_ sender: Any) {
+        
+    }
 }
