@@ -124,6 +124,7 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         //only pass section
         questionView.questionList = practiceQuestions
         questionView.questionCount = selectedIndex
+        questionView.dismissDelegate = self
         questionView.testQuesitonAnswers = selectedQuestionAnswers
         self.present(questionView, animated: true, completion: nil)
     }
