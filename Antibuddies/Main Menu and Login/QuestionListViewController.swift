@@ -125,6 +125,7 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         questionView.questionList = practiceQuestions
         questionView.questionLbl?.text = String(format: "%@  -  Question %@", selectedQuestion?.section ?? "Immunohematology", practiceQuestions.firstIndex(of: selectedQuestion!)!)
         questionView.questionCount = selectedIndex
+        questionView.dismissDelegate = self
         questionView.testQuesitonAnswers = selectedQuestionAnswers
         self.present(questionView, animated: true, completion: nil)
     }
