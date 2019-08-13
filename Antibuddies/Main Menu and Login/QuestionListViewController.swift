@@ -18,6 +18,13 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
     var uniqueFirstNames = [String]()
     var firstNames = [String]()
     var sections = [[PracticeQuestion]]()
+    var selectedQuestion: PracticeQuestion? = nil
+    var selectedQuestionAnswers = [PracticeQuestionAnswer]()
+    var selectedIndex: Int = 0
+    
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+    var blurEffectView: UIVisualEffectView!
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
     
     
     override func viewDidLoad() {
@@ -27,10 +34,10 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.register(UINib(nibName: "QuestionListCell", bundle: nil), forCellReuseIdentifier: "QuestionListCell")
         self.tableView.register(UINib(nibName: "QuestionListHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "QuestionListHeader")
         self.tableView.tableFooterView = UIView()
-     //   self.tableView.allowsSelection = false
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showQuestion(notification:)), name: .practiceQuestionAnswersDownloadedNotification, object: nil)
         
         practiceQuestions = QuestionListWorker.getPracticeQuestionsWithDifficulty(difficulty: selectedDifficulty)
-        print("TEST")
         refilterRowsAndSections()
        
     }
@@ -60,12 +67,25 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let questionView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
-        //only pass section
-        questionView.questionList = sections[indexPath.section]
-        questionView.questionLbl?.text = String(format: "Question %@", indexPath.row + 1)
-        questionView.questionCount = indexPath.row + 1
-        self.present(questionView, animated: true, completion: nil)
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        startActivityIndicator(blur: blurEffectView, ai: activityIndicator)
+        
+        selectedQuestion = sections[indexPath.section][indexPath.row]
+        selectedIndex = sections.indices(of: selectedQuestion!)!
+        
+        selectedQuestionAnswers = EntityInteractor.getEntityWithPredicate(entityName: "PracticeQuestionAnswer", predicate: String(format: "practiceQuestion = %@", self.selectedQuestion!), context: context) as! [PracticeQuestionAnswer]
+        
+        if selectedQuestionAnswers.count > 0 {
+            self.showQuestionDetailVC()
+        } else {
+            DispatchQueue.global(qos: .background).async {
+                let DPQA = DownloadPracticeQuestionAnswer()
+                DPQA.downloadPracticeQuestionAnswer(practiceQuestionId: self.selectedQuestion!.serverKey)
+            }
+        }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -81,6 +101,28 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
  
     @IBAction func didSelectBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func showQuestion(notification: Notification) -> Void {
+        DispatchQueue.main.async {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            self.selectedQuestionAnswers = EntityInteractor.getEntityWithPredicate(entityName: "PracticeQuestionAnswer", predicate: String(format: "practiceQuestion = %@", self.selectedQuestion!), context: context) as! [PracticeQuestionAnswer]
+            
+            self.showQuestionDetailVC()
+        }
+        
+    }
+    
+    func showQuestionDetailVC() -> Void {
+        self.stopActivityIndicator(blur: self.blurEffectView, ai: self.activityIndicator)
+        let questionView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+        //only pass section
+        questionView.questionList = practiceQuestions
+        questionView.questionLbl?.text = String(format: "%@  -  Question %@", selectedQuestion?.section ?? "Immunohematology", practiceQuestions.firstIndex(of: selectedQuestion!)!)
+        questionView.questionCount = selectedIndex
+        questionView.testQuesitonAnswers = selectedQuestionAnswers
+        self.present(questionView, animated: true, completion: nil)
     }
     
 }
