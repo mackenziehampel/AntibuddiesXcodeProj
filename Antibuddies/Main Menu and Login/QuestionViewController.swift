@@ -168,20 +168,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didSelectBackBtn(_ sender: Any) {
-//
-//        let alertController = UIAlertController(title: "Hey!", message: "Are you sure you want to exit these practice questions?", preferredStyle: .alert)
-//        let action2 = UIAlertAction(title: "Get Brain Swole, I'll stay", style: .cancel) { (action:UIAlertAction) in
-//
-//        }
-      //  let action1 = UIAlertAction(title: "Exit, I make my own choices", style: .default) { (action:UIAlertAction) in
-             self.dismiss(animated: true, completion: nil)
-//      //  }
-//        
-//        alertController.addAction(action2)
-//        alertController.addAction(action1)
-//
-//        self.present(alertController, animated: true, completion: nil)
-       
+        self.dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -203,16 +190,14 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         }
         selectedIndex = index
         self.tableView.reloadData()
-        
     }
     
-    
     func setQuestionAndExpalnationForView() {
-        question.text = questionList[questionCount - 1].question // need to pass the questionCount index just incase it isn't always zero
+        question.text = questionList[questionCount - 1].question
         explanation.text = questionList[questionCount - 1].correctDescription
         correctAnswer = Int(questionList[questionCount - 1].correctAnswer)
         questionLbl.text = "Question \(questionCount)"
-      //  self.tableView.reloadData()
+    
         if questionCount - 1 <= 0 {
             moveLeft.isEnabled = false
             moveLeft.setTitleColor(.lightGray, for: .normal)
@@ -246,10 +231,8 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didSelectDifficulty(_ sender: Any) {
-        
         self.dismiss(animated: false, completion: {
             self.dismissDelegate.dismissView()
         })
-        
     }
 }
