@@ -46,7 +46,7 @@ App REPO: https://github.com/WeberStateAntibuddiesProject/IOS-Antibuddies/settin
 GitHub login info:(FOR APP ONLY)  
 
 
-Email Login info:
+Email Login info: CONTACT boliverson@mail.weber.edu for Passwords
 
 The App is written in Swift on XCode.  You must have the most recent version of Xcode on the app store.  
 
