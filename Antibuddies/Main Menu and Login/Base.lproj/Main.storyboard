@@ -661,7 +661,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ss-Zg-eGx">
                                         <rect key="frame" x="0.0" y="0.0" width="1166" height="186.5"/>
-                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="36"/>
                                         <state key="normal" title="Practice Questions">
                                             <color key="titleColor" red="0.423167884349823" green="0.74526125192642212" blue="0.60175716876983643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -680,7 +680,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi3-od-NSk">
                                         <rect key="frame" x="0.0" y="232.5" width="1166" height="186"/>
-                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                         <state key="normal" title="Panels">
                                             <color key="titleColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -699,7 +699,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-ZE-rfo">
                                         <rect key="frame" x="0.0" y="464.5" width="1166" height="186.5"/>
-                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
                                         <state key="normal" title="Panel Examples">
                                             <color key="titleColor" red="0.22379350384798716" green="0.4048619923857868" blue="0.32638888356926415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
