@@ -179,6 +179,21 @@ extension String {
 
 extension Notification.Name {
     static let practiceQuestionsDownloadedNotification = Notification.Name("practiceQuestionsDownloadedNotification")
+    
+    static let practiceQuestionAnswersDownloadedNotification = Notification.Name("practiceQuestionAnswersDownloadedNotification")
+}
+
+extension Array where Element : Collection,
+Element.Iterator.Element : Equatable, Element.Index == Int {
+    
+    func indices(of x: Element.Iterator.Element) -> Int? {
+        for (_, row) in self.enumerated() {
+            if let j = row.firstIndex(of: x) {
+                return j
+            }
+        }
+        return nil
+    }
 }
 
 

@@ -81,6 +81,7 @@
 		9A871A3322FE4A5B00BA7DFE /* CourseItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A871A2722FE4A5B00BA7DFE /* CourseItem+CoreDataProperties.swift */; };
 		9A871A3422FE4A5B00BA7DFE /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A871A2822FE4A5B00BA7DFE /* Course+CoreDataClass.swift */; };
 		9A871A3522FE4A5B00BA7DFE /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A871A2922FE4A5B00BA7DFE /* Course+CoreDataProperties.swift */; };
+		9A871A3E230223B400BA7DFE /* DownloadPracticeQuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A871A3D230223B400BA7DFE /* DownloadPracticeQuestionAnswer.swift */; };
 		9A9B353422E0129E00992868 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353222E0129E00992868 /* User+CoreDataClass.swift */; };
 		9A9B353522E0129E00992868 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */; };
 		9A9B353822E013AC00992868 /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B353722E013AC00992868 /* LambdaBase.swift */; };
@@ -195,6 +196,7 @@
 		9A871A2722FE4A5B00BA7DFE /* CourseItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A871A2822FE4A5B00BA7DFE /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A871A2922FE4A5B00BA7DFE /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9A871A3D230223B400BA7DFE /* DownloadPracticeQuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPracticeQuestionAnswer.swift; sourceTree = "<group>"; };
 		9A9B353222E0129E00992868 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A9B353322E0129E00992868 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A9B353722E013AC00992868 /* LambdaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaBase.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 			children = (
 				9A9B353922E0148300992868 /* DownloadUser.swift */,
 				9AE9C48A22FD14D1008F36F5 /* DownloadPracticeQuestion.swift */,
+				9A871A3D230223B400BA7DFE /* DownloadPracticeQuestionAnswer.swift */,
 			);
 			path = Download;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				9A871A3122FE4A5B00BA7DFE /* PracticeQuestion+CoreDataProperties.swift in Sources */,
 				9A9B354322E13FEC00992868 /* InsertUser.swift in Sources */,
 				9A871A3522FE4A5B00BA7DFE /* Course+CoreDataProperties.swift in Sources */,
+				9A871A3E230223B400BA7DFE /* DownloadPracticeQuestionAnswer.swift in Sources */,
 				855FBA31228E1C1900C086F2 /* ViewController.swift in Sources */,
 				857011EF229E075E00FBA10F /* MainMenuViewController.swift in Sources */,
 				855FBA37228E1C1900C086F2 /* Antibuddies.xcdatamodeld in Sources */,
@@ -954,7 +958,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7S6D9G55V;
+				DEVELOPMENT_TEAM = W7UF55P2U7;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -975,7 +979,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7S6D9G55V;
+				DEVELOPMENT_TEAM = W7UF55P2U7;
 				INFOPLIST_FILE = Antibuddies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

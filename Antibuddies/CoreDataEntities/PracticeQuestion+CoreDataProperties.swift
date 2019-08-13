@@ -2,7 +2,7 @@
 //  PracticeQuestion+CoreDataProperties.swift
 //  Antibuddies
 //
-//  Created by Ben Oliverson on 8/9/19.
+//  Created by Ben Oliverson on 8/12/19.
 //  Copyright © 2019 WeberStateUniversity. All rights reserved.
 //
 //
@@ -23,9 +23,26 @@ extension PracticeQuestion {
     @NSManaged public var question: String?
     @NSManaged public var section: String?
     @NSManaged public var serverKey: Int32
-    @NSManaged public var answers: PracticeQuestionAnswer?
+    @NSManaged public var answers: NSSet?
     @NSManaged public var courseItem: NSSet?
     @NSManaged public var questionScore: PracticeQuestionScore?
+
+}
+
+// MARK: Generated accessors for answers
+extension PracticeQuestion {
+
+    @objc(addAnswersObject:)
+    @NSManaged public func addToAnswers(_ value: PracticeQuestionAnswer)
+
+    @objc(removeAnswersObject:)
+    @NSManaged public func removeFromAnswers(_ value: PracticeQuestionAnswer)
+
+    @objc(addAnswers:)
+    @NSManaged public func addToAnswers(_ values: NSSet)
+
+    @objc(removeAnswers:)
+    @NSManaged public func removeFromAnswers(_ values: NSSet)
 
 }
 

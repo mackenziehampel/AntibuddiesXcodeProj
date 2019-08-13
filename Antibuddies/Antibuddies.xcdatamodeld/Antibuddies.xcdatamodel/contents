@@ -29,7 +29,7 @@
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="section" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverKey" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="answers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticeQuestionAnswer" inverseName="practiceQuestion" inverseEntity="PracticeQuestionAnswer" syncable="YES"/>
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PracticeQuestionAnswer" inverseName="practiceQuestion" inverseEntity="PracticeQuestionAnswer" syncable="YES"/>
         <relationship name="courseItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseItem" inverseName="practiceQuestions" inverseEntity="CourseItem" syncable="YES"/>
         <relationship name="questionScore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticeQuestionScore" inverseName="practiceQuestion" inverseEntity="PracticeQuestionScore" syncable="YES"/>
     </entity>
@@ -61,7 +61,7 @@
         <element name="Panel" positionX="36" positionY="81" width="128" height="45"/>
         <element name="PanelRow" positionX="0" positionY="45" width="128" height="45"/>
         <element name="PanelScore" positionX="-9" positionY="36" width="128" height="45"/>
-        <element name="PracticeQuestion" positionX="-63" positionY="9" width="128" height="180"/>
+        <element name="PracticeQuestion" positionX="-63" positionY="9" width="128" height="30"/>
         <element name="PracticeQuestionAnswer" positionX="-54" positionY="18" width="128" height="105"/>
         <element name="PracticeQuestionScore" positionX="18" positionY="63" width="128" height="120"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="135"/>

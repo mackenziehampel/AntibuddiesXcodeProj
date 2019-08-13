@@ -42,7 +42,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var sideImageRightConstraint: NSLayoutConstraint!
     
     
-    var testQuesitons = ["anti-Kna", "anit-Ch", "anti-Yka", "anti-Csa", "A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick fromA REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end here A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her  A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her A REALLY REALLY long Answer to pick from antoher really long extra ssomthing on the end her"]
+    var testQuesitonAnswers = [PracticeQuestionAnswer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,8 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.estimatedRowHeight = 100
         tableView.allowsSelection = false
         
-        self.explanation.text = "REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATIONREALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION,REALLY LONG EXPLANATION "
+        self.explanation.text = ""
+        
         self.noImgArray = [ "no.png", "no2.png", "no3.png", "no4.png", "no5.png", "no6.png", "no7.png", "no8.png", "no9.png", "no10.png", "no11.png", "no12.png", "no13.png", "no14.png", "no15.png"]
         
         explanationView.isHidden = true
@@ -87,7 +88,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testQuesitons.count
+        return testQuesitonAnswers.count
     }
     
     
@@ -95,7 +96,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-        cell.question.text = testQuesitons[indexPath.row]
+        cell.question.text = testQuesitonAnswers[indexPath.row].answer
         cell.delegate = self
         cell.selectionStyle = .none
         
@@ -193,12 +194,13 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func setQuestionAndExpalnationForView() {
-        question.text = questionList[questionCount - 1].question
-        explanation.text = questionList[questionCount - 1].correctDescription
-        correctAnswer = Int(questionList[questionCount - 1].correctAnswer)
+        
+        question.text = questionList[questionCount].question // need to pass the questionCount index just incase it isn't always zero
+        explanation.text = questionList[questionCount].correctDescription
+        correctAnswer = Int(questionList[questionCount].correctAnswer)
         questionLbl.text = "Question \(questionCount)"
-    
-        if questionCount - 1 <= 0 {
+      //  self.tableView.reloadData()
+        if questionCount <= 0 {
             moveLeft.isEnabled = false
             moveLeft.setTitleColor(.lightGray, for: .normal)
         }else {
