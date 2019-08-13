@@ -75,7 +75,7 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         selectedQuestion = sections[indexPath.section][indexPath.row]
         selectedIndex = sections.indices(of: selectedQuestion!)!
         
-        selectedQuestionAnswers = EntityInteractor.getEntityWithPredicate(entityName: "PracticeQuestionAnswer", predicate: String(format: "practiceQuestion = %@", self.selectedQuestion!), context: context) as! [PracticeQuestionAnswer]
+        selectedQuestionAnswers = EntityInteractor.getEntityWithPredicate(entityName: "PracticeQuestionAnswer", predicate: String(format: "practiceQuestion.serverKey = %d", self.selectedQuestion!.serverKey), context: context) as! [PracticeQuestionAnswer]
         
         if selectedQuestionAnswers.count > 0 {
             self.showQuestionDetailVC()
@@ -107,7 +107,7 @@ class QuestionListViewController: UIViewController, UITableViewDelegate, UITable
         DispatchQueue.main.async {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
-            self.selectedQuestionAnswers = EntityInteractor.getEntityWithPredicate(entityName: "PracticeQuestionAnswer", predicate: String(format: "practiceQuestion = %@", self.selectedQuestion!), context: context) as! [PracticeQuestionAnswer]
+            self.selectedQuestionAnswers = EntityInteractor.getEntityWithPredicate(entityName: "PracticeQuestionAnswer", predicate: String(format: "practiceQuestion.serverKey = %d", self.selectedQuestion!.serverKey), context: context) as! [PracticeQuestionAnswer]
             
             self.showQuestionDetailVC()
         }

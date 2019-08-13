@@ -204,12 +204,12 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func setQuestionAndExpalnationForView() {
-        question.text = questionList[questionCount - 1].question // need to pass the questionCount index just incase it isn't always zero
-        explanation.text = questionList[questionCount - 1].correctDescription
-        correctAnswer = Int(questionList[questionCount - 1].correctAnswer)
+        question.text = questionList[questionCount].question // need to pass the questionCount index just incase it isn't always zero
+        explanation.text = questionList[questionCount].correctDescription
+        correctAnswer = Int(questionList[questionCount].correctAnswer)
         questionLbl.text = "Question \(questionCount)"
       //  self.tableView.reloadData()
-        if questionCount - 1 <= 0 {
+        if questionCount <= 0 {
             moveLeft.isEnabled = false
             moveLeft.setTitleColor(.lightGray, for: .normal)
         }else {

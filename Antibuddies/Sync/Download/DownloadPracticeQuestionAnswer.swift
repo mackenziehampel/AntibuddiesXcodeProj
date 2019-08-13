@@ -34,8 +34,11 @@ class DownloadPracticeQuestionAnswer: LambdaBase {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         guard let serverKey = Int32(item["id"] as? String ?? "0") else { return }
+        guard let questionID = Int32(item["questionID"] as? String ?? "0") else { return }
         
         var practiceA = EntityInteractor.getEntityWithId(entityName: "PracticeQuestionAnswer", entityId: serverKey, context: context) as? PracticeQuestionAnswer
+        
+        let pQuestion = EntityInteractor.getEntityWithId(entityName: "PracticeQuestion", entityId: questionID, context: context) as? PracticeQuestion
         
         if practiceA == nil {
             practiceA = PracticeQuestionAnswer.init(entity: NSEntityDescription.entity(forEntityName: "PracticeQuestionAnswer", in: context)!, insertInto: context)
@@ -44,6 +47,7 @@ class DownloadPracticeQuestionAnswer: LambdaBase {
         practiceA?.serverKey = serverKey
         practiceA?.answer = item["correctAnswer"] as? String
         practiceA?.order = Int16(item["answerNum"] as? String ?? "0")!
+        practiceA?.practiceQuestion = pQuestion
         
         do {
             try context.save()
