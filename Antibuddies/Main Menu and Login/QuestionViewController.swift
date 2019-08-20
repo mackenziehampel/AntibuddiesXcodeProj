@@ -194,7 +194,9 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func setQuestionAndExpalnationForView() {
-        
+        if questionCount == questionList.count {
+            questionCount = 0
+        }
         question.text = questionList[questionCount].question // need to pass the questionCount index just incase it isn't always zero
         explanation.text = questionList[questionCount].correctDescription
         correctAnswer = Int(questionList[questionCount].correctAnswer)
